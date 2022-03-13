@@ -1,14 +1,14 @@
 ---
-# cover: /img/template.png
-date: 2023-12-10T07:57:24.796Z
-# domain: example.com
+draft: true
+date: 2069-4-20T07:57:24.796Z
 id: template
 layout: ../../layouts/post-layout.astro
+title: Template
+# cover: /img/template.png
+# domain: example.com
 # link: https://example.com/my-link
 # tags: comma, seperated
-title: Template
 # type: link, article, video
-draft: true
 ---
 
 Hi! My name is Melanie.
