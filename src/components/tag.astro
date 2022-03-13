@@ -1,0 +1,9 @@
+---
+const cx = {
+  a: 'no-underline hover:underline text-sky-500',
+}
+const { tag } = Astro.props
+---
+<a class={cx.a} href={`/t/${tag}`}>
+  #{tag}
+</a>

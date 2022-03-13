@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/base-layout.astro'
+import Article from '../../components/article.astro'
+import uniqBy from 'lodash/uniqBy'
+import { byDate } from '../../utils/sort'
+
+export async function getStaticPaths({ rss }) {
+  let allPosts = await Astro.fetchContent('../p/*.md')
+  rss({
+    title: 'melkat.blog',
+    description: 'a blog by Melanie Kat',
+    items: allPosts.sort(byDate).map(item => ({
+      title: item.title,
+      description: item.content.html,
+      link: item.url,
+      pubDate: item.date,
+    })),
+  });
+  allPosts = allPosts.filter(o => !!o.type)
+  const uniqParams = uniqBy(allPosts, 'type').map(({ type }) => (
+    { params: { type } }
+  ))
+  return uniqParams
+}
+
+const { type } = Astro.request.params
+let posts = await Astro.fetchContent('../p/*.md');
+posts = posts.filter(o => o.type === type).sort(byDate);
+---
+<Layout title={`melkat.blog - ${type} posts`}>
+  {posts.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+</Layout>

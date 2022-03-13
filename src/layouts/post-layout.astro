@@ -1,0 +1,11 @@
+---
+import Layout from './base-layout.astro'
+import Article from '../components/article.astro'
+const { content } = Astro.props
+const { title, cover, light, dark } = content
+---
+<Layout title={`melkat.blog - ${title}`} {cover}  description={content.astro.source.replaceAll('\n', '')} {light} {dark}>
+  <Article {...content}>
+    <Fragment set:html={content.astro.html}/>
+  </Article>
+</Layout>

@@ -1,0 +1,9 @@
+---
+const cx = {
+  a: 'no-underline hover:underline text-sky-500',
+}
+const { url } = Astro.props
+---
+<a class={cx.a} href={url} title='permalink'>
+  ★
+</a>

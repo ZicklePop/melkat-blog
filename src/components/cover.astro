@@ -1,0 +1,14 @@
+---
+const cx = {
+  img: 'bg-cover bg-center h-16 w-16 rounded ml-2 mb-2 float-right'
+}
+
+const { title, cover } = Astro.props
+---
+<div
+  alt={title}
+  aria-label='Preview image'
+  class={cx.img}
+  role='img'
+  style={`background-image: url(${cover ? cover : ''})`}
+/>

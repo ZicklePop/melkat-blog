@@ -1,0 +1,8 @@
+---
+const cx = {
+  a: 'no-underline hover:underline text-sky-500',
+}
+
+const { domain } = Astro.props
+---
+<a class={cx.a} href={`/d/${domain}`}>{domain?.replace('www.', '')}</a>

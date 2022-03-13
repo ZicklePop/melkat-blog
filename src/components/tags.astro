@@ -1,0 +1,32 @@
+---
+import Category from './category.astro'
+import Permalink from './permalink.astro'
+import Tag from './tag.astro'
+import map from 'lodash/map'
+import getTags from '../utils/get-tags'
+
+const cx = {
+  li: 'inline-block uppercase',
+  tag: 'inline-block uppercase pr-1',
+  ul: 'list-none text-sm mt-4'
+}
+
+const {
+  url,
+  tags,
+  type,
+} = Astro.props
+---
+<ul class={cx.ul}>
+  <li class={cx.li}>
+    <Permalink {url} />
+  </li>
+  {!!type ? <li class={cx.li}>
+    <Category {type} />
+  </li> : ''}
+  {map(getTags(tags), tag => (
+    <li class={cx.tag}>
+      <Tag {tag} />
+    </li>
+  ))}
+</ul>

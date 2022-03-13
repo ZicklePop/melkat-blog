@@ -1,0 +1,19 @@
+---
+import Domain from './domain.astro'
+import Date from './date.astro'
+
+const cx = {
+  details: 'uppercase text-sm my-4',
+}
+
+const {
+  date,
+  domain,
+  seperator = ' • ',
+} = Astro.props
+---
+<p class={cx.details}>
+  <Domain {domain} />
+  {domain ? seperator : ''}
+  <Date {date} />
+</p>

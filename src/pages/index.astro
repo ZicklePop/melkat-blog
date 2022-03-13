@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/base-layout.astro'
+import Article from '../components/article.astro'
+import { byDate } from '../utils/sort'
+
+let allPosts = await Astro.fetchContent('./p/*.md')
+allPosts = allPosts.sort(byDate)
+---
+<Layout>
+  {allPosts.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+</Layout>

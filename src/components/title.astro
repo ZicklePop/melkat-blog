@@ -1,0 +1,16 @@
+---
+const cx = {
+  a: 'text-sky-500 underline',
+  h2: 'mb-4 text-xl font-medium',
+}
+
+const {
+  title = '',
+  link = '',
+} = Astro.props
+---
+<h2 class={cx.h2}>
+  <a href={link} class={cx.a}>
+    {title}
+  </a>
+</h2>

@@ -1,0 +1,31 @@
+---
+import Details from './details.astro'
+import Body from './body.astro'
+import Cover from './cover.astro'
+import Tags from './tags.astro'
+import Title from './title.astro'
+
+const cx = {
+  article: 'pb-8 mb-8 border-solid border-b cv-auto',
+}
+
+const {
+  cover,
+  date,
+  domain,
+  link,
+  tags,
+  title,
+  type,
+  url,
+} = Astro.props
+---
+<article class={cx.article}>
+  {cover && <Cover {cover} {title} /> }
+  <Title {title} link={link ? link : url} />
+  <Details {domain} {date} />
+  <Body>
+    <slot />
+  </Body>
+  <Tags {url} {tags} {type} />
+</article>
