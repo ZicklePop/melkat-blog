@@ -4,18 +4,8 @@ import Article from '../../components/article.astro'
 import uniqBy from 'lodash/uniqBy'
 import { byDate } from '../../utils/sort'
 
-export async function getStaticPaths({ rss }) {
+export async function getStaticPaths({ paginate }) {
   let allPosts = await Astro.fetchContent('../p/*.md')
-  rss({
-    title: 'melkat.blog',
-    description: 'a blog by Melanie Kat',
-    items: allPosts.sort(byDate).filter(o => !o.draft).map(item => ({
-      title: item.title,
-      description: item.content.html,
-      link: item.url,
-      pubDate: item.date,
-    })),
-  });
   allPosts = allPosts.filter(o => !!o.type).filter(o => !o.draft).sort(byDate)
   const uniqParams = uniqBy(allPosts, 'type').map(({ type }) => (
     { params: { type } }

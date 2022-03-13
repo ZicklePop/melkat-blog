@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/base-layout.astro'
+
+const cx = {
+  p: 'mv-8',
+  a: 'text-sky-500 underline',
+}
+---
+<Layout>
+  <p class={cx.p}>It looks like I may have goof'd.</p>
+  <p>Return <a href="/" class={cx.a}>home</a>?</p>
+</Layout>
