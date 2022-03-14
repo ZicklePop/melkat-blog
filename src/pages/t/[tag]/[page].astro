@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
 import Article from '../../../components/article.astro'
+import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
 import getTags from '../../../utils/get-tags'
@@ -30,4 +31,5 @@ const { tag } = Astro.request.params
 ---
 <Layout title={`melkat.blog - posts tagged #${tag}, page ${page.currentPage} of ${page.lastPage}`}>
   {page.data.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+  <PageNavigator page={page} />
 </Layout>

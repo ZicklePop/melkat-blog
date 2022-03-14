@@ -1,0 +1,22 @@
+---
+const cx = {
+  a: 'text-sky-500 no-underline hover:underline',
+  box: 'mb-8 flex items-center justify-between',
+  pageCount: 'flex items-center',
+  navigation: 'w-32 flex items-center',
+}
+
+const { url = {}, currentPage = '1', lastPage = '1' } = Astro.props.page
+const { prev, next } = url
+---
+<div class={cx.box}>
+  <div class={cx.navigation}>
+    {prev && <a href={prev} class={cx.a}>&#8592; Newer</a>}
+  </div>
+  <div class={cx.pageCount}>
+    <span>{currentPage} of {lastPage}</span>
+  </div>
+  <div class={`${cx.navigation} justify-end`}>
+    {next ? <a href={next} class={cx.a}>Older &#8594;</a> : ''}
+  </div>
+</div>
