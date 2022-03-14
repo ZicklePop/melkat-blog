@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/base-layout.astro'
+import Article from '../../../components/article.astro'
+import { byDate } from '../../../utils/sort'
+import { pageSize } from '../../../consts/config'
+import uniqBy from 'lodash/uniqBy'
+
+export async function getStaticPaths({ paginate }) {
+  let allPosts = await Astro.fetchContent('../../p/*.md')
+  allPosts = allPosts.filter(o => !!o.type).filter(o => !o.draft).sort(byDate)
+
+  const allDomains = uniqBy(allPosts, 'type').map(({ type }) => type)
+
+  return allDomains?.map(type => {
+    const filtered = allPosts.filter(o => o.type === type)
+    return paginate(filtered, {
+      params: {
+        type
+      },
+      pageSize,
+    })
+  })
+}
+
+const { page } = Astro.props
+const { type } = Astro.request.params
+---
+<Layout title={`melkat.blog - ${type} posts, page ${page.currentPage} of ${page.lastPage}`}>
+  {page.data.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+</Layout>

@@ -2,10 +2,11 @@
 import Layout from '../layouts/base-layout.astro'
 import Article from '../components/article.astro'
 import { byDate } from '../utils/sort'
+import { pageSize } from '../consts/config'
 
 let allPosts = await Astro.fetchContent('./p/*.md')
-allPosts = allPosts.sort(byDate).filter(o => !o.draft).slice(0, 25)
+allPosts = allPosts.sort(byDate).filter(o => !o.draft)
 ---
 <Layout>
-  {allPosts.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+  {allPosts.slice(0, pageSize).map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
 </Layout>
