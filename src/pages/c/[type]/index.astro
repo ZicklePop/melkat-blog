@@ -4,7 +4,7 @@ import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
-import uniqBy from 'lodash/uniqBy'
+import { uniqBy } from '../../../utils/uniques'
 
 export async function getStaticPaths() {
   let allPosts = await Astro.fetchContent('../../p/*.md')

@@ -35,8 +35,9 @@ const {
     <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
     <link rel='icon' href='/favicon.ico' />
     <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color={light} />
-    <link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/global.css')} />
-    <style global define:vars={{ dark, light }} />
+    <style global define:vars={{ dark, light }}>
+      @import '../styles/global.css';
+    </style>
   </head>
   <body class={className}>
     <Header />
