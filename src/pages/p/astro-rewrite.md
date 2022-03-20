@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2069-4-20T07:57:24.796Z
 id: astro-rewrite
 layout: ../../layouts/post-layout.astro
