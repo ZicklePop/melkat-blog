@@ -4,6 +4,4 @@ const cx = {
 }
 const { type } = Astro.props
 ---
-<a class={cx.a} href={`/c/${type?.trim()}`}>
-  #{type?.trim()}
-</a>
+<a class={cx.a} href={`/c/${type?.trim()}`}>#{type?.trim()}</a>
