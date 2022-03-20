@@ -58,7 +58,7 @@ module.exports = {
       typography: ({ theme }) => ({
         melkat: {
           css: {
-            '--tw-prose-links': theme('colors.cerulean[500]'),
+            '--tw-prose-links': theme('colors.cerulean[600]'),
             '--tw-prose-invert-links': theme('colors.cerulean[500]'),
           }
         }
