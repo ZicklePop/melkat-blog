@@ -1,17 +1,16 @@
 ---
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
+import '../styles/global.css'
 
 const {
   className = 'font-sans max-w-xl mx-auto px-2',
   cover = '/cover.png',
-  dark = '#000000',
   description = 'a blog by Melanie Kat',
-  light = '#ffffff',
   permalink = 'https://melkat.blog/',
   title = 'melkat.blog - a blog by Melanie Kat',
 } = Astro.props
----
+---r
 <html lang='en'>
   <head>
     <title>{title}</title>
@@ -34,10 +33,7 @@ const {
     <link rel='alternate' type='application/rss+xml' title='melkat.blog' href='/rss.xml' />
     <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
     <link rel='icon' href='/favicon.ico' />
-    <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color={light} />
-    <style global define:vars={{ dark, light }}>
-      @import '../styles/global.css';
-    </style>
+    <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color='#0caceb' />
   </head>
   <body class={className}>
     <Header />

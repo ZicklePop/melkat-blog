@@ -1,6 +1,6 @@
 ---
 draft: true
-date: 2069-4-20T07:57:24.796Z
+date: 2069-4-20T07:57:24.796Z # date.toISOString();
 id: template
 layout: ../../layouts/post-layout.astro
 title: Template

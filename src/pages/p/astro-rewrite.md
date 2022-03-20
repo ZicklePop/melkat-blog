@@ -1,6 +1,5 @@
 ---
-draft: true
-date: 2069-4-20T07:57:24.796Z
+date: 2022-03-20T20:02:19.497Z
 id: astro-rewrite
 layout: ../../layouts/post-layout.astro
 title: I rewrote my blog with Astro

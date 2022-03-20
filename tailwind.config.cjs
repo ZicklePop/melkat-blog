@@ -1,7 +1,8 @@
 module.exports = {
-  mode: 'jit',
   content: ['./public/**/*.html', './src/**/*.{astro,js,jsx,ts,tsx}'],
-  darkmode: 'media',
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   theme: {
     extend: {
       colors: {
@@ -54,6 +55,14 @@ module.exports = {
           '900': '#38580f',
         },
       },
+      typography: ({ theme }) => ({
+        melkat: {
+          css: {
+            '--tw-prose-links': theme('colors.cerulean[500]'),
+            '--tw-prose-invert-links': theme('colors.cerulean[500]'),
+          }
+        }
+      }),
     },
   },
 }

@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark: rgb(55, 65, 81);
+  --light: rgb(209, 213, 219);
+}
+
 body {
   color: var(--dark);
-  background-color: var(--light);
+  background-color: #ffffff;
 }
 
 a {
@@ -17,9 +22,8 @@ article {
 
 @media (prefers-color-scheme: dark) {
   body {
-    --dark: #000000;
     color: var(--light);
-    background-color: var(--dark);
+    background-color: #000000;
   }
 
   a {
@@ -30,8 +34,3 @@ article {
     border-color: rgb(255,255,255,.25);
   }
 }
-
-.hyphens-auto {
-  hyphens: auto;
-}
-
