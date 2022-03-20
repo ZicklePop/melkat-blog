@@ -13,7 +13,7 @@ const {
 } = Astro.props
 ---
 <p class={cx.details}>
-  <Domain {domain} />
+  {domain && <Domain {domain} /> }
   {domain ? seperator : ''}
   <Date {date} />
 </p>
