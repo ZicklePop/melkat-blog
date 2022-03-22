@@ -2,10 +2,16 @@
 import Layout from './base-layout.astro'
 import Article from '../components/article.astro'
 const { content } = Astro.props
-const { title, cover, light, dark } = content
+const { title, cover, id } = content
+const permalink = `/p/${id}`
 ---
-<Layout title={`melkat.blog - ${title}`} {cover}  description={content.astro.source.split('\n')[0]} {light} {dark}>
-  <Article {...content} url={`/p/${content.id}`}>
+<Layout
+  title={`melkat.blog - ${title}`}
+  description={content.astro.source.split('\n')[0]}
+  {cover}
+  {permalink}
+>
+  <Article {...content} url={permalink}>
     <Fragment set:html={content.astro.html}/>
   </Article>
 </Layout>

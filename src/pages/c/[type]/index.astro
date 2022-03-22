@@ -35,7 +35,10 @@ const page = {
   },
 }
 ---
-<Layout title={`melkat.blog - ${type} posts${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}>
+<Layout
+  title={`melkat.blog - ${type} posts${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
+  permalink={`/c/${type}`}
+>
   {pages.slice(0, pageSize).map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
   <PageNavigator page={page} />
 </Layout>

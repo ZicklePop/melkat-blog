@@ -26,7 +26,10 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 const { domain } = Astro.request.params
 ---
-<Layout title={`melkat.blog - posts from #${domain}, page ${page.currentPage} of ${page.lastPage}`}>
+<Layout
+  title={`melkat.blog - posts from #${domain}, page ${page.currentPage} of ${page.lastPage}`}
+  permalink={`/d/${domain}/${page.currentPage}`}
+>
   {page.data.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
   <PageNavigator page={page} />
 </Layout>

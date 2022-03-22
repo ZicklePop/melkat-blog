@@ -2,12 +2,13 @@
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import '../styles/global.css'
+import { baseUrl } from '../consts/config'
 
 const {
   className = 'font-sans max-w-xl mx-auto px-2',
   cover = '/cover.png',
   description = 'a blog by Melanie Kat',
-  permalink = 'https://melkat.blog/',
+  permalink = '',
   title = 'melkat.blog - a blog by Melanie Kat',
 } = Astro.props
 ---r
@@ -19,19 +20,20 @@ const {
     <meta name='keywords' content='melkat, blog' />
     <meta name='twitter:description' content={description} />
     <meta name='twitter:image:alt' content={title} />
-    <meta name='twitter:image' content={`https://melkat.blog${cover}`} />
+    <meta name='twitter:image' content={`${baseUrl}${cover}`} />
     <meta name='twitter:title' content={title} />
     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
     <meta property='og:description' content={description} />
     <meta property='og:image:height' content='630' />
     <meta property='og:image:width' content='1200' />
-    <meta property='og:image' content={`https://melkat.blog${cover}`} />
+    <meta property='og:image' content={`${baseUrl}${cover}`} />
     <meta property='og:title' content={title} />
     <meta property='og:type' content='website' />
-    <meta property='og:url' content={permalink} />
-    <meta property='twitter:url' content={permalink} />
+    <meta property='og:url' content={`${baseUrl}${permalink}`} />
+    <meta property='twitter:url' content={`${baseUrl}${permalink}`} />
     <link rel='alternate' type='application/rss+xml' title='melkat.blog' href='/rss.xml' />
     <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+    <link rel='canonical' href={`${baseUrl}${permalink.replace(/\/1$/gi, '')}`} />
     <link rel='icon' href='/favicon.ico' />
     <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color='#0caceb' />
   </head>
