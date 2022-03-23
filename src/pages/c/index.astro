@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/base-layout.astro'
+
+const cx = {
+  div: 'prose prose-melkat dark:prose-invert mb-8',
+}
+
+let allPosts = await Astro.fetchContent('../p/*.md')
+allPosts = allPosts.filter(o => !o.draft)
+
+const data = {}
+allPosts.forEach(({ type }, i) => {
+  data[type] = data[type] ? data[type] + 1 : 1
+})
+const sortedData = Object.keys(data).map(key => ({ key, count: data[key] })).sort((a, b) => b.count - a.count)
+
+---
+<Layout
+  title='melkat.blog - Posts by category'
+  permalink='/c'
+>
+  <div class={cx.div}>
+    <h2>Posts by category</h2>
+    <ul>
+      {sortedData.map(({key, count}) => (
+        <li>
+          <a href={`/c/${key}`}>{key}</a>
+          {count} posts
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>

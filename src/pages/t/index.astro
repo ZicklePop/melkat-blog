@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/base-layout.astro'
+import getTags from '../../utils/get-tags'
+
+const cx = {
+  div: 'prose prose-melkat dark:prose-invert mb-8',
+}
+
+let allPosts = await Astro.fetchContent('../p/*.md')
+allPosts = allPosts.filter(o => !o.draft)
+
+const data = {}
+allPosts.forEach(({ tags }) => {
+  if (tags) {
+    const individualTags = getTags(tags)
+    individualTags.forEach(tag => {
+      data[tag] = data[tag] ? data[tag] + 1 : 1
+    })
+  }
+})
+const sortedData = Object.keys(data).map(key => ({ key, count: data[key] })).sort((a, b) => b.count - a.count)
+
+---
+<Layout
+  title='melkat.blog - Posts by tag'
+  permalink='/t'
+>
+  <div class={cx.div}>
+    <h2>Posts by tag</h2>
+    <ul>
+      {sortedData.map(({key, count}) => (
+        <li>
+          <a href={`/t/${key}`}>{key}</a>
+          {count} posts
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>
