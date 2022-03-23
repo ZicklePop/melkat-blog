@@ -5,8 +5,8 @@ import Tag from './tag.astro'
 import getTags from '../utils/get-tags'
 
 const cx = {
-  li: 'inline-block uppercase',
-  tag: 'inline-block uppercase pr-1',
+  li: 'inline-block uppercase my-1',
+  tag: 'inline-block uppercase my-1 pr-1',
   ul: 'list-none mt-4'
 }
 
@@ -20,13 +20,13 @@ const {
   <li class={cx.li}>
     <Permalink {url} />
   </li>
-  <li class={cx.li}>
+  {(!!type || !!tags) && <li class={cx.li}>
     •
-  </li>
+  </li>}
   {!!type && <li class={cx.li}>
     <Category {type} />
   </li> }
-  {getTags(tags).map(tag => (
+  {getTags(tags)?.map(tag => (
     <li class={cx.tag}>
       <Tag {tag} />
     </li>
