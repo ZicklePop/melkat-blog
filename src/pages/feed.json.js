@@ -1,7 +1,8 @@
 import { byJsonDate } from '../utils/sort'
 import getTags from '../utils/get-tags'
 
-export async function get() {  let items = await import.meta.glob('./p/*.md')
+export async function get() {
+  let items = await import.meta.glob('./p/*.md')
   items = await Promise.all(
     Object.keys(items).map(async el => {
       let item = items[el]
@@ -36,15 +37,15 @@ export async function get() {  let items = await import.meta.glob('./p/*.md')
 
   return {
     body: JSON.stringify({
-      version: 'https://jsonfeed.org/version/1',
+      version: 'https://jsonfeed.org/version/1.1',
       title: 'melkat.blog',
       icon: 'https://melkat.blog/apple-touch-icon.png',
       home_page_url: 'https://melkat.blog/',
       feed_url: 'https://melkat.blog/feed.json',
-      author: {
+      authors: [{
         name: 'Melanie Kat',
         avatar: 'https://melkat.blog/apple-touch-icon.png',
-      },
+      }],
       items,
     }),
   }
