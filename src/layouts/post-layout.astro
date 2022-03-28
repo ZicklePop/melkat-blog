@@ -5,6 +5,7 @@ const { content } = Astro.props
 const { title, cover, id } = content
 const permalink = `/p/${id}`
 ---
+
 <Layout
   title={`melkat.blog - ${title}`}
   description={content.astro.source.split('\n')[0]}
@@ -12,6 +13,6 @@ const permalink = `/p/${id}`
   {permalink}
 >
   <Article {...content} url={permalink}>
-    <Fragment set:html={content.astro.html}/>
+    <Fragment set:html={content.astro.html} />
   </Article>
 </Layout>
