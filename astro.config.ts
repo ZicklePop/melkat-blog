@@ -9,11 +9,17 @@ export default defineConfig(
   {
     devOptions: {
       hostname: '0.0.0.0',
-      tailwindConfig: './tailwind.config.cjs',
     },
     buildOptions: {
       site: 'https://melkat.blog/',
     },
-    integrations: [react(), tailwind()],
+    integrations: [
+      react(),
+      tailwind({
+        config: {
+          path: './tailwind.config.cjs',
+        },
+      }),
+    ],
   }
 )
