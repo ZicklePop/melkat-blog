@@ -1,6 +1,6 @@
 ---
 cover: /img/uses.jpg
-date: 2022-03-22T04:03:21.298Z
+date: 2022-03-31T05:18:15.218Z
 id: uses
 layout: ../../layouts/post-layout.astro
 tags: uses, apps, hardware
@@ -100,6 +100,18 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 * Color scheme: [Dracula Pro](https://draculatheme.com/pro)
 * Font: [Cartograph](https://connary.com/cartograph.html)
 * [My dotfiles are available on Github](https://github.com/zicklepop/dotfiles)
+
+
+## VS Code Extensions
+
+- [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) - There is nothing like a handy way to convert which case your text or variables are. 
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Never spend another hour trying to debug code that would work if didn't make that typo.
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - This pair programmer's inteligence is like magic, but it does pay to keep an eye on it so it stays on track.
+- [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) - Create and review PRs without having to find what your looking for in GitHub.
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Invite someone you trust to code along side you each from the comfort of each other's own VS Code.
+- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - I use this for connecting to a Windows Subsystem for Linux quite often, but it's also great for working over SSH.
+- [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines) - Like casing, there's nothing like a quick way to remove duplicates from a list and sort it at the same time.
+- [Turbo Console Log](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log) - Highlight text and press a keyboard shortcut to have your own easy to find console log. Each log is easily identifiable with an emoji, file name, and line number.
 
 
 ## Browser Extensions
