@@ -6,7 +6,7 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
-    "format": "prettier --check .",
+    "format": "prettier --write .",
     "lint": "astro check && prettier --check .",
     "prepare": "husky install",
     "preview": "astro preview",
