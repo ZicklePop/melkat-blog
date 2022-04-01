@@ -11,6 +11,7 @@
     "lint": "astro check"
   },
   "dependencies": {
+    "@astrojs/tailwind": "0.0.2",
     "@tailwindcss/typography": "^0.5.2",
     "astro": "^0.25.4",
     "autoprefixer": "^10.4.4",
