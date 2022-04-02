@@ -17,7 +17,7 @@ a {
 }
 
 article {
-  border-color: rgba(0,0,0,.12);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,6 +31,6 @@ article {
   }
 
   article {
-    border-color: rgb(255,255,255,.25);
+    border-color: rgb(255, 255, 255, 0.25);
   }
 }
