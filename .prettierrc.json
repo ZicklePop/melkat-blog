@@ -11,6 +11,5 @@
         "parser": "astro"
       }
     }
-  ],
-  "tailwindConfig": "./tailwind.config.cjs"
+  ]
 }
