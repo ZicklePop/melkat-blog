@@ -4,18 +4,19 @@
   "license": "Unlicense",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
+    "dev": "astro dev",
+    "format": "prettier --write .",
+    "lint": "astro check",
+    "prepare": "husky install",
     "preview": "astro preview",
-    "lint": "astro check && prettier --check .",
-    "prepare": "husky install"
+    "start": "astro dev"
   },
   "dependencies": {
     "@astrojs/react": "0.0.2",
     "@astrojs/tailwind": "0.0.2",
     "@tailwindcss/typography": "^0.5.2",
-    "astro": "^0.25.2",
+    "astro": "^0.25.4",
     "autoprefixer": "^10.4.4",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",

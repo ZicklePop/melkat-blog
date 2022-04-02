@@ -1,9 +1,7 @@
-import react from '@astrojs/react' // @ts-check
-
+// @ts-check
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 
-// https://astro.build/config
 export default defineConfig(
   /** @type {import('astro').AstroUserConfig} */
   {
@@ -14,7 +12,6 @@ export default defineConfig(
       site: 'https://melkat.blog/',
     },
     integrations: [
-      react(),
       tailwind({
         config: {
           path: './tailwind.config.cjs',
