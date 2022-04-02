@@ -5,4 +5,5 @@ const cx = {
 
 const { domain } = Astro.props
 ---
+
 <a class={cx.a} href={`/d/${domain}`}>{domain?.replace('www.', '')}</a>

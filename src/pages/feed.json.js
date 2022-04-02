@@ -4,7 +4,7 @@ import getTags from '../utils/get-tags'
 export async function get() {
   let items = await import.meta.glob('./p/*.md')
   items = await Promise.all(
-    Object.keys(items).map(async el => {
+    Object.keys(items).map(async (el) => {
       let item = items[el]
       item = await item()
       const {
@@ -17,23 +17,23 @@ export async function get() {
         tags,
         title,
       } = item.frontmatter
-        const url = `https://melkat.blog/p/${id}`
-        const image = `https://melkat.blog${cover}`
+      const url = `https://melkat.blog/p/${id}`
+      const image = `https://melkat.blog${cover}`
 
-        return {
-          content_html,
-          date_published,
-          draft,
-          external_url,
-          id: url,
-          image,
-          tags: getTags(tags),
-          title,
-          url,
-        }
+      return {
+        content_html,
+        date_published,
+        draft,
+        external_url,
+        id: url,
+        image,
+        tags: getTags(tags),
+        title,
+        url,
+      }
     })
   )
-  items = items.filter(o => !o.draft).sort(byJsonDate)
+  items = items.filter((o) => !o.draft).sort(byJsonDate)
 
   return {
     body: JSON.stringify({
@@ -42,10 +42,12 @@ export async function get() {
       icon: 'https://melkat.blog/apple-touch-icon.png',
       home_page_url: 'https://melkat.blog/',
       feed_url: 'https://melkat.blog/feed.json',
-      authors: [{
-        name: 'Melanie Kat',
-        avatar: 'https://melkat.blog/apple-touch-icon.png',
-      }],
+      authors: [
+        {
+          name: 'Melanie Kat',
+          avatar: 'https://melkat.blog/apple-touch-icon.png',
+        },
+      ],
       items,
     }),
   }
