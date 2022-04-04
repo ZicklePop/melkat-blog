@@ -7,7 +7,7 @@ import { pageSize } from '../../../consts/config'
 import { uniqBy } from '../../../utils/uniques'
 
 export async function getStaticPaths() {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
+  let allPosts = await Astro.glob('../../p/*.md')
   allPosts = allPosts.filter(o => !!o.domain).filter(o => !o.draft).sort(byDate)
 
   const allDomains = uniqBy(allPosts, 'domain').map(({ domain }) => domain)
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 }
 
 const { pages } = Astro.props
-const { domain } = Astro.request.params
+const { domain } = Astro.params
 const lastPage = Math.ceil(pages.length / pageSize)
 const page = {
   lastPage,

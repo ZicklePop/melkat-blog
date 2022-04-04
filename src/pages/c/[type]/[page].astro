@@ -7,7 +7,7 @@ import { pageSize } from '../../../consts/config'
 import { uniqBy } from '../../../utils/uniques'
 
 export async function getStaticPaths({ paginate }) {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
+  let allPosts = await Astro.glob('../../p/*.md')
   allPosts = allPosts.filter(o => !!o.type).filter(o => !o.draft).sort(byDate)
 
   const allTypes = uniqBy(allPosts, 'type').map(({ type }) => type)
@@ -24,7 +24,7 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props
-const { type } = Astro.request.params
+const { type } = Astro.params
 ---
 <Layout
   title={`melkat.blog - ${type} posts, page ${page.currentPage} of ${page.lastPage}`}

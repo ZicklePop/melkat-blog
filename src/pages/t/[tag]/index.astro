@@ -8,8 +8,8 @@ import { uniq } from '../../../utils/uniques'
 import getTags from '../../../utils/get-tags'
 
 export async function getStaticPaths() {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
-  allPosts = allPosts.filter(o => !o.draft).sort(byDate)
+  let allPosts = await Astro.glob('../../p/*.md')
+  allPosts = allPosts.frontmatter.filter(o => !o.draft).sort(byDate)
 
   let allTags = []
   allPosts.filter(o => !o.draft).forEach(({ tags }) => getTags(tags)?.forEach(tag => allTags.push(tag?.toLowerCase())))
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 }
 
 const { pages } = Astro.props
-const { tag } = Astro.request.params
+const { tag } = Astro.params
 const lastPage = Math.ceil(pages.length / pageSize)
 const page = {
   lastPage,

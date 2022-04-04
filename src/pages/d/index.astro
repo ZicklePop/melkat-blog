@@ -5,7 +5,7 @@ const cx = {
   div: 'prose prose-melkat dark:prose-invert mb-8',
 }
 
-let allPosts = await Astro.fetchContent('../p/*.md')
+let allPosts = await Astro.glob('../p/*.md')
 allPosts = allPosts.filter(o => !o.draft)
 
 const data = {}

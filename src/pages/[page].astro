@@ -6,7 +6,7 @@ import { byDate } from '../utils/sort'
 import { pageSize } from '../consts/config'
 
 export async function getStaticPaths({ paginate, rss }) {
-  let allPosts = await Astro.fetchContent('./p/*.md')
+  let allPosts = await Astro.glob('./p/*.md')
   allPosts = allPosts.filter(o => !o.draft).sort(byDate)
   rss({
     title: 'melkat.blog',

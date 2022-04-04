@@ -8,7 +8,7 @@ import { uniq } from '../../../utils/uniques'
 import getTags from '../../../utils/get-tags'
 
 export async function getStaticPaths({ paginate }) {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
+  let allPosts = await Astro.glob('../../p/*.md')
   allPosts = allPosts.filter(o => !o.draft).sort(byDate)
 
   let allTags = []
@@ -27,7 +27,7 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props
-const { tag } = Astro.request.params
+const { tag } = Astro.params
 ---
 <Layout
   title={`melkat.blog - posts tagged #${tag}, page ${page.currentPage} of ${page.lastPage}`}

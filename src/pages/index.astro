@@ -5,7 +5,7 @@ import PageNavigator from '../components/page-navigator.astro'
 import { byDate } from '../utils/sort'
 import { pageSize } from '../consts/config'
 
-let allPosts = await Astro.fetchContent('./p/*.md')
+let allPosts = await Astro.glob('./p/*.md')
 allPosts = allPosts.sort(byDate).filter(o => !o.draft)
 const lastPage = Math.ceil(allPosts.length / pageSize)
 const page = {
