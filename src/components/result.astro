@@ -1,0 +1,17 @@
+---
+import Article from './article.astro'
+
+const {
+  content_html,
+  date_publication: date,
+  external_url: link,
+  image: cover,
+  tags,
+  title,
+  url,
+} = Astro.props
+---
+
+<Article {title} {cover} {link} {date} {url} {tags}>
+  <Fragment set:html={content_html} />
+</Article>

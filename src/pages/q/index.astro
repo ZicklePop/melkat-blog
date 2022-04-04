@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/base-layout.astro'
+import Browse from '../../components/browse.astro'
+import Search from '../../components/search'
+
+const cx = {
+  div: 'prose prose-melkat dark:prose-invert mb-8',
+}
+---
+
+<Layout title="melkat.blog - Search" permalink="/q">
+  <div class={cx.div}>
+    <h2>Search</h2>
+
+    <Search client:load />
+
+    <Browse />
+  </div>
+</Layout>
