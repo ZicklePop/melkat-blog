@@ -1,6 +1,5 @@
 ---
 const cx = {
-  a: 'text-cerulean-700 dark:text-cerulean-500 underline',
   h2: 'mb-4 text-xl font-medium',
 }
 
@@ -8,7 +7,7 @@ const { title = '', link = '' } = Astro.props
 ---
 
 <h2 class={cx.h2}>
-  <a href={link} class={cx.a}>
+  <a href={link}>
     {title}
   </a>
 </h2>

@@ -1,36 +1,18 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --dark: rgb(55, 65, 81);
-  --light: rgb(209, 213, 219);
-}
-
-body {
-  color: var(--dark);
-  background-color: #ffffff;
-}
-
-a {
-  color: var(--dark);
-}
-
-article {
-  border-color: rgba(0, 0, 0, 0.12);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   body {
-    color: var(--light);
-    background-color: #000000;
+    @apply bg-white text-gray-700 dark:bg-black dark:text-gray-300;
   }
 
   a {
-    color: var(--light);
+    @apply underline text-cerulean-700 dark:text-cerulean-700;
   }
 
   article {
-    border-color: rgb(255, 255, 255, 0.25);
+    @apply border-black/10 dark:border-white/25;
   }
 }
+
+@tailwind components;
+@tailwind utilities;
