@@ -4,19 +4,17 @@ import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
-import { uniq } from '../../../utils/uniques'
-import getTags from '../../../utils/get-tags'
+import { noDrafts, hasTags } from '../../../utils/filter'
+import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
 
 export async function getStaticPaths() {
   let allPosts = await Astro.fetchContent('../../p/*.md')
-  allPosts = allPosts.filter(o => !o.draft).sort(byDate)
+  allPosts = allPosts.filter(hasTags).filter(noDrafts).sort(byDate)
 
-  let allTags = []
-  allPosts.filter(o => !o.draft).forEach(({ tags }) => getTags(tags)?.forEach(tag => allTags.push(tag?.toLowerCase())))
-  allTags = uniq(allTags)
+  const allTags = getAllTags(allPosts)
 
   return allTags?.map(tag => {
-    const filtered = allPosts.filter(o => getTags(o.tags)?.includes(tag))
+    const filtered = getPostsByTag(allPosts, tag)
     return {
       params: {
         tag

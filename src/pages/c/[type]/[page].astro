@@ -4,16 +4,16 @@ import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
-import { uniqBy } from '../../../utils/uniques'
+import { getAllTypes, getPostsByType } from '../../../utils/get-posts'
+import { noDrafts, hasType } from '../../../utils/filter'
 
 export async function getStaticPaths({ paginate }) {
   let allPosts = await Astro.fetchContent('../../p/*.md')
-  allPosts = allPosts.filter(o => !!o.type).filter(o => !o.draft).sort(byDate)
+  allPosts = allPosts.filter(hasType).filter(noDrafts).sort(byDate)
 
-  const allTypes = uniqBy(allPosts, 'type').map(({ type }) => type)
-
+  const allTypes = getAllTypes(allPosts)
   return allTypes?.map(type => {
-    const filtered = allPosts.filter(o => o.type === type)
+    const filtered = getPostsByType(allPosts, type)
     return paginate(filtered, {
       params: {
         type

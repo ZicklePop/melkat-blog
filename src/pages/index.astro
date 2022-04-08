@@ -3,10 +3,11 @@ import Layout from '../layouts/base-layout.astro'
 import Article from '../components/article.astro'
 import PageNavigator from '../components/page-navigator.astro'
 import { byDate } from '../utils/sort'
+import { noDrafts } from '../utils/filter'
 import { pageSize } from '../consts/config'
 
 let allPosts = await Astro.fetchContent('./p/*.md')
-allPosts = allPosts.sort(byDate).filter(o => !o.draft)
+allPosts = allPosts.sort(byDate).filter(noDrafts)
 const lastPage = Math.ceil(allPosts.length / pageSize)
 const page = {
   lastPage,

@@ -2,12 +2,13 @@
 import Layout from '../layouts/base-layout.astro'
 import Article from '../components/article.astro'
 import PageNavigator from '../components/page-navigator.astro'
+import { noDrafts } from '../utils/filter'
 import { byDate } from '../utils/sort'
 import { pageSize } from '../consts/config'
 
 export async function getStaticPaths({ paginate, rss }) {
   let allPosts = await Astro.fetchContent('./p/*.md')
-  allPosts = allPosts.filter(o => !o.draft).sort(byDate)
+  allPosts = allPosts.filter(noDrafts).sort(byDate)
   rss({
     title: 'melkat.blog',
     description: 'a blog by Melanie Kat',
@@ -19,9 +20,7 @@ export async function getStaticPaths({ paginate, rss }) {
     })),
   });
 
-  return paginate(allPosts, {
-    pageSize,
-  })
+  return paginate(allPosts, { pageSize })
 }
 
 const { page } = Astro.props

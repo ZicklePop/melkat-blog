@@ -1,24 +1,15 @@
 ---
 import Layout from '../../layouts/base-layout.astro'
-import getTags from '../../utils/get-tags'
+import { getTagsByCount } from '../../utils/get-posts'
+import { noDrafts } from '../../utils/filter'
 
 const cx = {
   div: 'prose prose-melkat dark:prose-invert mb-8',
 }
 
 let allPosts = await Astro.fetchContent('../p/*.md')
-allPosts = allPosts.filter(o => !o.draft)
-
-const data = {}
-allPosts.forEach(({ tags }) => {
-  if (tags) {
-    const individualTags = getTags(tags)
-    individualTags.forEach(tag => {
-      data[tag] = data[tag] ? data[tag] + 1 : 1
-    })
-  }
-})
-const sortedData = Object.keys(data).map(key => ({ key, count: data[key] })).sort((a, b) => b.count - a.count)
+allPosts = allPosts.filter(noDrafts)
+const sortedData = getTagsByCount(allPosts)
 
 ---
 <Layout
