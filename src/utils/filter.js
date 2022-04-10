@@ -1,7 +1,9 @@
-export const noDrafts = (o) => !o.draft
+export const noDrafts = (o) => !o.frontmatter.draft
 
-export const hasType = (o) => !!o.type
+export const noJsonDrafts = (o) => !o.draft
 
-export const hasDomain = (o) => !!o.domain
+export const hasType = (o) => !!o.frontmatter.type
 
-export const hasTags = (o) => !!o.tags
+export const hasDomain = (o) => !!o.frontmatter.domain
+
+export const hasTags = (o) => !!o.frontmatter.tags

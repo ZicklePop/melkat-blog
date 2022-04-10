@@ -5,17 +5,18 @@
   "private": true,
   "scripts": {
     "build": "astro build",
+    "check": "astro check; prettier -c .",
     "dev": "astro dev",
     "format": "prettier --write .",
-    "lint": "astro check",
+    "lint": "echo 'waiting for astro check and astros prettier to work :('",
     "prepare": "husky install",
     "preview": "astro preview",
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/tailwind": "0.0.2",
+    "@astrojs/tailwind": "^0.1.0",
     "@tailwindcss/typography": "^0.5.2",
-    "astro": "^0.25.4",
+    "astro": "^0.26.1",
     "autoprefixer": "^10.4.4",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
