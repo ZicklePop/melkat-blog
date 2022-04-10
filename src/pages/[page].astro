@@ -4,19 +4,17 @@ import PageNavigator from '../components/page-navigator.astro'
 import { noDrafts } from '../utils/filter'
 import { byDate } from '../utils/sort'
 import { pageSize } from '../consts/config'
+import { getMarkdownForRSS } from '../utils/get-markdown'
 
 export async function getStaticPaths({ paginate, rss }) {
   let allPosts = await Astro.glob('./p/*.md')
   allPosts = allPosts.filter(noDrafts).sort(byDate)
+  const items = await getMarkdownForRSS(allPosts)
+  console.log('getStaticPaths', items)
   rss({
     title: 'melkat.blog',
     description: 'a blog by Melanie Kat',
-    items: allPosts.map(item => ({
-      title: item.frontmatter.title,
-      description: item.Content,  // TODO: Fix this
-      link: item.url,
-      pubDate: item.frontmatter.date,
-    })),
+    items,
   });
 
   return paginate(allPosts, { pageSize })
