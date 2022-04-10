@@ -10,7 +10,6 @@ export async function getStaticPaths({ paginate, rss }) {
   let allPosts = await Astro.glob('./p/*.md')
   allPosts = allPosts.filter(noDrafts).sort(byDate)
   const items = await getMarkdownForRSS(allPosts)
-  console.log('getStaticPaths', items)
   rss({
     title: 'melkat.blog',
     description: 'a blog by Melanie Kat',
