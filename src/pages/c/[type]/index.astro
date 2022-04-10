@@ -1,6 +1,5 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
-import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
@@ -8,7 +7,7 @@ import { noDrafts, hasType } from '../../../utils/filter'
 import { getAllTypes, getPostsByType } from '../../../utils/get-posts'
 
 export async function getStaticPaths() {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
+  let allPosts = await Astro.glob('../../p/*.md')
   allPosts = allPosts.filter(hasType).filter(noDrafts).sort(byDate)
 
   const allTypes = getAllTypes(allPosts)
@@ -27,7 +26,7 @@ export async function getStaticPaths() {
 }
 
 const { pages } = Astro.props
-const { type } = Astro.request.params
+const { type } = Astro.params
 const lastPage = Math.ceil(pages.length / pageSize)
 const page = {
   lastPage,
@@ -40,6 +39,6 @@ const page = {
   title={`melkat.blog - ${type} posts${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
   permalink={`/c/${type}`}
 >
-  {pages.slice(0, pageSize).map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+  {pages.slice(0, pageSize).map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

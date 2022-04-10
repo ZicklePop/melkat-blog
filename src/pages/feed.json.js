@@ -8,7 +8,6 @@ export async function get() {
       let item = items[el]
       item = await item()
       const {
-        astro: { html: content_html },
         cover,
         date: date_published,
         draft,
@@ -21,7 +20,7 @@ export async function get() {
       const image = `https://melkat.blog${cover}`
 
       return {
-        content_html,
+        content_html: item.Content, // TODO: Fix this
         date_published,
         draft,
         external_url,
