@@ -1,19 +1,20 @@
 ---
 import Layout from './base-layout.astro'
 import Article from '../components/article.astro'
+import Blank from '../components/blank.astro'
 const { content } = Astro.props
 const { title, cover, id } = content
 const permalink = `/p/${id}`
 const isPermalink =
   `${Astro.canonicalURL}`.indexOf(`${Astro.site.pathname}p/`) > -1
-const Component = isPermalink ? Layout : 'div'
+const Component = isPermalink ? Layout : Blank
 ---
 
 <Component
-  title={isPermalink && `melkat.blog - ${title}`}
-  description={isPermalink && content.astro.source.split('\n')[0]}
-  cover={isPermalink && cover}
-  permalink={isPermalink && permalink}
+  title={`melkat.blog - ${title}`}
+  description={content.astro.source.split('\n')[0]}
+  {cover}
+  {permalink}
 >
   <Article {...content} url={permalink}>
     <Fragment set:html={content.astro.html} />
