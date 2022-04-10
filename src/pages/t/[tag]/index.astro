@@ -1,22 +1,19 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
-import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
-import { uniq } from '../../../utils/uniques'
-import getTags from '../../../utils/get-tags'
+import { noDrafts, hasTags } from '../../../utils/filter'
+import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
 
 export async function getStaticPaths() {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
-  allPosts = allPosts.filter(o => !o.draft).sort(byDate)
+  let allPosts = await Astro.glob('../../p/*.md')
+  allPosts = allPosts.filter(hasTags).filter(noDrafts).sort(byDate)
 
-  let allTags = []
-  allPosts.filter(o => !o.draft).forEach(({ tags }) => getTags(tags)?.forEach(tag => allTags.push(tag?.toLowerCase())))
-  allTags = uniq(allTags)
+  const allTags = getAllTags(allPosts)
 
   return allTags?.map(tag => {
-    const filtered = allPosts.filter(o => getTags(o.tags)?.includes(tag))
+    const filtered = getPostsByTag(allPosts, tag)
     return {
       params: {
         tag
@@ -29,7 +26,7 @@ export async function getStaticPaths() {
 }
 
 const { pages } = Astro.props
-const { tag } = Astro.request.params
+const { tag } = Astro.params
 const lastPage = Math.ceil(pages.length / pageSize)
 const page = {
   lastPage,
@@ -42,6 +39,6 @@ const page = {
   title={`melkat.blog - posts tagged #${tag}${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
   permalink={`/t/${tag}`}
 >
-  {pages.slice(0, pageSize).map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+  {pages.slice(0, pageSize).map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

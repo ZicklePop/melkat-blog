@@ -1,35 +1,33 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
-import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
-import { uniqBy } from '../../../utils/uniques'
+import { getAllDomains, getPostsByDomain } from '../../../utils/get-posts'
+import { noDrafts, hasDomain } from '../../../utils/filter'
 
 export async function getStaticPaths({ paginate }) {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
-  allPosts = allPosts.filter(o => !!o.domain).filter(o => !o.draft).sort(byDate)
+  let allPosts = await Astro.glob('../../p/*.md')
+  allPosts = allPosts.filter(hasDomain).filter(noDrafts).sort(byDate)
 
-  const allDomains = uniqBy(allPosts, 'domain').map(({ domain }) => domain)
+  const allDomains = getAllDomains(allPosts)
 
   return allDomains?.map(domain => {
-    const filtered = allPosts.filter(o => o.domain === domain)
+    const filtered = getPostsByDomain(allPosts, domain)
     return paginate(filtered, {
-      params: {
-        domain
-      },
+      params: { domain },
       pageSize,
     })
   })
 }
 
 const { page } = Astro.props
-const { domain } = Astro.request.params
+const { domain } = Astro.params
 ---
 <Layout
   title={`melkat.blog - posts from #${domain}, page ${page.currentPage} of ${page.lastPage}`}
   permalink={`/d/${domain}/${page.currentPage}`}
 >
-  {page.data.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+  {page.data.map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

@@ -1,20 +1,15 @@
 ---
 import Layout from '../../layouts/base-layout.astro'
+import { getDomainsByCount } from '../../utils/get-posts'
+import { noDrafts } from '../../utils/filter'
 
 const cx = {
   div: 'prose prose-melkat dark:prose-invert mb-8',
 }
 
-let allPosts = await Astro.fetchContent('../p/*.md')
-allPosts = allPosts.filter(o => !o.draft)
-
-const data = {}
-allPosts.forEach(({ domain }, i) => {
-  if (domain) {
-    data[domain] = data[domain] ? data[domain] + 1 : 1
-  }
-})
-const sortedData = Object.keys(data).map(key => ({ key, count: data[key] })).sort((a, b) => b.count - a.count)
+let allPosts = await Astro.glob('../p/*.md')
+allPosts = allPosts.filter(noDrafts)
+const sortedData = getDomainsByCount(allPosts)
 
 ---
 <Layout
