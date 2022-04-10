@@ -10,10 +10,10 @@ const Component = isPermalink ? Layout : 'div'
 ---
 
 <Component
-  title={`melkat.blog - ${title}`}
-  description={content.astro.source.split('\n')[0]}
-  {cover}
-  {permalink}
+  title={isPermalink && `melkat.blog - ${title}`}
+  description={isPermalink && content.astro.source.split('\n')[0]}
+  cover={isPermalink && cover}
+  permalink={isPermalink && permalink}
 >
   <Article {...content} url={permalink}>
     <Fragment set:html={content.astro.html} />
