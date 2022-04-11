@@ -1,5 +1,5 @@
-import { renderMarkdown } from '@astrojs/markdown-remark';
-import fs from 'fs';
+import { renderMarkdown } from '@astrojs/markdown-remark'
+import fs from 'fs'
 
 export const getMarkdown = async (path) => {
   const raw = fs.readFileSync(path, 'utf8').split('---').at(-1)
@@ -8,7 +8,7 @@ export const getMarkdown = async (path) => {
 }
 
 export const getMarkdownForRSS = async (items) => {
-  const output = items.map(async item => {
+  const output = items.map(async (item) => {
     const description = await getMarkdown(item.file)
     return {
       description,
