@@ -3,7 +3,7 @@ import Layout from '../layouts/base-layout.astro'
 import PageNavigator from '../components/page-navigator.astro'
 import { noDrafts } from '../utils/filter'
 import { byDate } from '../utils/sort'
-import { pageSize, title } from '../consts/config'
+import { pageSize, title, description } from '../consts/config'
 import { getMarkdownForRSS } from '../utils/get-markdown'
 
 export async function getStaticPaths({ paginate, rss }) {
@@ -12,7 +12,7 @@ export async function getStaticPaths({ paginate, rss }) {
   const items = await getMarkdownForRSS(allPosts)
   rss({
     title,
-    description: 'a blog by Melanie Kat',
+    description,
     items,
   });
 
