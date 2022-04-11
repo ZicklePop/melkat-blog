@@ -1,4 +1,6 @@
 import { byJsonDate } from '../utils/sort'
+import { noJsonDrafts } from '../utils/filter'
+import getMarkdown from '../utils/get-markdown'
 import getTags from '../utils/get-tags'
 
 export async function get() {
@@ -7,17 +9,16 @@ export async function get() {
     Object.keys(items).map(async (el) => {
       let item = items[el]
       item = await item()
+      const content_html = await getMarkdown(item.file)
       const {
-        astro: { html: content_html },
         cover,
         date: date_published,
         draft,
-        id,
         link: external_url,
         tags,
         title,
       } = item.frontmatter
-      const url = `https://melkat.blog/p/${id}`
+      const url = `https://melkat.blog${item.url}`
       const image = `https://melkat.blog${cover}`
 
       return {
@@ -33,7 +34,7 @@ export async function get() {
       }
     })
   )
-  items = items.filter((o) => !o.draft).sort(byJsonDate)
+  items = items.filter(noJsonDrafts).sort(byJsonDate)
 
   return {
     body: JSON.stringify({

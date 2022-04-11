@@ -1,38 +1,33 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
-import Article from '../../../components/article.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize } from '../../../consts/config'
-import { uniq } from '../../../utils/uniques'
-import getTags from '../../../utils/get-tags'
+import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
+import { noDrafts, hasTags } from '../../../utils/filter'
 
 export async function getStaticPaths({ paginate }) {
-  let allPosts = await Astro.fetchContent('../../p/*.md')
-  allPosts = allPosts.filter(o => !o.draft).sort(byDate)
+  let allPosts = await Astro.glob('../../p/*.md')
+  allPosts = allPosts.filter(hasTags).filter(noDrafts).sort(byDate)
 
-  let allTags = []
-  allPosts.filter(o => !o.draft).forEach(({ tags }) => getTags(tags)?.forEach(tag => allTags.push(tag?.toLowerCase())))
-  allTags = uniq(allTags)
+  let allTags = getAllTags(allPosts)
 
   return allTags?.map(tag => {
-    const filtered = allPosts.filter(o => getTags(o.tags)?.includes(tag))
+    const filtered = getPostsByTag(allPosts, tag)
     return paginate(filtered, {
-      params: {
-        tag
-      },
+      params: { tag },
       pageSize,
     })
   })
 }
 
 const { page } = Astro.props
-const { tag } = Astro.request.params
+const { tag } = Astro.params
 ---
 <Layout
   title={`melkat.blog - posts tagged #${tag}, page ${page.currentPage} of ${page.lastPage}`}
   permalink={`/t/${tag}/${page.currentPage}`}
 >
-  {page.data.map(({ title, cover, link, domain, date, url, tags, type, content }) => <Article {title} {cover} {link} {domain} {date} {url} {tags} {type}><Fragment set:html={content.html}/></Article>)}
+  {page.data.map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>
