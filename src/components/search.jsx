@@ -34,7 +34,6 @@ const Search = () => {
       const result = fuse
         .search(query)
         .filter((o) => o.score < 0.1)
-        .sort((a, b) => b.score - a.score)
       setResults(result)
     }
   }, [db, query, results, setResults])
