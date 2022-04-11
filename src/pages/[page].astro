@@ -3,7 +3,7 @@ import Layout from '../layouts/base-layout.astro'
 import PageNavigator from '../components/page-navigator.astro'
 import { noDrafts } from '../utils/filter'
 import { byDate } from '../utils/sort'
-import { pageSize } from '../consts/config'
+import { pageSize, title } from '../consts/config'
 import { getMarkdownForRSS } from '../utils/get-markdown'
 
 export async function getStaticPaths({ paginate, rss }) {
@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate, rss }) {
   allPosts = allPosts.filter(noDrafts).sort(byDate)
   const items = await getMarkdownForRSS(allPosts)
   rss({
-    title: 'melkat.blog',
+    title,
     description: 'a blog by Melanie Kat',
     items,
   });
@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate, rss }) {
 const { page } = Astro.props
 ---
 <Layout
-  title={`melkat.blog - page ${page.currentPage} of ${page.lastPage}`}
+  title={`${title} - page ${page.currentPage} of ${page.lastPage}`}
   permalink={`/${page.currentPage}`}
 >
   {page.data.map(({ Content }) => <Content />)}

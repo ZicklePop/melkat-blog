@@ -3,10 +3,11 @@ import Category from './category.astro'
 import Permalink from './permalink.astro'
 import Tag from './tag.astro'
 import getTags from '../utils/get-tags'
+import { cxs } from '../consts/config'
 
 const cx = {
-  li: 'inline-block uppercase my-1',
-  tag: 'inline-block uppercase my-1 pr-1',
+  li: cxs.li,
+  tag: `${cxs.li} pr-1`,
   ul: 'list-none mt-4'
 }
 

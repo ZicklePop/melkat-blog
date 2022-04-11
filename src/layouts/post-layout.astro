@@ -1,17 +1,19 @@
 ---
 import Layout from './base-layout.astro'
 import Article from '../components/article.astro'
-import Blank from '../components/blank.astro'
+import { title as blogTitle } from '../consts/config'
+
 const { content } = Astro.props
 const { title, cover, id } = content
+
 const permalink = `/p/${id}`
 const isPermalink =
   `${Astro.canonicalURL}`.indexOf(`${Astro.site.pathname}p/`) > -1
-const Component = isPermalink ? Layout : Blank
+const Component = isPermalink ? Layout : Fragment
 ---
 
 <Component
-  title={`melkat.blog - ${title}`}
+  title={`${blogTitle} - ${title}`}
   description={content.astro.source.split('\n')[0]}
   {cover}
   {permalink}

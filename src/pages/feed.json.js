@@ -2,6 +2,7 @@ import { byJsonDate } from '../utils/sort'
 import { noJsonDrafts } from '../utils/filter'
 import getMarkdown from '../utils/get-markdown'
 import getTags from '../utils/get-tags'
+import { title as blogTitle } from '../consts/config'
 
 export async function get() {
   let items = await import.meta.glob('./p/*.md')
@@ -39,7 +40,7 @@ export async function get() {
   return {
     body: JSON.stringify({
       version: 'https://jsonfeed.org/version/1.1',
-      title: 'melkat.blog',
+      title: blogTitle,
       icon: 'https://melkat.blog/apple-touch-icon.png',
       home_page_url: 'https://melkat.blog/',
       feed_url: 'https://melkat.blog/feed.json',

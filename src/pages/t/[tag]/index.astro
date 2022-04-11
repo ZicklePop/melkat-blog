@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/base-layout.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
-import { pageSize } from '../../../consts/config'
+import { pageSize, title } from '../../../consts/config'
 import { noDrafts, hasTags } from '../../../utils/filter'
 import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
 
@@ -36,7 +36,7 @@ const page = {
 }
 ---
 <Layout
-  title={`melkat.blog - posts tagged #${tag}${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
+  title={`${title} - posts tagged #${tag}${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
   permalink={`/t/${tag}`}
 >
   {pages.slice(0, pageSize).map(({ Content }) => <Content />)}

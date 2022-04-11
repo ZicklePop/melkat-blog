@@ -1,10 +1,11 @@
 ---
 import Layout from '../../layouts/base-layout.astro'
+import { cxs, title } from '../../consts/config'
 import { getTypesByCount } from '../../utils/get-posts'
 import { noDrafts } from '../../utils/filter'
 
 const cx = {
-  div: 'prose prose-melkat dark:prose-invert mb-8',
+  div: `${cxs.prose} mb-8`,
 }
 
 let allPosts = await Astro.glob('../p/*.md')
@@ -13,7 +14,7 @@ const sortedData = getTypesByCount(allPosts)
 
 ---
 <Layout
-  title='melkat.blog - Posts by category'
+  title={`${title} - Posts by category`}
   permalink='/c'
 >
   <div class={cx.div}>
