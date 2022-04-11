@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import Fuse from 'fuse.js/dist/fuse.basic'
-import Result from './result.astro'
 
 const SEARCH_OPTIONS = {
   keys: ['title', 'content_html', 'external_url', 'tags'],
@@ -30,9 +29,14 @@ const Search = () => {
   }, [db, setDb])
 
   useEffect(() => {
-    const fuse = new Fuse(db, SEARCH_OPTIONS)
-    const result = fuse.search(query).filter((o) => o.score < 0.1)
-    setResults(result)
+    if (!!query) {
+      const fuse = new Fuse(db, SEARCH_OPTIONS)
+      const result = fuse
+        .search(query)
+        .filter((o) => o.score < 0.1)
+        .sort((a, b) => b.score - a.score)
+      setResults(result)
+    }
   }, [db, query, results, setResults])
 
   const handleSubmit = (e) => {
@@ -62,7 +66,9 @@ const Search = () => {
       </form>
       {showNoResults && <p>No results</p>}
       {showResults &&
-        results.map(({ item }) => <Result key={item.id} {...item} />)}
+        results.map((result) => (
+          <pre key={result.item.id}>{JSON.stringify(result, null, 2)}</pre>
+        ))}
     </>
   )
 }
