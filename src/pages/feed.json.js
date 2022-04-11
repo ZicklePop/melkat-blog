@@ -2,6 +2,7 @@ import { byJsonDate } from '../utils/sort'
 import { noJsonDrafts } from '../utils/filter'
 import getMarkdown from '../utils/get-markdown'
 import getTags from '../utils/get-tags'
+import { title as blogTitle, description, baseUrl } from '../consts/config'
 
 export async function get() {
   let items = await import.meta.glob('./p/*.md')
@@ -18,8 +19,8 @@ export async function get() {
         tags,
         title,
       } = item.frontmatter
-      const url = `https://melkat.blog${item.url}`
-      const image = `https://melkat.blog${cover}`
+      const url = `${baseUrl}${item.url}`
+      const image = `${baseUrl}${cover}`
 
       return {
         content_html,
@@ -39,14 +40,15 @@ export async function get() {
   return {
     body: JSON.stringify({
       version: 'https://jsonfeed.org/version/1.1',
-      title: 'melkat.blog',
-      icon: 'https://melkat.blog/apple-touch-icon.png',
-      home_page_url: 'https://melkat.blog/',
-      feed_url: 'https://melkat.blog/feed.json',
+      title: blogTitle,
+      description,
+      icon: `${baseUrl}/apple-touch-icon.png`,
+      home_page_url: baseUrl,
+      feed_url: `${baseUrl}/feed.json`,
       authors: [
         {
           name: 'Melanie Kat',
-          avatar: 'https://melkat.blog/apple-touch-icon.png',
+          avatar: `${baseUrl}/apple-touch-icon.png`,
         },
       ],
       items,
