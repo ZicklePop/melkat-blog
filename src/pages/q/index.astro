@@ -4,16 +4,12 @@ import Browse from '../../components/browse.astro'
 import Search from '../../components/search'
 
 const cx = {
-  div: 'prose prose-melkat dark:prose-invert mb-8',
+  h2: 'mb-4 text-xl font-medium',
 }
 ---
 
 <Layout title="melkat.blog - Search" permalink="/q">
-  <div class={cx.div}>
-    <h2>Search</h2>
-
-    <Search client:load />
-
-    <Browse />
-  </div>
+  <h2 class={cx.h2}>Search</h2>
+  <Search client:load />
+  <Browse />
 </Layout>

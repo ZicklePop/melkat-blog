@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import FeedArticle from './feed-article'
 import Fuse from 'fuse.js/dist/fuse.basic'
+import { useState, useEffect } from 'react'
 
 const SEARCH_OPTIONS = {
   keys: ['title', 'content_html', 'external_url', 'tags'],
@@ -7,12 +8,12 @@ const SEARCH_OPTIONS = {
 }
 
 const cx = {
-  form: 'mb-8',
+  div: 'mb-8',
   label: 'hidden',
   input:
-    'appearance-none outline-none bg-transparent border border-r-0 border-blue-700 rounded-l-md px-3 py-2 focus:ring-2 ring-blue-700',
+    'appearance-none outline-none bg-transparent border border-cerulean-700 rounded-md px-3 py-2 focus:ring-3 ring-cerulean-700',
   button:
-    'appearance-none outline-none border border-blue-700 bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 font-semibold white px-3 py-2 rounded-r-md focus:ring-2 ring-blue-700',
+    'appearance-none outline-none border border-cerulean-700 bg-cerulean-700 hover:bg-cerulean-600 focus:bg-cerulean-800 font-semibold white px-3 py-2 rounded-r-md focus:ring-2 ring-cerulean-700',
 }
 
 const Search = () => {
@@ -31,9 +32,7 @@ const Search = () => {
   useEffect(() => {
     if (!!query) {
       const fuse = new Fuse(db, SEARCH_OPTIONS)
-      const result = fuse
-        .search(query)
-        .filter((o) => o.score < 0.1)
+      const result = fuse.search(query).filter((o) => o.score < 0.1)
       setResults(result)
     }
   }, [db, query, results, setResults])
@@ -47,7 +46,7 @@ const Search = () => {
 
   return (
     <>
-      <form className={cx.form} onSubmit={handleSubmit}>
+      <div className={cx.div}>
         <label className={cx.label} htmlFor="search">
           Search
         </label>
@@ -56,18 +55,13 @@ const Search = () => {
           type="search"
           id="search"
           name="q"
-          placeholder="Search"
+          placeholder="Type to search"
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button className={cx.button} type="submit">
-          Search
-        </button>
-      </form>
+      </div>
       {showNoResults && <p>No results</p>}
       {showResults &&
-        results.map((result) => (
-          <pre key={result.item.id}>{JSON.stringify(result, null, 2)}</pre>
-        ))}
+        results.map(({ item }) => <FeedArticle key={item.id} {...item} />)}
     </>
   )
 }
