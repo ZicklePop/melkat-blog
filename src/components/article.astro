@@ -16,7 +16,6 @@ const {
   link,
   tags,
   title,
-  type,
   url,
 } = Astro.props
 ---
@@ -27,5 +26,5 @@ const {
   <Body>
     <slot />
   </Body>
-  <Tags {url} {tags} {type} />
+  <Tags {url} {tags} />
 </article>

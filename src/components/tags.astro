@@ -1,5 +1,4 @@
 ---
-import Category from './category.astro'
 import Permalink from './permalink.astro'
 import Tag from './tag.astro'
 import getTags from '../utils/get-tags'
@@ -14,21 +13,16 @@ const cx = {
 const {
   url,
   tags,
-  type,
 } = Astro.props
 ---
+
 <ul class={cx.ul}>
   <li class={cx.li}>
     <Permalink {url} />
   </li>
-  {(!!type || !!tags) &&
+  {(!!tags) &&
     <li class={cx.li}>
       •
-    </li>
-  }
-  {!!type &&
-    <li class={cx.li}>
-      <Category {type} />
     </li>
   }
   {getTags(tags)?.map(tag => (

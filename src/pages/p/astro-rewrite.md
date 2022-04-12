@@ -3,8 +3,7 @@ date: 2022-03-20T20:02:19.497Z
 id: astro-rewrite
 layout: ../../layouts/post-layout.astro
 title: I rewrote my blog with Astro
-tags: me, astro, javascript
-type: post
+tags: post, me, astro, javascript
 cover: /img/astro-rewrite.png
 ---
 Welcome to the blog that was known as [melkat.link](https://melkat.link).

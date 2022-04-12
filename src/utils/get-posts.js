@@ -1,24 +1,7 @@
-import { hasType, hasDomain, hasTags } from './filter'
+import { hasDomain, hasTags } from './filter'
 import { uniq } from './uniques'
 import getTags from './get-tags'
 import countKeys from './count-keys'
-
-// Types
-
-export const getAllTypes = (posts) =>
-  uniq(posts.filter(hasType).map(({ frontmatter: { type } }) => type))
-
-export const getTypesByCount = (posts) => {
-  const data = {}
-  posts.forEach(({ frontmatter: { type } }) => {
-    data[type] = data[type] ? data[type] + 1 : 1
-  })
-  return countKeys(data)
-}
-
-export const getPostsByType = (posts, type) => {
-  return posts.filter((o) => o.frontmatter.type === type)
-}
 
 // Domains
 

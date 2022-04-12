@@ -7,8 +7,7 @@ title: Template
 # cover: /img/template.png
 # domain: example.com
 # link: https://example.com/my-link
-# tags: comma, seperated
-# type: link, article, video
+# tags: [link, article, video, post] comma, seperated
 ---
 
 Hi! My name is Melanie.

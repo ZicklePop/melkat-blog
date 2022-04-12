@@ -1,8 +1,0 @@
----
-const cx = {
-  a: 'no-underline hover:underline text-cerulean-700 dark:text-cerulean-500',
-}
-const { type } = Astro.props
----
-
-<a class={cx.a} href={`/c/${type?.trim()}`}>#{type?.trim()}</a>
