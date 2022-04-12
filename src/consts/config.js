@@ -5,7 +5,8 @@ export const baseUrl = 'https://melkat.blog'
 
 export const cxs = {
   a: 'text-cerulean-700 dark:text-cerulean-500 underline',
-  aHover: 'no-underline hover:underline text-cerulean-700 dark:text-cerulean-500',
+  aHover:
+    'no-underline hover:underline text-cerulean-700 dark:text-cerulean-500',
   h1: 'font-light text-4xl my-6',
   h2: 'mb-4 text-xl font-medium',
   li: 'inline-block uppercase my-1',

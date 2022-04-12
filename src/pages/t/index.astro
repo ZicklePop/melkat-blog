@@ -13,10 +13,7 @@ allPosts = allPosts.filter(noDrafts)
 const sortedData = getTagsByCount(allPosts)
 
 ---
-<Layout
-  title='${title} - Posts by tag'
-  permalink='/t'
->
+<Layout title={`${title} - Posts by tag`} permalink='/t'>
   <div class={cx.div}>
     <h2>Posts by tag</h2>
     <ul>

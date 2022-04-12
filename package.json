@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^0.1.0",
-    "@astrojs/tailwind": "^0.1.0",
+    "@astrojs/tailwind": "^0.1.2",
     "@tailwindcss/typography": "^0.5.2",
     "astro": "^0.26.1",
     "autoprefixer": "^10.4.4",
