@@ -1,6 +1,6 @@
 ---
 cover: /img/uses.jpg
-date: 2022-03-31T05:18:15.218Z
+date: 2022-04-12T04:53:33.458Z
 id: uses
 layout: ../../layouts/post-layout.astro
 tags: uses, apps, hardware
@@ -37,7 +37,8 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 	- [Drop + Mito Keysterine Cyanide Keycap Set](https://drop.com/buy/keysterine-keycap-set?defaultSelectionIds=965918) - Translucent keycaps that match the blue Portico75.
 	- [SP-Star Marble Soda Original switches](https://thekey.company/collections/in-stock/products/sp-star-marble-soda-switches) Blue linear switches that are quiet enough and match the translucent blue of the Portico75 and Keysterine keycaps.
 - [Kensington VeriMark USB Fingerprint Key](https://smile.amazon.com/gp/product/B01NAVWPOJ) - This is finicky but when it works it's pretty cool.
-- [Logitech MX Vertical Ergonomic Mouse](https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html) - Using a regular mouse or trackpad for long periods of time was hurting my wrist during this stay-home lifestyle we're all living.
+- [Kone XP](https://www.roccat.com/products/kone-xp) - I wanted to try out a gaming mouse and this seemed like the perfect place to start. It's light and has automatic profile switching between apps and games.
+- [Logitech MX Ergo](https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.910-005178.html) - I learned during quarantine that my hand starts to hurt after long periods of using a regular mouse. The MX Vertical is great but I've wanted to try a trackball mouse for a while.
 - [Stream Deck](https://www.elgato.com/en/stream-deck) - The answer to the question, "omg where is the hang up button on Zoom?!" It's right there, on a physical button.
 
 
@@ -48,8 +49,9 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [Behringer UMC204HD Audio Interface](https://www.behringer.com/product.html?modelCode=P0BK0)
 - [FiiO BTR5 Bluetooth and USB-C DAC](https://www.fiio.com/btr5) - No headphone jack on the iOS devices anymore, so lets add it back through Bluetooth.
 - [Hatsune Miku Edition TASCAM VL-S3BT Speakers](https://tascam.com/us/product/vl-s3/)
+- [Opal C1](https://opalcamera.com) - This camera is pretty slick and in early beta. I hope to one day use it with Windows as well as Mac. As of this writing it runs 105°F when it's not in use, the software is lacking, and it only works in Zoom and Chrome.
 - [Pokémon Center × Grado Labs Pikachu Headphones](https://gradolabs.com/pokemon) - Thic cable, amazing sound, wearing all day leads to them getting a little uncomfortable, but they have a Pikachu on them so it's five stars all around. And hey, approved by [DankPods](https://www.youtube.com/watch?v=kR0xiIYvOSw).
-- [RAZER Kiyo Camera w/ Ring Light](https://www.razer.com/streaming-cameras/razer-kiyo) - Not a fan of Razer, but it solved a lighting issue for me.
+- [RAZER Kiyo Camera w/ Ring Light](https://www.razer.com/streaming-cameras/razer-kiyo) - Not a fan of Razer, but it solved a lighting issue for me. Where I cannot use the Opal C1, I will use this camera.
 - [Samson SR850 Headphones](https://smile.amazon.com/Samson-SR850-Semi-Open-Back-Reference-Headphones/dp/B002LBSEQS) with [Brainwavz Cooling Gel Earpads](https://smile.amazon.com/gp/product/B07SBT93R9/) - Long cable, amazing sound, and with the replacement earpads they are the most comfortable headphones I own. Great for all day wear. Also recommended by [DankPods](https://www.youtube.com/watch?v=aKIryezhAos)!
 
 
