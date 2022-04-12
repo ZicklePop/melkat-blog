@@ -12,8 +12,7 @@ const cx = {
   label: 'hidden',
   input:
     'appearance-none outline-none bg-transparent border border-cerulean-700 rounded-md px-3 py-2 focus:ring-3 ring-cerulean-700',
-  button:
-    'appearance-none outline-none border border-cerulean-700 bg-cerulean-700 hover:bg-cerulean-600 focus:bg-cerulean-800 font-semibold white px-3 py-2 rounded-r-md focus:ring-2 ring-cerulean-700',
+  p: 'mb-8 italic',
 }
 
 const Search = () => {
@@ -59,7 +58,7 @@ const Search = () => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      {showNoResults && <p>No results</p>}
+      {showNoResults && <p className={cx.p}>No results</p>}
       {showResults &&
         results.map(({ item }) => <FeedArticle key={item.id} {...item} />)}
     </>
