@@ -58,7 +58,7 @@ const FeedArticle = ({
         {!!tags && <li className={cx.li}>{` • `}</li>}
         {tags.map((tag, i) => (
           <li key={`${id}-${tag}`} className={cx.li}>
-            <a href={`/tag/${tag}`} className={cx.aHover}>
+            <a href={`/t/${tag}`} className={cx.aHover}>
               #{tag}
             </a>
             {` `}
