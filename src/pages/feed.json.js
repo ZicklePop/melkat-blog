@@ -16,11 +16,12 @@ export async function get() {
         date: date_published,
         draft,
         link: external_url,
-        tags,
+        tags: tagsStr,
         title,
       } = item.frontmatter
       const url = `${baseUrl}${item.url}`
-      const image = `${baseUrl}${cover}`
+      const image = !!cover ? { image: `${baseUrl}${cover}` } : {}
+      const tags = getTags(tagsStr) || []
 
       return {
         content_html,
@@ -28,10 +29,10 @@ export async function get() {
         draft,
         external_url,
         id: url,
-        image,
-        tags: getTags(tags),
+        tags,
         title,
         url,
+        ...image,
       }
     })
   )
