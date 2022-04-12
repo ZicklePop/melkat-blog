@@ -11,7 +11,7 @@ const cx = {
   div: 'mb-8',
   label: 'hidden',
   input:
-    'appearance-none outline-none bg-transparent border border-cerulean-700 rounded-md px-3 py-2 focus:ring-2 ring-offset-2 ring-sky-300 w-full',
+    'appearance-none focus:outline-none bg-transparent border border-cerulean-700 rounded-md px-3 py-2 focus:ring-2 ring-offset-2 ring-sky-300 w-full',
   p: 'mb-8 italic',
 }
 
