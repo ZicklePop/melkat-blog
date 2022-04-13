@@ -12,7 +12,6 @@ const cx = {
 const {
   cover,
   date,
-  domain,
   link,
   tags,
   title,
@@ -22,7 +21,7 @@ const {
 <article class={cx.article}>
   {cover && <Cover {cover} {title} /> }
   <Title {title} link={link ? link : url} />
-  <Details {domain} {date} />
+  <Details {link} {date} />
   <Body>
     <slot />
   </Body>

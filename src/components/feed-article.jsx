@@ -1,4 +1,5 @@
 import formatDate from '../utils/format-date'
+import getDomain from '../utils/get-domain'
 import { cxs } from '../consts/config'
 
 const cx = {
@@ -24,6 +25,7 @@ const FeedArticle = ({
   title,
   url,
 }) => {
+  const domain = !!external_url && getDomain(external_url)
   return (
     <article className={cx.article}>
       {image && (
@@ -43,6 +45,12 @@ const FeedArticle = ({
         </a>
       </h2>
       <p className={cx.details}>
+        {domain && (
+          <a href={`/d/${domain}`} className={cx.aHover}>
+            {domain}
+          </a>
+        )}
+        {domain ? ' • ' : ''}
         <time dateTime={date_published}>{formatDate(date_published)}</time>
       </p>
       <div

@@ -4,11 +4,11 @@ import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize, title } from '../../../consts/config'
 import { getAllDomains, getPostsByDomain } from '../../../utils/get-posts'
-import { noDrafts, hasDomain } from '../../../utils/filter'
+import { noDrafts, hasLink } from '../../../utils/filter'
 
 export async function getStaticPaths({ paginate }) {
   let allPosts = await Astro.glob('../../p/*.md')
-  allPosts = allPosts.filter(hasDomain).filter(noDrafts).sort(byDate)
+  allPosts = allPosts.filter(hasLink).filter(noDrafts).sort(byDate)
 
   const allDomains = getAllDomains(allPosts)
 

@@ -1,10 +1,12 @@
 ---
+import getDomain from '../utils/get-domain'
 import { cxs } from '../consts/config'
 const cx = {
   a: cxs.aHover,
 }
 
-const { domain } = Astro.props
+const { link } = Astro.props
+const domain = getDomain(link)
 ---
 
-<a class={cx.a} href={`/d/${domain}`}>{domain?.replace('www.', '')}</a>
+<a class={cx.a} href={`/d/${domain}`}>{domain}</a>
