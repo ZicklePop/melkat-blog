@@ -1,7 +1,6 @@
 import { hasLink, hasTags } from './filter'
 import { uniq } from './uniques'
 import getDomain from './get-domain'
-import getTags from './get-tags'
 import countKeys from './count-keys'
 
 // Domains
@@ -31,7 +30,7 @@ export const getAllTags = (posts) => {
   posts = posts.filter(hasTags)
   let allTags = []
   posts.forEach(({ frontmatter: { tags } }) =>
-    getTags(tags).forEach((tag) => allTags.push(tag))
+    tags.forEach((tag) => allTags.push(tag))
   )
   return uniq(allTags)
 }
@@ -40,8 +39,7 @@ export const getTagsByCount = (posts) => {
   const data = {}
   posts.forEach(({ frontmatter: { tags } }) => {
     if (tags) {
-      const individualTags = getTags(tags)
-      individualTags.forEach((tag) => {
+      tags.forEach((tag) => {
         data[tag] = data[tag] ? data[tag] + 1 : 1
       })
     }

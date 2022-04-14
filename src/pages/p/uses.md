@@ -3,7 +3,7 @@ cover: /img/uses.jpg
 date: 2022-04-12T04:53:33.458Z
 id: uses
 layout: ../../layouts/post-layout.astro
-tags: post, uses, apps, hardware
+tags: [post, uses, apps, hardware]
 title: Uses
 ---
 Inspired by [uses.tech](https://uses.tech), I have written up my current setup. I will try to keep this post updated as things change.

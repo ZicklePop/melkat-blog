@@ -1,7 +1,6 @@
 ---
 import Permalink from './permalink.astro'
 import Tag from './tag.astro'
-import getTags from '../utils/get-tags'
 import { cxs } from '../consts/config'
 
 const cx = {
@@ -25,7 +24,7 @@ const {
       •
     </li>
   }
-  {getTags(tags)?.map(tag => (
+  {tags.map(tag => (
     <li class={cx.tag}>
       <Tag {tag} />
     </li>

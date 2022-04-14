@@ -1,6 +1,7 @@
 import FeedArticle from './feed-article'
-import Fuse from 'fuse.js/dist/fuse.basic'
 import { useState, useEffect } from 'react'
+
+const Fuse = (await import('fuse.js')).default
 
 const SEARCH_OPTIONS = {
   keys: ['title', 'content_html', 'external_url', 'tags'],
@@ -35,10 +36,6 @@ const Search = () => {
       setResults(result)
     }
   }, [db, query, results, setResults])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  }
 
   const showResults = query.length > 0 && results.length > 0
   const showNoResults = results.length < 1 && query.length > 0
