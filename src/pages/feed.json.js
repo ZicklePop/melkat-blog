@@ -1,7 +1,6 @@
 import { byJsonDate } from '../utils/sort'
 import { noJsonDrafts } from '../utils/filter'
 import getMarkdown from '../utils/get-markdown'
-import getTags from '../utils/get-tags'
 import { title as blogTitle, description, baseUrl } from '../consts/config'
 
 export async function get() {
@@ -16,12 +15,11 @@ export async function get() {
         date: date_published,
         draft,
         link: external_url,
-        tags: tagsStr,
+        tags,
         title,
       } = item.frontmatter
       const url = `${baseUrl}${item.url}`
       const image = !!cover ? { image: `${baseUrl}${cover}` } : {}
-      const tags = getTags(tagsStr) || []
 
       return {
         content_html,
