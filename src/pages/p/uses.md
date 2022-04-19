@@ -49,9 +49,9 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [FiiO BTR5 Bluetooth and USB-C DAC](https://www.fiio.com/btr5) - No headphone jack on the iOS devices anymore, so lets add it back through Bluetooth.
 - [Hatsune Miku Edition TASCAM VL-S3BT Speakers](https://tascam.com/us/product/vl-s3/)
 - [Opal C1](https://opalcamera.com) - This camera is pretty slick and in early beta. I hope to one day use it with Windows as well as Mac. As of this writing it runs 105°F when it's not in use, the software is lacking, and it only works in Zoom and Chrome.
-- [Pokémon Center × Grado Labs Pikachu Headphones](https://gradolabs.com/pokemon) - Thic cable, amazing sound, wearing all day leads to them getting a little uncomfortable, but they have a Pikachu on them so it's five stars all around. And hey, approved by [DankPods](https://www.youtube.com/watch?v=kR0xiIYvOSw).
+- [Pokémon Center × Grado Labs Pikachu Headphones](https://gradolabs.com/pokemon) - Thic cable, amazing sound, wearing all day leads to them getting a little uncomfortable, but they have a Pikachu on them so it's five stars all around. And hey, approved by [DankPods](https://www.youtube.com/watch?v=kR0xiIYvOSw 'YouTube Video: The best worst headphones ever.').
 - [RAZER Kiyo Camera w/ Ring Light](https://www.razer.com/streaming-cameras/razer-kiyo) - Not a fan of Razer, but it solved a lighting issue for me. Where I cannot use the Opal C1, I will use this camera.
-- [Samson SR850 Headphones](https://smile.amazon.com/Samson-SR850-Semi-Open-Back-Reference-Headphones/dp/B002LBSEQS) with [Brainwavz Cooling Gel Earpads](https://smile.amazon.com/gp/product/B07SBT93R9/) - Long cable, amazing sound, and with the replacement earpads they are the most comfortable headphones I own. Great for all day wear. Also recommended by [DankPods](https://www.youtube.com/watch?v=aKIryezhAos)!
+- [Samson SR850 Headphones](https://smile.amazon.com/Samson-SR850-Semi-Open-Back-Reference-Headphones/dp/B002LBSEQS) with [Brainwavz Cooling Gel Earpads](https://smile.amazon.com/gp/product/B07SBT93R9/) - Long cable, amazing sound, and with the replacement earpads they are the most comfortable headphones I own. Great for all day wear. Also recommended by [DankPods](https://www.youtube.com/watch?v=aKIryezhAos 'YouTube Video: Do cheaper headphones stink?')!
 
 
 ## Software
@@ -121,12 +121,12 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 
 - [Dark Reader](https://darkreader.org/) - Outside of Safari, I use this to manually make bright websites that are hurting my eyes dark.
 - [DuckDuckGo Privacy Essentials](https://duckduckgo.com/app) - no Mobile Safari support
-- [Magnet Links](https://girlfriend.technology/magnet-links/) - Makes Magnet Links work with Put.io. I made this!
+- [Magnet Links](https://girlfriend.technology/magnet-links/ 'Browser extension Magnet Links') - Makes Magnet Links work with Put.io. I made this!
 - [React Developer Tools](https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-devtools-profiler) - No Safari support. This is for debugging React.
 - [Refined GitHub](https://github.com/refined-github/refined-github) - Various customizations for GitHub to fill some gaps.
 - [Tabby Cat](https://www.tabbycats.club/) - No Safari support. Random cute cats in every tab.
 - [uBlock Origin](https://ublockorigin.com/) - No Safari support. Blocks ads and trackers for your security.
-- [X to Y](https://girlfriend.technology/x-to-y/) - Replace words in text or links with other text. I made this too!
+- [X to Y](https://girlfriend.technology/x-to-y/ 'Browser extension X to Y') - Replace words in text or links with other text. I made this too!
 
 
 ### Safari
