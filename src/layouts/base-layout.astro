@@ -56,7 +56,9 @@ const {
   </head>
   <body class={className}>
     <Header />
-    <slot />
+    <main role="main">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
