@@ -12,12 +12,13 @@ const cx = {
 const {
   url,
   tags,
+  title,
 } = Astro.props
 ---
 
 <ul class={cx.ul}>
   <li class={cx.li}>
-    <Permalink {url} />
+    <Permalink {url} {title} />
   </li>
   {(!!tags) &&
     <li class={cx.li}>

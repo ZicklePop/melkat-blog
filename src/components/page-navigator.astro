@@ -11,14 +11,15 @@ const cx = {
 const { url = {}, currentPage = '1', lastPage = '1' } = Astro.props.page
 const { prev, next } = url
 ---
+
 <div class={cx.box}>
   <div class={cx.navigation}>
-    {prev && <a href={prev} class={cx.a}>&#8592; Newer</a>}
+    {prev && <a href={prev} class={cx.a} aria-label="Newer posts">&#8592; Newer</a>}
   </div>
   <div class={cx.pageCount}>
     <span>{currentPage} of {lastPage}</span>
   </div>
   <div class={`${cx.navigation} justify-end`}>
-    {next ? <a href={next} class={cx.a}>Older &#8594;</a> : ''}
+    {next ? <a href={next} class={cx.a} aria-label="Older posts">Older &#8594;</a> : ''}
   </div>
 </div>

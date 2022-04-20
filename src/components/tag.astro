@@ -6,4 +6,4 @@ const cx = {
 const { tag } = Astro.props
 ---
 
-<a class={cx.a} href={`/t/${tag}`}>#{tag}</a>
+<a class={cx.a} href={`/t/${tag}`} aria-label={`Posts tagged #${tag}`}>#{tag}</a>

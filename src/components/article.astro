@@ -20,10 +20,10 @@ const {
 ---
 <article class={cx.article}>
   {cover && <Cover {cover} {title} /> }
-  <Title {title} link={link ? link : url} />
+  <Title {title} link={link ? link : url} isExternal={!!link} />
   <Details {link} {date} />
   <Body>
     <slot />
   </Body>
-  <Tags {url} {tags} />
+  <Tags {url} {tags} {title} />
 </article>
