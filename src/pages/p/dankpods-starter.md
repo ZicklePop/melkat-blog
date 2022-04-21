@@ -1,7 +1,7 @@
 ---
-cover: /img/dankpod-starter.jpg
+cover: /img/dankpods-starter.jpg
 date: 2022-04-21T22:43:46.501Z
-id: dankpod-starter
+id: dankpods-starter
 layout: ../../layouts/post-layout.astro
 link: https://www.youtube.com/watch?v=jk-Tybi-ihw
 title: The DankPods Headphone Starter Guide.
