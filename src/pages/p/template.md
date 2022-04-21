@@ -5,9 +5,8 @@ id: template
 layout: ../../layouts/post-layout.astro
 title: Template
 # cover: /img/template.png
-# domain: example.com
 # link: https://example.com/my-link
-# tags: [link, article, video, post] comma, seperated
+# tags: [link, article, video, post, etc]
 ---
 
 Hi! My name is Melanie.
