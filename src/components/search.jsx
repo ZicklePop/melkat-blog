@@ -1,7 +1,7 @@
 import FeedArticle from './feed-article'
 import { useState, useEffect } from 'react'
 
-const Fuse = (await import('fuse.js')).default
+const Fuse = (await import('fuse.js/dist/fuse.basic.js')).default
 
 const SEARCH_OPTIONS = {
   keys: ['title', 'content_html', 'external_url', 'tags'],
