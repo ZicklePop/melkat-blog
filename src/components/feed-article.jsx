@@ -40,13 +40,23 @@ const FeedArticle = ({
         />
       )}
       <h2 className={cx.h2}>
-        <a href={external_url ? external_url : url} className={cx.a} aria-label={`${!!external_url ? 'Link to ' : 'Permalink for '}${title}`}>
+        <a
+          href={external_url ? external_url : url}
+          className={cx.a}
+          aria-label={`${
+            !!external_url ? 'Link to ' : 'Permalink for '
+          }${title}`}
+        >
           {title}
         </a>
       </h2>
       <p className={cx.details}>
         {domain && (
-          <a href={`/d/${domain}`} className={cx.aHover} aria-label={`Posts linking to ${domain}`}>
+          <a
+            href={`/d/${domain}`}
+            className={cx.aHover}
+            aria-label={`Posts linking to ${domain}`}
+          >
             {domain}
           </a>
         )}
@@ -59,8 +69,15 @@ const FeedArticle = ({
       />
       <ul className={cx.ul}>
         <li className={cx.li}>
-          <a href={url} className={cx.aHover} aria-label={`Permalink for ${title}`}>
-            <span role="img" aria-label="Star icon">★</span> Permalink
+          <a
+            href={url}
+            className={cx.aHover}
+            aria-label={`Permalink for ${title}`}
+          >
+            <span role="img" aria-label="Star icon">
+              ★
+            </span>{' '}
+            Permalink
           </a>
         </li>
         {!!tags && <li className={cx.li}>{` • `}</li>}
