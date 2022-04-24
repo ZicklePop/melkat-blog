@@ -6,7 +6,7 @@ const Fuse = (await import('fuse.js/dist/fuse.basic.js')).default
 const SEARCH_OPTIONS = {
   keys: ['title', 'body', 'external_url', 'tags'],
   includeScore: true,
-  threshold: 0.3,
+  threshold: 0.25,
 }
 
 const cx = {
