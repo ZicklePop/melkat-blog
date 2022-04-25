@@ -1,11 +1,12 @@
 import FeedArticle from './feed-article'
-import { useState, useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const Fuse = (await import('fuse.js/dist/fuse.basic.js')).default
 
 const SEARCH_OPTIONS = {
-  keys: ['title', 'content_html', 'external_url', 'tags'],
+  keys: ['title', 'body', 'external_url', 'tags'],
   includeScore: true,
+  threshold: 0.25,
 }
 
 const cx = {
@@ -19,23 +20,25 @@ const cx = {
 const Search = () => {
   const [query, setQuery] = useState('')
   const [db, setDb] = useState(false)
-  const [results, setResults] = useState([])
+  const fuse = useMemo(() => new Fuse(db, SEARCH_OPTIONS), [db])
+  const results = useMemo(() => fuse.search(query), [fuse, query])
 
   useEffect(() => {
     if (!db) {
       fetch('/feed.json')
         .then((res) => res.json())
-        .then((d) => setDb(d.items))
+        .then((d) =>
+          setDb(
+            d.items.map((item) => ({
+              ...item,
+              body: item.content_html
+                .replace(/<\/?[^>]+(>|$)/gm, '')
+                .split(' '),
+            }))
+          )
+        )
     }
   }, [db, setDb])
-
-  useEffect(() => {
-    if (!!query) {
-      const fuse = new Fuse(db, SEARCH_OPTIONS)
-      const result = fuse.search(query).filter((o) => o.score < 0.1)
-      setResults(result)
-    }
-  }, [db, query, results, setResults])
 
   const showResults = query.length > 0 && results.length > 0
   const showNoResults = results.length < 1 && query.length > 0

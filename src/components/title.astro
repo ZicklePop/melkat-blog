@@ -10,7 +10,11 @@ const { title = '', link = '', isExternal = false } = Astro.props
 ---
 
 <h2 class={cx.h2}>
-  <a href={link} class={cx.a} aria-label={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}>
+  <a
+    href={link}
+    class={cx.a}
+    aria-label={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
+  >
     {title}
   </a>
 </h2>
