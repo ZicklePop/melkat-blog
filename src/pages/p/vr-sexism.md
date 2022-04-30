@@ -1,6 +1,6 @@
 ---
 cover: /img/vr-sexism.jpg
-date: 2022-04-22T04:49:03.362Z
+date: 2022-04-30T06:32:11.369Z
 id: vr-sexism
 layout: ../../layouts/post-layout.astro
 title: "Virtual Reality Is Sexist: But It Does Not Have to Be"
