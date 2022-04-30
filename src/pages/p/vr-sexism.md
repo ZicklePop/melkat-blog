@@ -3,7 +3,7 @@ cover: /img/vr-sexism.jpg
 date: 2022-04-22T04:49:03.362Z
 id: vr-sexism
 layout: ../../layouts/post-layout.astro
-title: Virtual Reality Is Sexist: But It Does Not Have to Be
+title: "Virtual Reality Is Sexist: But It Does Not Have to Be"
 link: https://www.frontiersin.org/articles/10.3389/frobt.2020.00004/full
 tags: [article, sexism, vr]
 ---
