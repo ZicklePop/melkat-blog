@@ -18,7 +18,7 @@
     "@astrojs/tailwind": "^0.2.1",
     "@tailwindcss/typography": "^0.5.2",
     "astro": "^0.26.1",
-    "autoprefixer": "^10.4.5",
+    "autoprefixer": "^10.4.7",
     "fuse.js": "^6.5.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
