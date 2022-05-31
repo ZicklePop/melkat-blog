@@ -1,6 +1,5 @@
 import { byJsonDate } from '../utils/sort'
 import { noJsonDrafts } from '../utils/filter'
-import getMarkdown from '../utils/get-markdown'
 import { title as blogTitle, description, baseUrl } from '../consts/config'
 
 export async function get() {
@@ -9,7 +8,7 @@ export async function get() {
     Object.keys(items).map(async (el) => {
       let item = items[el]
       item = await item()
-      const content_html = await getMarkdown(item.file)
+      const content_html = await item.compiledContent()
       const {
         cover,
         date: date_published,
