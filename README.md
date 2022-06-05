@@ -1,6 +1,6 @@
 # [melkat.blog](https://melkat.blog)
 
-A simple_ish_ blog in Astro
+A simpleish blog in Astro
 
 
 ## Features
