@@ -1,5 +1,5 @@
 import { byJsonDate } from '../utils/sort'
-import { noJsonDrafts } from '../utils/filter'
+import { noFeedDrafts } from '../utils/filter'
 import { title as blogTitle, description, baseUrl } from '../consts/config'
 
 export async function get() {
@@ -33,7 +33,7 @@ export async function get() {
       }
     })
   )
-  items = items.filter(noJsonDrafts).sort(byJsonDate)
+  items = items.filter(noFeedDrafts).sort(byJsonDate)
 
   return {
     body: JSON.stringify({
