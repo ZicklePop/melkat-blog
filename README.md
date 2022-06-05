@@ -1,6 +1,6 @@
 # [melkat.blog](https://melkat.blog)
 
-A ~simple~ blog in Astro
+A simple_ish_ blog in Astro
 
 
 ## Features
@@ -11,5 +11,4 @@ A ~simple~ blog in Astro
 - RSS Feed
 - JSON Feed
 - Search
-- Astro utility for getting a markdown file's HTML when you need it
 - Built with Tailwind
