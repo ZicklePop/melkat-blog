@@ -164,7 +164,7 @@ It’s hard to get exited about something for in the year ahead. Things get canc
 - Animal Crossing: New Horizons — switch
 - Bob’s Burgers: The Movie — movie
 - Boyfriend Dungeon by Kitfox Games — switch
-- Calico: Magical Girls Running Cat Cafes — [pc](http://home.calicogame.com/)
+- Calico: Magical Girls Running Cat Cafes — [pc](https://whitethorngames.com/calico)
 - Get in the Car, Loser! by Love Conquers All Games — [itch.io](https://loveconquersallgames.itch.io/getinthecarloser)
 - Hatsune Miku Expo 2020 US — concert
 - Hatsune Miku: Project Diva Mega Mix — switch
