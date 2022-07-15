@@ -1,0 +1,15 @@
+name: Check for dead links
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  linkinator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: JustinBeckwith/linkinator-action@v1
+        with:
+          paths: **/*.md
