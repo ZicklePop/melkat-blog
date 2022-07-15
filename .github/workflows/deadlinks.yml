@@ -13,4 +13,4 @@ jobs:
       - uses: JustinBeckwith/linkinator-action@v1
         with:
           paths: "**/*.md"
-
+          concurrency: 1
