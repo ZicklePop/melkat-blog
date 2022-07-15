@@ -14,3 +14,4 @@ jobs:
         with:
           paths: "**/*.md"
           concurrency: 1
+          linksToSkip: "https://example.com/my-link"
