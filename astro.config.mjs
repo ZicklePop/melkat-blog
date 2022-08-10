@@ -12,4 +12,7 @@ export default defineConfig({
       },
     }),
   ],
+  legacy: {
+    astroFlavoredMarkdown: true, // todo: remove this :)
+  },
 })
