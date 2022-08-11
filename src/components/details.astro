@@ -6,14 +6,11 @@ const cx = {
   details: 'uppercase text-sm my-4',
 }
 
-const {
-  date,
-  link,
-  seperator = ' • ',
-} = Astro.props
+const { date, link, seperator = ' • ' } = Astro.props
 ---
+
 <p class={cx.details}>
-  {link && <Domain {link} /> }
+  {link && <Domain {link} />}
   {link ? seperator : ''}
   <Date {date} />
 </p>

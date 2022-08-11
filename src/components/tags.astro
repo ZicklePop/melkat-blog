@@ -6,26 +6,18 @@ import { cxs } from '../consts/config'
 const cx = {
   li: cxs.li,
   tag: `${cxs.li} pr-1`,
-  ul: 'list-none mt-4'
+  ul: 'list-none mt-4',
 }
 
-const {
-  url,
-  tags,
-  title,
-} = Astro.props
+const { url, tags, title } = Astro.props
 ---
 
 <ul class={cx.ul}>
   <li class={cx.li}>
     <Permalink {url} {title} />
   </li>
-  {(!!tags) &&
-    <li class={cx.li}>
-      •
-    </li>
-  }
-  {tags.map(tag => (
+  {!!tags && <li class={cx.li}>•</li>}
+  {tags.map((tag) => (
     <li class={cx.tag}>
       <Tag {tag} />
     </li>

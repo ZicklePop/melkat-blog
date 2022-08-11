@@ -9,4 +9,6 @@ const { link } = Astro.props
 const domain = getDomain(link)
 ---
 
-<a class={cx.a} href={`/d/${domain}`} aria-label={`Posts linking to ${domain}`}>{domain}</a>
+<a class={cx.a} href={`/d/${domain}`} aria-label={`Posts linking to ${domain}`}
+  >{domain}
+</a>

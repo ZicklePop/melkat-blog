@@ -6,20 +6,15 @@ import Tags from './tags.astro'
 import Title from './title.astro'
 
 const cx = {
-  article: 'pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25',
+  article:
+    'pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25',
 }
 
-const {
-  cover,
-  date,
-  link,
-  tags,
-  title,
-  url,
-} = Astro.props
+const { cover, date, link, tags, title, url } = Astro.props
 ---
+
 <article class={cx.article}>
-  {cover && <Cover {cover} {title} /> }
+  {cover && <Cover {cover} {title} />}
   <Title {title} link={link ? link : url} isExternal={!!link} />
   <Details {link} {date} />
   <Body>
