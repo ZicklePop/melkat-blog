@@ -1,10 +1,12 @@
 ---
+import { Image } from '@astrojs/image/components'
 import { cxs, title } from '../consts/config'
 
 const cx = {
   h1: 'font-light text-4xl my-6',
   link: 'no-underline hover:underline',
   logo: 'inline-block mr-2 align-middle',
+  img: 'h-16 w-auto',
 }
 ---
 
@@ -12,11 +14,11 @@ const cx = {
   <h1 class={cx.h1}>
     <a href="/" class={cx.link}>
       <div class={cx.logo}>
-        <img
+        <Image
+          src={import('../../public/logo.png')}
           alt="illustration by supasavina"
-          height={64}
-          src={'/logo.png'}
-          width={61}
+          class={cx.img}
+          height={192}
         />
       </div>{title}
     </a>
