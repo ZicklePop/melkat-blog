@@ -1,17 +1,16 @@
 ---
-import { Image } from '@astrojs/image/components'
-
 const cx = {
-  img: 'h-16 w-auto rounded ml-2 mb-2 float-right',
+  img: 'bg-cover aspect-video bg-center h-16 rounded ml-2 mb-2 float-right',
 }
 
 const { title, cover } = Astro.props
 ---
 
-<Image
-  src={import(`../../public${cover}`)}
+<div
   alt={title}
-  aspectRatio="16:9"
-  height={164}
+  aria-label="Preview image"
   class={cx.img}
-/>
+  role="img"
+  style={`background-image: url(${cover ? cover : ''})`}
+>
+</div>
