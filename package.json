@@ -19,7 +19,7 @@
     "@astrojs/rss": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^1.0.6",
+    "astro": "^1.1.1",
     "autoprefixer": "^10.4.8",
     "fuse.js": "^6.6.2",
     "husky": "^8.0.1",
