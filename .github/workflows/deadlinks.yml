@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: JustinBeckwith/linkinator-action@v1
         with:
-          paths: "**/*.md"
+          paths: '**/*.md'
           timeout: 30000
-          linksToSkip: "https://example.com/my-link,https://sevenseasentertainment.com/2020/02/20/seven-seas-has-a-type-with-license-of-what-the-font-a-manga-guide-to-western-typeface/,https://www.fiio.com/btr5,https://velocity.silverlakesoftware.com/,https://imageoptim.com/mac"
+          linksToSkip: 'https://example.com/my-link,https://sevenseasentertainment.com/2020/02/20/seven-seas-has-a-type-with-license-of-what-the-font-a-manga-guide-to-western-typeface/,https://www.fiio.com/btr5,https://velocity.silverlakesoftware.com/,https://imageoptim.com/mac'

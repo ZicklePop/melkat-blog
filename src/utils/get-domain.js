@@ -1,4 +1,4 @@
-export const getDomain = (link) =>
+export const getDomain = link =>
   link
     .replace(/^https?:\/\//, '')
     .split('/')[0]

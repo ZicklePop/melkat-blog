@@ -1,7 +1,7 @@
-export const noDrafts = (o) => !o.frontmatter.draft
+export const noDrafts = o => !o.frontmatter.draft
 
-export const noFeedDrafts = (o) => !o.draft
+export const noFeedDrafts = o => !o.draft
 
-export const hasLink = (o) => !!o.frontmatter.link
+export const hasLink = o => !!o.frontmatter.link
 
-export const hasTags = (o) => !!o.frontmatter.tags
+export const hasTags = o => !!o.frontmatter.tags

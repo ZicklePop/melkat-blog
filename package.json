@@ -8,7 +8,7 @@
     "check": "astro check; prettier -c .",
     "dev": "astro dev",
     "format": "prettier --write .",
-    "lint": "echo 'waiting for astro check and astros prettier to work :('",
+    "lint": "prettier --check .",
     "prepare": "husky install",
     "preview": "astro preview",
     "start": "astro dev"

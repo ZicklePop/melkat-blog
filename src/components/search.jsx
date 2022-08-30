@@ -26,10 +26,10 @@ const Search = () => {
   useEffect(() => {
     if (!db) {
       fetch('/feed.json')
-        .then((res) => res.json())
-        .then((d) =>
+        .then(res => res.json())
+        .then(d =>
           setDb(
-            d.items.map((item) => ({
+            d.items.map(item => ({
               ...item,
               body: item.content_html
                 .replace(/<\/?[^>]+(>|$)/gm, '')
@@ -55,7 +55,7 @@ const Search = () => {
           id="search"
           name="q"
           placeholder="Type to search"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={e => setQuery(e.target.value)}
         />
       </div>
       {showNoResults && <p className={cx.p}>No results</p>}

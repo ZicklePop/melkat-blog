@@ -15,9 +15,8 @@ const page = {
   },
 }
 ---
+
 <Layout>
-  {allPosts.slice(0, pageSize).map(
-    ({ Content }) => <Content />
-  )}
+  {allPosts.slice(0, pageSize).map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

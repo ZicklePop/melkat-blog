@@ -11,18 +11,20 @@ const cx = {
 let allPosts = await Astro.glob('../p/*.md')
 allPosts = allPosts.filter(noDrafts)
 const sortedData = getTagsByCount(allPosts)
-
 ---
-<Layout title={`${title} - Posts by tag`} permalink='/t'>
+
+<Layout title={`${title} - Posts by tag`} permalink="/t">
   <div class={cx.div}>
     <h2>Posts by tag</h2>
     <ul>
-      {sortedData.map(({key, count}) => (
-        <li>
-          <a href={`/t/${key}`}>{key}</a>
-          {count} posts
-        </li>
-      ))}
+      {
+        sortedData.map(({ key, count }) => (
+          <li>
+            <a href={`/t/${key}`}>{key}</a>
+            {count} posts
+          </li>
+        ))
+      }
     </ul>
   </div>
 </Layout>

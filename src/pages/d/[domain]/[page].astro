@@ -24,6 +24,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 const { domain } = Astro.params
 ---
+
 <Layout
   title={`${title} - posts from #${domain}, page ${page.currentPage} of ${page.lastPage}`}
   permalink={`/d/${domain}/${page.currentPage}`}

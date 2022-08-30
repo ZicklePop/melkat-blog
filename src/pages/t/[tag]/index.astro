@@ -16,11 +16,11 @@ export async function getStaticPaths() {
     const filtered = getPostsByTag(allPosts, tag)
     return {
       params: {
-        tag
+        tag,
       },
       props: {
-        pages: filtered
-      }
+        pages: filtered,
+      },
     }
   })
 }
@@ -35,8 +35,11 @@ const page = {
   },
 }
 ---
+
 <Layout
-  title={`${title} - posts tagged #${tag}${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
+  title={`${title} - posts tagged #${tag}${
+    lastPage > 1 ? ', page 1 of ' + lastPage : ''
+  }`}
   permalink={`/t/${tag}`}
 >
   {pages.slice(0, pageSize).map(({ Content }) => <Content />)}

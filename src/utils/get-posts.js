@@ -5,12 +5,12 @@ import countKeys from './count-keys'
 
 // Domains
 
-export const getAllDomains = (posts) =>
+export const getAllDomains = posts =>
   uniq(
     posts.filter(hasLink).map(({ frontmatter: { link } }) => getDomain(link))
   )
 
-export const getDomainsByCount = (posts) => {
+export const getDomainsByCount = posts => {
   const data = {}
   posts.forEach(({ frontmatter: { link } }) => {
     if (link) {
@@ -22,24 +22,24 @@ export const getDomainsByCount = (posts) => {
 }
 
 export const getPostsByDomain = (posts, domain) =>
-  posts.filter((o) => getDomain(o.frontmatter.link) === domain)
+  posts.filter(o => getDomain(o.frontmatter.link) === domain)
 
 // Tags
 
-export const getAllTags = (posts) => {
+export const getAllTags = posts => {
   posts = posts.filter(hasTags)
   let allTags = []
   posts.forEach(({ frontmatter: { tags } }) =>
-    tags.forEach((tag) => allTags.push(tag))
+    tags.forEach(tag => allTags.push(tag))
   )
   return uniq(allTags)
 }
 
-export const getTagsByCount = (posts) => {
+export const getTagsByCount = posts => {
   const data = {}
   posts.forEach(({ frontmatter: { tags } }) => {
     if (tags) {
-      tags.forEach((tag) => {
+      tags.forEach(tag => {
         data[tag] = data[tag] ? data[tag] + 1 : 1
       })
     }
@@ -48,4 +48,4 @@ export const getTagsByCount = (posts) => {
 }
 
 export const getPostsByTag = (posts, tag) =>
-  posts.filter((o) => o.frontmatter.tags && o.frontmatter.tags.includes(tag))
+  posts.filter(o => o.frontmatter.tags && o.frontmatter.tags.includes(tag))

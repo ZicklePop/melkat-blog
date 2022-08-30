@@ -1,4 +1,5 @@
 ---
+import Logo from './logo.astro'
 import { title } from '../consts/config'
 
 const cx = {
@@ -11,13 +12,8 @@ const cx = {
 <header role="banner">
   <h1 class={cx.h1}>
     <a href="/" class={cx.link}>
-      <div class={cx.logo}>
-        <img
-          alt="illustration by supasavina"
-          height={64}
-          src={'/logo.png'}
-          width={61}
-        />
+      <div class={cx.logo} title="emoji by dzuk.zone">
+        <Logo width={64} />
       </div>{title}
     </a>
   </h1>

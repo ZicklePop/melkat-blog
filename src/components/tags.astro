@@ -17,9 +17,11 @@ const { url, tags, title } = Astro.props
     <Permalink {url} {title} />
   </li>
   {!!tags && <li class={cx.li}>•</li>}
-  {tags.map((tag) => (
-    <li class={cx.tag}>
-      <Tag {tag} />
-    </li>
-  ))}
+  {
+    tags.map(tag => (
+      <li class={cx.tag}>
+        <Tag {tag} />
+      </li>
+    ))
+  }
 </ul>

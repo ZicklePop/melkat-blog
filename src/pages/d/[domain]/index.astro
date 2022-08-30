@@ -16,11 +16,11 @@ export async function getStaticPaths() {
     const filtered = getPostsByDomain(allPosts, domain)
     return {
       params: {
-        domain
+        domain,
       },
       props: {
-        pages: filtered
-      }
+        pages: filtered,
+      },
     }
   })
 }
@@ -35,8 +35,11 @@ const page = {
   },
 }
 ---
+
 <Layout
-  title={`${title} - posts from #${domain}${lastPage > 1 ? ', page 1 of ' + lastPage : ''}`}
+  title={`${title} - posts from #${domain}${
+    lastPage > 1 ? ', page 1 of ' + lastPage : ''
+  }`}
   permalink={`/d/${domain}`}
 >
   {pages.slice(0, pageSize).map(({ Content }) => <Content />)}

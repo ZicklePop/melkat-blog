@@ -6,7 +6,7 @@ import { title as blogTitle, description, baseUrl } from '../consts/config'
 export const get = async () => {
   let items = await import.meta.glob('./p/*.md')
   items = await Promise.all(
-    Object.keys(items).map(async (el) => {
+    Object.keys(items).map(async el => {
       let item = items[el]
       item = await item()
       const content_html = await item.compiledContent()
