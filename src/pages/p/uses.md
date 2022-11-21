@@ -32,7 +32,7 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 
 ### The Input Club
 
-- [Blue Portico75 Keyboard](https://thekey.company/collections/keyboards/products/portico75-blue) - A 75% keyboard with a knob and a USB-C port.
+- [Blue Portico75 Keyboard](https://thekey.company/collections/keyboards/products/portico75-clear) - A 75% keyboard with a knob and a USB-C port.
 	- [Drop + Mito Keysterine Cyanide Keycap Set](https://drop.com/buy/keysterine-keycap-set?defaultSelectionIds=965918) - Translucent keycaps that match the blue Portico75.
 	- [SP-Star Marble Soda Original switches](https://thekey.company/collections/in-stock/products/sp-star-marble-soda-switches) Blue linear switches that are quiet enough and match the translucent blue of the Portico75 and Keysterine keycaps.
 - [Kensington VeriMark USB Fingerprint Key](https://smile.amazon.com/gp/product/B01NAVWPOJ) - This is finicky but when it works it's pretty cool.
