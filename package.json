@@ -22,7 +22,7 @@
     "astro": "^1.6.10",
     "autoprefixer": "^10.4.13",
     "fuse.js": "^6.6.2",
-    "husky": "^8.0.1",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "^0.7.0",
