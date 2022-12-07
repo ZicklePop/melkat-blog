@@ -13,7 +13,9 @@ export default defineConfig({
         path: './tailwind.config.cjs',
       },
     }),
-    image(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
   ],
   legacy: {
     astroFlavoredMarkdown: true, // todo: remove this :)
