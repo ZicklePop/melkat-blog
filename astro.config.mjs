@@ -17,7 +17,4 @@ export default defineConfig({
       serviceEntryPoint: '@astrojs/image/sharp',
     }),
   ],
-  legacy: {
-    astroFlavoredMarkdown: true, // todo: remove this :)
-  },
 })

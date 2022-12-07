@@ -13,11 +13,11 @@ const Component = isPermalink ? Layout : Fragment
 
 <Component
   title={`${blogTitle} - ${title}`}
-  description={content.astro.source.split('\n')[0]}
+  description={Astro.props.rawContent().split('\n')[0]}
   {cover}
   {permalink}
 >
   <Article {...content} url={permalink}>
-    <Fragment set:html={content.astro.html} />
+    <Fragment set:html={Astro.props.compiledContent()} />
   </Article>
 </Component>
