@@ -1,13 +1,8 @@
 import FeedArticle from './feed-article'
+import map from 'lodash/map'
+import uFuzzy from '@leeoniya/ufuzzy'
 import { useEffect, useMemo, useState } from 'react'
-
-const Fuse = (await import('fuse.js/dist/fuse.basic.js')).default
-
-const SEARCH_OPTIONS = {
-  keys: ['title', 'body', 'external_url', 'tags'],
-  includeScore: true,
-  threshold: 0.25,
-}
+import { pageSize } from '../consts/config'
 
 const cx = {
   div: 'mb-8',
@@ -17,11 +12,27 @@ const cx = {
   p: 'mb-8 italic',
 }
 
+const uf = new uFuzzy()
+const getSearchableDb = db =>
+  map(
+    db,
+    ({ title = '', body = '', external_url = '', tags = [] }) =>
+      `${title} ${body} ${external_url} ${tags.join(' ')}`
+  )
+
 const Search = () => {
   const [query, setQuery] = useState('')
   const [db, setDb] = useState(false)
-  const fuse = useMemo(() => new Fuse(db, SEARCH_OPTIONS), [db])
-  const results = useMemo(() => fuse.search(query), [fuse, query])
+  const results = useMemo(() => {
+    const stringDb = getSearchableDb(db)
+    const idxs = uf.filter(stringDb, query)
+    const info = uf.info(idxs, stringDb, query)
+    const order = uf.sort(info, stringDb, query)
+    return map(order, i => {
+      const idx = idxs[i]
+      return db[idx]
+    }).slice(0, pageSize * 2)
+  }, [query])
 
   useEffect(() => {
     if (!db) {
@@ -60,7 +71,7 @@ const Search = () => {
       </div>
       {showNoResults && <p className={cx.p}>No results</p>}
       {showResults &&
-        results.map(({ item }) => <FeedArticle key={item.id} {...item} />)}
+        map(results, ({ id, ...rest }) => <FeedArticle key={id} {...rest} />)}
     </>
   )
 }
