@@ -1,20 +1,16 @@
 ---
+import PageHeader from './page-header.astro'
 import { cxs } from '../consts/config'
-
-const cx = {
-  a: cxs.a,
-  h2: 'mb-4 text-xl font-medium',
-}
 
 const { title = '', link = '', isExternal = false } = Astro.props
 ---
 
-<h2 class={cx.h2}>
+<PageHeader>
   <a
     href={link}
-    class={cx.a}
+    class={cxs.a}
     aria-label={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
   >
     {title}
   </a>
-</h2>
+</PageHeader>

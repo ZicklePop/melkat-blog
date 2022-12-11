@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
+import PageHeader from '../../../components/page-header.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize, title } from '../../../consts/config'
@@ -29,6 +30,7 @@ const { domain } = Astro.params
   title={`${title} - posts from #${domain}, page ${page.currentPage} of ${page.lastPage}`}
   permalink={`/d/${domain}/${page.currentPage}`}
 >
+  <PageHeader>Links to {domain}</PageHeader>
   {page.data.map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

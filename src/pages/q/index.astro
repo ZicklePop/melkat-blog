@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/base-layout.astro'
 import Browse from '../../components/browse.astro'
+import PageHeader from '../../components/page-header.astro'
 import Search from '../../components/search'
 
 const cx = {
@@ -9,7 +10,7 @@ const cx = {
 ---
 
 <Layout title="melkat.blog - Search" permalink="/q">
-  <h2 class={cx.h2}>Search</h2>
+  <PageHeader>Search</PageHeader>
   <Search client:load />
   <Browse />
 </Layout>

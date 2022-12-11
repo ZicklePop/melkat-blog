@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/base-layout.astro'
+import PageHeader from '../../../components/page-header.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
 import { byDate } from '../../../utils/sort'
 import { pageSize, title } from '../../../consts/config'
@@ -42,6 +43,7 @@ const page = {
   }`}
   permalink={`/d/${domain}`}
 >
+  <PageHeader>Links to {domain}</PageHeader>
   {pages.slice(0, pageSize).map(({ Content }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>
