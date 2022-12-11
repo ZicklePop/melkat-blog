@@ -19,9 +19,10 @@ export async function get() {
       } = item.frontmatter
       const url = `${baseUrl}${item.url}`
       const image = !!cover ? { image: `${baseUrl}${cover}` } : {}
+      const coverHtml = `<img src="${baseUrl}${cover}" alt="${title}" /><br />`
 
       return {
-        content_html,
+        content_html: cover ? `${coverHtml}${content_html}` : content_html,
         date_published,
         draft,
         external_url,

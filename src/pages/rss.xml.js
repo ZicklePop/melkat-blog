@@ -10,11 +10,12 @@ export const get = async () => {
       let item = items[el]
       item = await item()
       const content_html = await item.compiledContent()
-      const { date, draft, link: external_url, title } = item.frontmatter
+      const { cover, date, draft, link: external_url, title } = item.frontmatter
       const url = `${baseUrl}${item.url}`
+      const coverHtml = `<img src="${baseUrl}${cover}" alt="${title}" /><br />`
 
       return {
-        description: content_html,
+        description: cover ? `${coverHtml}${content_html}` : content_html,
         draft,
         link: url,
         pubDate: date,

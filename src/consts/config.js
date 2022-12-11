@@ -2,6 +2,8 @@ export const pageSize = 25
 export const description = 'a blog by Melanie Kat'
 export const title = 'melkat.blog'
 export const baseUrl = 'https://melkat.blog'
+export const defaultCover = '/cover.png'
+export const baseCoverUrl = `${baseUrl}${defaultCover}`
 
 export const cxs = {
   a: 'text-cerulean-700 dark:text-cerulean-500 underline',
@@ -16,6 +18,7 @@ export const cxs = {
 export default {
   baseUrl,
   cxs,
+  defaultCover,
   description,
   pageSize,
   title,
