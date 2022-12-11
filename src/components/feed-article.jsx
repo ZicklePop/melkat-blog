@@ -63,10 +63,6 @@ const FeedArticle = ({
         {domain ? ' • ' : ''}
         <time dateTime={date_published}>{formatDate(date_published)}</time>
       </p>
-      <div
-        className={cx.body}
-        dangerouslySetInnerHTML={{ __html: content_html.split('</p>')[0] }}
-      />
       <ul className={cx.ul}>
         <li className={cx.li}>
           <a
