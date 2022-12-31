@@ -47,5 +47,5 @@ Streaming services are trying to figure out how hard they can push their custome
 - Paper Girls (Prime Video)
 - Severance (Apple TV+)
 - The Rehearsal (HBO)
-- Tokyo Vice on (HBO)
+- Tokyo Vice (HBO)
 - Yellowjackets (Showtime)
