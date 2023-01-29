@@ -1,11 +1,16 @@
 ---
+import type { PaginateFunction } from 'astro'
 import Layout from '../layouts/base-layout.astro'
 import PageNavigator from '../components/page-navigator.astro'
 import { noDrafts } from '../utils/filter'
 import { byDate } from '../utils/sort'
 import { pageSize, title } from '../consts/config'
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction
+}) {
   let allPosts = await Astro.glob('./p/*.md')
   allPosts = allPosts.filter(noDrafts).sort(byDate)
 

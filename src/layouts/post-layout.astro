@@ -7,7 +7,7 @@ const { content } = Astro.props
 const { title, cover, id } = content
 
 const permalink = `/p/${id}`
-const isPermalink = `${Astro.url}`.indexOf(`${Astro.site.pathname}p/`) > -1
+const isPermalink = `${Astro.url}`.indexOf('/p/') > -1
 const Component = isPermalink ? Layout : Fragment
 ---
 

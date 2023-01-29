@@ -18,9 +18,9 @@ const { url, tags, title } = Astro.props
   </li>
   {!!tags && <li class={cx.li}>•</li>}
   {
-    tags.map(tag => (
+    tags.map((tag: string) => (
       <li class={cx.tag}>
-        <Tag {tag} />
+        <Tag tag={tag} />
       </li>
     ))
   }
