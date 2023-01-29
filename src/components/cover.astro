@@ -10,8 +10,9 @@ const { title, cover } = Astro.props
 
 <Picture
   alt={title}
-  src={cover}
-  class={cx.img}
-  widths={[120, 240, 360]}
   aspectRatio={16 / 9}
+  class={cx.img}
+  sizes="(min-device-pixel-ratio: 2) 360px, (min-device-pixel-ratio: 2) 240px, 120px)"
+  src={cover}
+  widths={[120, 240, 360]}
 />
