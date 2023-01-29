@@ -9,6 +9,14 @@ import {
   description as blogDescription,
 } from '../consts/config'
 
+export interface Props {
+  className?: string
+  cover?: string
+  description?: string
+  permalink?: string
+  title?: string
+}
+
 const {
   className = 'font-sans max-w-xl mx-auto px-2',
   cover = defaultCover,

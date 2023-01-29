@@ -44,6 +44,6 @@ const page = {
   permalink={`/d/${domain}`}
 >
   <PageHeader>Links to {domain}</PageHeader>
-  {pages.slice(0, pageSize).map(({ Content }) => <Content />)}
+  {pages.slice(0, pageSize).map(({ Content }: { Content: any }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

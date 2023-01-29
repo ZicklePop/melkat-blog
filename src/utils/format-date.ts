@@ -1,4 +1,4 @@
-const formatDate = pubDate => {
+const formatDate = (pubDate: string | number | Date) => {
   if (!pubDate) return ''
   const date = new Date(pubDate)
   const prettyDate = new Intl.DateTimeFormat('en-US', {

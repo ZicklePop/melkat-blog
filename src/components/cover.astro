@@ -1,6 +1,11 @@
 ---
 import { Picture } from '@astrojs/image/components'
 
+export interface Props {
+  title: string
+  cover: string
+}
+
 const cx = {
   img: 'h-16 rounded ml-2 mb-2 float-right',
 }
@@ -11,6 +16,7 @@ const { title, cover } = Astro.props
 <Picture
   alt={title}
   aspectRatio={16 / 9}
+  background={undefined}
   class={cx.img}
   sizes="(min-device-pixel-ratio: 2) 360px, (min-device-pixel-ratio: 2) 240px, 120px)"
   src={cover}

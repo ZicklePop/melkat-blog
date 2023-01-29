@@ -2,6 +2,16 @@ import formatDate from '../utils/format-date'
 import getDomain from '../utils/get-domain'
 import { cxs } from '../consts/config'
 
+export interface Props {
+  date_published: string
+  external_url?: string
+  id: string
+  image?: string
+  tags: string[]
+  title: string
+  url: string
+}
+
 const cx = {
   a: cxs.a,
   aHover: cxs.aHover,
@@ -16,7 +26,6 @@ const cx = {
 }
 
 const FeedArticle = ({
-  content_html,
   date_published,
   external_url,
   id,
@@ -24,13 +33,13 @@ const FeedArticle = ({
   tags,
   title,
   url,
-}) => {
+}: Props) => {
   const domain = !!external_url && getDomain(external_url)
   return (
     <article className={cx.article}>
       {image && (
         <div
-          alt={title}
+          title={title}
           aria-label="Preview image"
           className={cx.img}
           role="img"

@@ -2,6 +2,12 @@
 import Domain from './domain.astro'
 import Date from './date.astro'
 
+export interface Props {
+  date: string
+  link?: string
+  seperator?: string
+}
+
 const cx = {
   details: 'uppercase text-sm my-4',
 }
@@ -10,7 +16,7 @@ const { date, link, seperator = ' • ' } = Astro.props
 ---
 
 <p class={cx.details}>
-  {link && <Domain {link} />}
+  {link && <Domain link={link} />}
   {link ? seperator : ''}
-  <Date {date} />
+  <Date date={date} />
 </p>

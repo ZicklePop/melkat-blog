@@ -2,6 +2,12 @@
 import PageHeader from './page-header.astro'
 import { cxs } from '../consts/config'
 
+export interface Props {
+  title: string
+  link: string
+  isExternal?: boolean
+}
+
 const { title = '', link = '', isExternal = false } = Astro.props
 ---
 

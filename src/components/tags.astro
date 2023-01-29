@@ -3,6 +3,12 @@ import Permalink from './permalink.astro'
 import Tag from './tag.astro'
 import { cxs } from '../consts/config'
 
+export interface Props {
+  url: string
+  title: string
+  tags: string[]
+}
+
 const cx = {
   li: cxs.li,
   tag: `${cxs.li} pr-1`,
@@ -14,11 +20,11 @@ const { url, tags, title } = Astro.props
 
 <ul class={cx.ul}>
   <li class={cx.li}>
-    <Permalink {url} {title} />
+    <Permalink url={url} title={title} />
   </li>
   {!!tags && <li class={cx.li}>•</li>}
   {
-    tags.map((tag: string) => (
+    tags.map(tag => (
       <li class={cx.tag}>
         <Tag tag={tag} />
       </li>

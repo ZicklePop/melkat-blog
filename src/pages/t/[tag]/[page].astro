@@ -1,5 +1,4 @@
 ---
-import type { PaginateFunction } from 'astro'
 import Layout from '../../../layouts/base-layout.astro'
 import PageHeader from '../../../components/page-header.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
@@ -8,11 +7,7 @@ import { pageSize, title } from '../../../consts/config'
 import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
 import { noDrafts, hasTags } from '../../../utils/filter'
 
-export async function getStaticPaths({
-  paginate,
-}: {
-  paginate: PaginateFunction
-}) {
+export async function getStaticPaths({ paginate }) {
   let allPosts = await Astro.glob('../../p/*.md')
   allPosts = allPosts.filter(hasTags).filter(noDrafts).sort(byDate)
 
@@ -36,6 +31,6 @@ const { tag } = Astro.params
   permalink={`/t/${tag}/${page.currentPage}`}
 >
   <PageHeader>Posts tagged #{tag}</PageHeader>
-  {page.data.map(({ Content }) => <Content />)}
+  {page.data.map(({ Content }: { Content: any }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>

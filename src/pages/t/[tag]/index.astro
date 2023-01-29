@@ -44,6 +44,6 @@ const page = {
   permalink={`/t/${tag}`}
 >
   <PageHeader>Posts tagged #{tag}</PageHeader>
-  {pages.slice(0, pageSize).map(({ Content }) => <Content />)}
+  {pages.slice(0, pageSize).map(({ Content }: { Content: any }) => <Content />)}
   <PageNavigator page={page} />
 </Layout>
