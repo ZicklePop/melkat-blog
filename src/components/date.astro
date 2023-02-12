@@ -6,9 +6,8 @@ export interface Props {
 }
 
 const { date } = Astro.props
-const datetime = `${date}`
 ---
 
-<time datetime={datetime}>
+<time datetime={date.toISOString()}>
   {formatDate(date)}
 </time>

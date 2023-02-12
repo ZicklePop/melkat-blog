@@ -1,7 +1,7 @@
+import type { CollectionEntry } from 'astro:content'
 import type { MarkdownInstance } from 'astro'
 
-export const noDrafts = (o: MarkdownInstance<Record<string, any>>): boolean =>
-  !o.frontmatter.draft
+export const noDrafts = ({ data }: CollectionEntry<'posts'>) => !data.draft
 
 export const noFeedDrafts = (o: { draft: boolean }): boolean => !o.draft
 
