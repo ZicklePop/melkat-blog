@@ -2,12 +2,13 @@
 import formatDate from '../utils/format-date'
 
 export interface Props {
-  date: string
+  date: Date
 }
 
 const { date } = Astro.props
+const datetime = `${date}`
 ---
 
-<time datetime={date}>
+<time datetime={datetime}>
   {formatDate(date)}
 </time>

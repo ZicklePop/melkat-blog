@@ -2,31 +2,35 @@
 import Layout from './base-layout.astro'
 import Article from '../components/article.astro'
 import { title as blogTitle } from '../consts/config'
+import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
-  content: {
-    title: string
-    cover: string
-    id: string
-    date: string
-  }
+  post: CollectionEntry<'posts'>
 }
 
-const { content } = Astro.props
-const { title, cover, id } = content
+const { post } = Astro.props
+const { slug } = post
+const { title, cover, date, link, tags } = post.data
 
-const permalink = `/p/${id}`
+const permalink = `/p/${slug}`
 const isPermalink = `${Astro.url}`.indexOf('/p/') > -1
 const Component = isPermalink ? Layout : Fragment
 ---
 
 <Component
   cover={cover}
-  description={Astro.props.rawContent().split('\n')[0]}
+  description={post.body.split('\n')[0]}
   permalink={permalink}
   title={`${blogTitle} - ${title}`}
 >
-  <Article url={permalink} {...content}>
-    <Fragment set:html={Astro.props.compiledContent()} />
+  <Article
+    cover={cover}
+    date={date}
+    link={link}
+    tags={tags}
+    title={title}
+    url={permalink}
+  >
+    <slot />
   </Article>
 </Component>
