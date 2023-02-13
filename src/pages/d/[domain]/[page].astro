@@ -1,16 +1,21 @@
 ---
-import type { GetStaticPathsOptions } from 'astro'
 import Layout from '../../../layouts/base-layout.astro'
 import PageHeader from '../../../components/page-header.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
+import PostLayout from '../../../layouts/post-layout.astro'
+import type { CollectionEntry } from 'astro:content'
+import type { GetStaticPathsOptions } from 'astro'
 import { byDate } from '../../../utils/sort'
-import { pageSize, title } from '../../../consts/config'
 import { getAllDomains, getPostsByDomain } from '../../../utils/get-posts'
-import { noDrafts, hasLink } from '../../../utils/filter'
+import { getCollection } from 'astro:content'
+import { hasLinkNoDrafts } from '../../../utils/filter'
+import { pageSize, title } from '../../../consts/config'
+
+type EntryProp = CollectionEntry<'posts'>
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  let allPosts = await Astro.glob('../../p/*.md')
-  allPosts = allPosts.filter(hasLink).filter(noDrafts).sort(byDate)
+  let allPosts = await getCollection('posts', hasLinkNoDrafts)
+  allPosts = allPosts.sort(byDate)
 
   const allDomains = getAllDomains(allPosts)
 
@@ -32,6 +37,6 @@ const { domain } = Astro.params
   permalink={`/d/${domain}/${page.currentPage}`}
 >
   <PageHeader>Links to {domain}</PageHeader>
-  {page.data.map(({ Content }: { Content: any }) => <Content />)}
+  {page.data.map((entry: EntryProp) => <PostLayout post={entry} />)}
   <PageNavigator page={page} />
 </Layout>
