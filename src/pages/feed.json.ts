@@ -1,41 +1,14 @@
-import { byJsonDate } from '../utils/sort'
-import { noFeedDrafts } from '../utils/filter'
+import MarkdownIt from 'markdown-it'
+import sanitizeHtml from 'sanitize-html'
+import { byDate } from '../utils/sort'
+import { getCollection } from 'astro:content'
+import { noDrafts } from '../utils/filter'
 import { title as blogTitle, description, baseUrl } from '../consts/config'
 
+const parser = new MarkdownIt()
+
 export async function get() {
-  let items = await import.meta.glob('./p/*.md')
-  items = await Promise.all(
-    Object.keys(items).map(async el => {
-      let item = items[el]
-      item = await item()
-      const content_html = await item.compiledContent()
-      const {
-        cover,
-        date: date_published,
-        draft,
-        link: external_url,
-        tags,
-        title,
-      } = item.frontmatter
-      const url = `${baseUrl}${item.url}`
-      const image = !!cover ? { image: `${baseUrl}${cover}` } : {}
-      const coverHtml = `<img src="${baseUrl}${cover}" alt="${title}" /><br />`
-
-      return {
-        content_html: cover ? `${coverHtml}${content_html}` : content_html,
-        date_published,
-        draft,
-        external_url,
-        id: url,
-        tags,
-        title,
-        url,
-        ...image,
-      }
-    })
-  )
-  items = items.filter(noFeedDrafts).sort(byJsonDate)
-
+  const posts = await getCollection('posts', noDrafts)
   return {
     body: JSON.stringify({
       version: 'https://jsonfeed.org/version/1.1',
@@ -50,7 +23,25 @@ export async function get() {
           avatar: `${baseUrl}/apple-touch-icon.png`,
         },
       ],
-      items,
+      items: posts.sort(byDate).map(post => ({
+        content_html: `${
+          post.data.cover
+            ? '<img src="' +
+              baseUrl +
+              post.data.cover +
+              '" alt="' +
+              post.data.title +
+              '" /><br />'
+            : ''
+        }${sanitizeHtml(parser.render(post.body))}`,
+        date_published: post.data.date.toISOString(),
+        external_url: post.data.link,
+        id: `${baseUrl}/p/${post.slug}`,
+        image: post.data.cover ? `${baseUrl}${post.data.cover}` : undefined,
+        tags: post.data.tags,
+        title: post.data.title,
+        url: `${baseUrl}/p/${post.slug}`,
+      })),
     }),
   }
 }

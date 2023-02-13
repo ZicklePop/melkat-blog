@@ -1,12 +1,13 @@
-import type { MarkdownInstance } from 'astro'
+import type { CollectionEntry } from 'astro:content'
 
-export const noDrafts = (o: MarkdownInstance<Record<string, any>>): boolean =>
-  !o.frontmatter.draft
+export const noDrafts = ({ data }: CollectionEntry<'posts'>) => !data.draft
 
-export const noFeedDrafts = (o: { draft: boolean }): boolean => !o.draft
+export const hasLinkNoDrafts = ({ data }: CollectionEntry<'posts'>) =>
+  !data.draft && !!data.link
 
-export const hasLink = (o: MarkdownInstance<Record<string, any>>): boolean =>
-  !!o.frontmatter.link
+export const hasTagsNoDrafts = ({ data }: CollectionEntry<'posts'>) =>
+  !data.draft && !!data.tags
 
-export const hasTags = (o: MarkdownInstance<Record<string, any>>): boolean =>
-  !!o.frontmatter.tags
+export const hasLink = ({ data }: CollectionEntry<'posts'>) => !!data.link
+
+export const hasTags = ({ data }: CollectionEntry<'posts'>) => !!data.tags

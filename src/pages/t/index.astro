@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/base-layout.astro'
 import { cxs, title } from '../../consts/config'
+import { getCollection } from 'astro:content'
 import { getTagsByCount } from '../../utils/get-posts'
 import { noDrafts } from '../../utils/filter'
 
@@ -8,8 +9,7 @@ const cx = {
   div: `${cxs.prose} mb-8`,
 }
 
-let allPosts = await Astro.glob('../p/*.md')
-allPosts = allPosts.filter(noDrafts)
+const allPosts = await getCollection('posts', noDrafts)
 const sortedData = getTagsByCount(allPosts)
 ---
 
@@ -21,7 +21,7 @@ const sortedData = getTagsByCount(allPosts)
         sortedData.map(({ key, count }) => (
           <li>
             <a href={`/t/${key}`}>{key}</a>
-            {count} posts
+            {count} {count === 1 ? 'post' : 'posts'}
           </li>
         ))
       }

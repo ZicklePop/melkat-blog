@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/base-layout.astro'
 import PageNavigator from '../components/page-navigator.astro'
+import PostLayout from '../layouts/post-layout.astro'
 import { byDate } from '../utils/sort'
+import { getCollection } from 'astro:content'
 import { noDrafts } from '../utils/filter'
 import { pageSize } from '../consts/config'
 
-let allPosts = await Astro.glob('./p/*.md')
-allPosts = allPosts.sort(byDate).filter(noDrafts)
+let allPosts = await getCollection('posts', noDrafts)
+allPosts = allPosts.sort(byDate)
 const lastPage = Math.ceil(allPosts.length / pageSize)
 const page = {
   lastPage,
@@ -17,6 +19,6 @@ const page = {
 ---
 
 <Layout>
-  {allPosts.slice(0, pageSize).map(({ Content }) => <Content />)}
+  {allPosts.slice(0, pageSize).map(entry => <PostLayout post={entry} />)}
   <PageNavigator page={page} />
 </Layout>

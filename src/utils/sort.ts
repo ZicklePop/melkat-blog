@@ -1,11 +1,9 @@
-import type { MarkdownInstance } from 'astro'
+import type { CollectionEntry } from 'astro:content'
 
 export const byDate = (
-  a: MarkdownInstance<Record<string, any>>,
-  b: MarkdownInstance<Record<string, any>>
-): number =>
-  new Date(b.frontmatter.date).valueOf() -
-  new Date(a.frontmatter.date).valueOf()
+  a: CollectionEntry<'posts'>,
+  b: CollectionEntry<'posts'>
+): number => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 
 export const byJsonDate = (
   a: { date_published: string | number | Date },
