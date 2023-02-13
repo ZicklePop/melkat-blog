@@ -8,7 +8,7 @@ import { title as blogTitle, description, baseUrl } from '../consts/config'
 
 const parser = new MarkdownIt()
 
-export const get = async () => {
+export async function get() {
   const posts = await getCollection('posts', noDrafts)
   return rss({
     title: blogTitle,
