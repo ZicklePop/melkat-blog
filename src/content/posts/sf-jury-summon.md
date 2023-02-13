@@ -17,6 +17,6 @@ You can use the Shortcuts.app on your Apple Watch, iPhone, iPad, and Mac. You wi
 
 ## Home screen widget
 
-There is a great app for iPhone and iPad called [Scriptable](https://scriptable.app) that lets you write and run JavaScript that can make home screen widgets. You will need to set your group number on line with `const GROUP\_NUMBER`.
+There is a great app for iPhone and iPad called [Scriptable](https://scriptable.app) that lets you write and run JavaScript that can make home screen widgets. You will need to set your group number on line with `const GROUP_NUMBER`.
 
 [Get SF Jury Duty Widget.js](https://melanie.paste.lol/sf-jury-duty-widget.js)
