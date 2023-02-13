@@ -1,7 +1,7 @@
 ---
 date: 2023-02-02T05:08:13.823Z
 title: omg.lol for Shortcuts.app
-tags: [post, omglol, shortcuts, ios, mac]
+tags: [post, omglol, shortcuts, ios, macos]
 cover: /img/omglol-shortcuts.jpg
 ---
 
