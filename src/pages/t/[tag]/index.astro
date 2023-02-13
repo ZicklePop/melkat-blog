@@ -2,14 +2,19 @@
 import Layout from '../../../layouts/base-layout.astro'
 import PageHeader from '../../../components/page-header.astro'
 import PageNavigator from '../../../components/page-navigator.astro'
+import PostLayout from '../../../layouts/post-layout.astro'
+import type { CollectionEntry } from 'astro:content'
 import { byDate } from '../../../utils/sort'
-import { pageSize, title } from '../../../consts/config'
-import { noDrafts, hasTags } from '../../../utils/filter'
 import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
+import { getCollection } from 'astro:content'
+import { hasTagsNoDrafts } from '../../../utils/filter'
+import { pageSize, title } from '../../../consts/config'
+
+type EntryProp = CollectionEntry<'posts'>
 
 export async function getStaticPaths() {
-  let allPosts = await Astro.glob('../../p/*.md')
-  allPosts = allPosts.filter(hasTags).filter(noDrafts).sort(byDate)
+  let allPosts = await getCollection('posts', hasTagsNoDrafts)
+  allPosts = allPosts.sort(byDate)
 
   const allTags = getAllTags(allPosts)
 
@@ -44,6 +49,10 @@ const page = {
   permalink={`/t/${tag}`}
 >
   <PageHeader>Posts tagged #{tag}</PageHeader>
-  {pages.slice(0, pageSize).map(({ Content }: { Content: any }) => <Content />)}
+  {
+    pages
+      .slice(0, pageSize)
+      .map((entry: EntryProp) => <PostLayout post={entry} />)
+  }
   <PageNavigator page={page} />
 </Layout>
