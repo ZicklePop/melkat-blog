@@ -14,7 +14,7 @@ const { title = '', link = '', isExternal = false } = Astro.props
 <PageHeader>
   <a
     href={link}
-    class={cxs.a}
+    class={isExternal ? cxs.a : cxs.aHover}
     aria-label={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
   >
     {title}
