@@ -7,6 +7,8 @@ import { getCollection } from 'astro:content'
 import { noDrafts } from '../utils/filter'
 import { pageSize } from '../consts/config'
 
+export const prerender = true
+
 let allPosts = await getCollection('posts', noDrafts)
 allPosts = allPosts.sort(byDate)
 const lastPage = Math.ceil(allPosts.length / pageSize)

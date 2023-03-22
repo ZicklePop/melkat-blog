@@ -3,6 +3,8 @@ import PostLayout from '../../layouts/post-layout.astro'
 import { getCollection } from 'astro:content'
 import { noDrafts } from '../../utils/filter'
 
+export const prerender = true
+
 export async function getStaticPaths() {
   const entries = await getCollection('posts', noDrafts)
   return entries.map(entry => ({

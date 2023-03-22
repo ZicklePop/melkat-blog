@@ -5,6 +5,8 @@ import { getCollection } from 'astro:content'
 import { getDomainsByCount } from '../../utils/get-posts'
 import { noDrafts } from '../../utils/filter'
 
+export const prerender = true
+
 const cx = {
   div: `${cxs.prose} mb-8`,
 }

@@ -14,6 +14,7 @@ export interface Props {
   cover?: string
   description?: string
   permalink?: string
+  showSearch?: boolean
   title?: string
 }
 
@@ -22,6 +23,7 @@ const {
   cover = defaultCover,
   description = blogDescription,
   permalink = '',
+  showSearch = true,
   title = `${blogTitle} - ${blogDescription}`,
 } = Astro.props
 ---
@@ -65,6 +67,6 @@ const {
     <main role="main">
       <slot />
     </main>
-    <Footer />
+    <Footer showSearch={showSearch} />
   </body>
 </html>

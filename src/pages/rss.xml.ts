@@ -6,6 +6,8 @@ import { getCollection } from 'astro:content'
 import { noDrafts } from '../utils/filter'
 import { title as blogTitle, description, baseUrl } from '../consts/config'
 
+export const prerender = true
+
 const parser = new MarkdownIt()
 
 export async function get() {

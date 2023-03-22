@@ -1,6 +1,8 @@
 const MY_FINGER =
   'https://nyan.lol/.well-known/webfinger?resource=acct:zicklepop@nyan.lol'
 
+export const prerender = true
+
 export async function get() {
   const res = await fetch(MY_FINGER)
   const json = await res.json()

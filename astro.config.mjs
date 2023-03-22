@@ -1,14 +1,13 @@
 import { defineConfig } from 'astro/config'
-import react from '@astrojs/react'
-import tailwind from '@astrojs/tailwind'
 import image from '@astrojs/image'
+import netlify from '@astrojs/netlify/functions'
 import sitemap from '@astrojs/sitemap'
+import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://melkat.blog',
   integrations: [
-    react(),
     tailwind({
       config: {
         path: './tailwind.config.cjs',
@@ -19,4 +18,6 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+  output: 'server',
+  adapter: netlify(),
 })

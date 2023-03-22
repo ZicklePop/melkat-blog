@@ -1,0 +1,29 @@
+---
+import Button from './button.astro'
+
+const cx = {
+  form: 'mb-8 flex flex-row items-center',
+  div: 'flex-grow mr-2',
+  label: 'hidden',
+  input:
+    'appearance-none focus:outline-none bg-transparent border border-cerulean-700 rounded-md px-3 py-2 focus:ring-2 ring-offset-2 ring-sky-300 w-full',
+  p: 'mb-8 italic',
+}
+
+const { defaultValue = '' } = Astro.props
+---
+
+<form action="/q" class={cx.form} method="get">
+  <div class={cx.div}>
+    <label class={cx.label} for="search">Search</label>
+    <input
+      class={cx.input}
+      type="search"
+      id="search"
+      name="q"
+      placeholder="Search for posts"
+      value={defaultValue}
+    />
+  </div>
+  <Button type="submit">Search</Button>
+</form>

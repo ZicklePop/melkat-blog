@@ -10,6 +10,8 @@ import { getCollection } from 'astro:content'
 import { hasLinkNoDrafts } from '../../../utils/filter'
 import { pageSize, title } from '../../../consts/config'
 
+export const prerender = true
+
 type EntryProp = CollectionEntry<'posts'>
 
 export async function getStaticPaths() {

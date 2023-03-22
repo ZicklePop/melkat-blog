@@ -1,0 +1,17 @@
+---
+export interface Props {
+  className?: string
+  href?: string
+  type?: 'button' | 'submit' | 'reset'
+}
+
+const cx =
+  'rounded-md bg-cerulean-600 font-bold text-white transition-colors hover:bg-cerulean-500 active:bg-cerulean-700 text-center px-3 py-2 focus:ring-2 ring-offset-2 ring-sky-300 focus:outline-none border border-cerulean-600'
+
+const { className = cx, ...rest } = Astro.props
+const El = rest.href ? 'a' : 'button'
+---
+
+<El class={className} {...rest}>
+  <slot />
+</El>

@@ -9,8 +9,10 @@ export interface Props {
 }
 
 const { post } = Astro.props
-const { slug } = post
-const { title, cover, date, link, tags } = post.data
+const {
+  data: { title, cover, date, link, tags },
+  slug,
+} = post
 
 const permalink = `/p/${slug}`
 const isPermalink = `${Astro.url}`.indexOf('/p/') > -1
