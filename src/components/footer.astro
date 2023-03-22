@@ -1,27 +1,40 @@
 ---
+import Search from '../components/search.astro'
 import { cxs } from '../consts/config'
 
 const cx = {
+  a: cxs.aHover,
   footer: 'text-center leading-normal',
   p: 'my-4',
-  a: cxs.aHover,
+  search: 'max-w-md mx-auto',
 }
+
+const { showSearch = true } = Astro.props
 ---
 
 <footer class={cx.footer} role="contentinfo">
+  {
+    showSearch && (
+      <div class={cx.search}>
+        <Search />
+      </div>
+    )
+  }
   <p class={cx.p}>
-    <a class={cx.a} href="/q">search and browse</a>
+    <a class={cx.a} href="/d">browse domains</a>
     {' • '}
+    <a class={cx.a} href="/t">browse tags</a>
+    <br />
     <a class={cx.a} href="/rss.xml">rss feed</a>
     {' • '}
     <a class={cx.a} href="/feed.json">json feed</a>
   </p>
   <p class={cx.p}>
-    a blog by
-    <a class={cx.a} href="https://melaniekat.com" rel="me">melanie kat</a> &lt;3
+    melkat emoji by
+    <a class={cx.a} href="https://dzuk.zone">dzuk</a>
   </p>
   <p class={cx.p}>
-    emoji by
-    <a class={cx.a} href="https://dzuk.zone"> dzuk</a>
+    a blog by
+    <a class={cx.a} href="https://melaniekat.com" rel="me">melanie kat</a> &lt;3
   </p>
 </footer>

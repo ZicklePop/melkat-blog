@@ -9,17 +9,25 @@ import { byDate } from '../../utils/sort'
 import { getCollection } from 'astro:content'
 import { noDrafts } from '../../utils/filter'
 
+const cx = {
+  p: 'pv-8 mb-8',
+}
+
 const { searchParams } = Astro.url
 const query = searchParams.get('q') || ''
 
 let allPosts = await getCollection('posts', noDrafts)
 allPosts = allPosts.sort(byDate)
 const results = fuzzySearch(query, allPosts)
+const noResults = !!query && results.length <= 0
+const permalink = noResults ? '/q' : `/q?q=${encodeURIComponent(query)}`
 ---
 
-<Layout title="melkat.blog - Search" permalink="/q" showSearch={false}>
-  <PageHeader>Search</PageHeader>
+<Layout title="melkat.blog - Search" permalink={permalink} showSearch={false}>
+  <PageHeader>
+    <label for="search">Search</label>
+  </PageHeader>
   <Search defaultValue={query} />
   {results.map(entry => <PostLayout post={entry} />)}
-  {results.length <= 0 && <Browse />}
+  {noResults && <p class={cx.p}>{'No results :('}</p>}
 </Layout>
