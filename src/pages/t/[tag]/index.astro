@@ -12,6 +12,8 @@ import { pageSize, title } from '../../../consts/config'
 
 type EntryProp = CollectionEntry<'posts'>
 
+export const prerender = true
+
 export async function getStaticPaths() {
   let allPosts = await getCollection('posts', hasTagsNoDrafts)
   allPosts = allPosts.sort(byDate)
