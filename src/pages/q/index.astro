@@ -1,12 +1,25 @@
 ---
-import Layout from '../../layouts/base-layout.astro'
 import Browse from '../../components/browse.astro'
+import Layout from '../../layouts/base-layout.astro'
 import PageHeader from '../../components/page-header.astro'
-import Search from '../../components/search'
+import PostLayout from '../../layouts/post-layout.astro'
+import Search from '../../components/search.astro'
+import fuzzySearch from '../../utils/fuzzy-search'
+import { byDate } from '../../utils/sort'
+import { getCollection } from 'astro:content'
+import { noDrafts } from '../../utils/filter'
+
+const { searchParams } = Astro.url
+const query = searchParams.get('q') || ''
+
+let allPosts = await getCollection('posts', noDrafts)
+allPosts = allPosts.sort(byDate)
+const results = fuzzySearch(query, allPosts)
 ---
 
-<Layout title="melkat.blog - Search" permalink="/q">
+<Layout title="melkat.blog - Search" permalink="/q" showSearch={false}>
   <PageHeader>Search</PageHeader>
-  <Search client:load />
-  <Browse />
+  <Search defaultValue={query} />
+  {results.map(entry => <PostLayout post={entry} />)}
+  {results.length <= 0 && <Browse />}
 </Layout>
