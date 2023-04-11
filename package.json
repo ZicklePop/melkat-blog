@@ -17,7 +17,7 @@
     "@astrojs/image": "^0.16.4",
     "@astrojs/netlify": "^2.2.2",
     "@astrojs/rss": "^2.3.2",
-    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.1",
     "@leeoniya/ufuzzy": "^1.0.2",
     "@tailwindcss/typography": "^0.5.9",
