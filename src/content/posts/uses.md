@@ -122,7 +122,7 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [Magnet Links](https://girlfriend.technology/magnet-links/ 'Browser extension Magnet Links') - Makes Magnet Links work with Put.io. I made this!
 - [React Developer Tools](https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-devtools-profiler) - No Safari support. This is for debugging React.
 - [Refined GitHub](https://github.com/refined-github/refined-github) - Various customizations for GitHub to fill some gaps.
-- [Tabby Cat](https://www.tabbycats.club/) - No Safari support. Random cute cats in every tab.
+- [Tabby Cat, Chrome](https://chrome.google.com/webstore/detail/tabby-cat/mefhakmgclhhfbdadeojlkbllmecialg?hl=en), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tabby-cat-friend/) - No Safari support. Random cute cats in every tab.
 - [uBlock Origin](https://ublockorigin.com/) - No Safari support. Blocks ads and trackers for your security.
 - [X to Y](https://girlfriend.technology/x-to-y/ 'Browser extension X to Y') - Replace words in text or links with other text. I made this too!
 
