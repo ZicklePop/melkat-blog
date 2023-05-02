@@ -18,7 +18,7 @@
     "@astrojs/netlify": "^2.2.2",
     "@astrojs/rss": "^2.4.0",
     "@astrojs/sitemap": "^1.2.2",
-    "@astrojs/tailwind": "^3.1.1",
+    "@astrojs/tailwind": "^3.1.2",
     "@leeoniya/ufuzzy": "^1.0.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/lodash": "^4.14.194",
