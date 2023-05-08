@@ -24,7 +24,7 @@
     "@types/lodash": "^4.14.194",
     "@types/markdown-it": "^12.2.3",
     "@types/sanitize-html": "^2.9.0",
-    "astro": "^2.2.1",
+    "astro": "^2.4.3",
     "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
