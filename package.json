@@ -16,7 +16,7 @@
   "dependencies": {
     "@astrojs/image": "^0.16.6",
     "@astrojs/netlify": "^2.2.2",
-    "@astrojs/rss": "^2.4.0",
+    "@astrojs/rss": "^2.4.1",
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.2",
     "@leeoniya/ufuzzy": "^1.0.2",
