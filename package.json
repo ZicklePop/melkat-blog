@@ -14,7 +14,7 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/image": "^0.16.6",
+    "@astrojs/image": "^0.16.7",
     "@astrojs/netlify": "^2.2.2",
     "@astrojs/rss": "^2.4.0",
     "@astrojs/sitemap": "^1.2.2",
