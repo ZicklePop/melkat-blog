@@ -3,3 +3,5 @@ Allow: /
 
 User-agent: GPTBot
 Disallow: /
+
+Sitemap: https://melkat.blog/sitemap-0.xml
