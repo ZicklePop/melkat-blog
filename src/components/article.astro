@@ -23,9 +23,9 @@ const { cover, date, link, tags = [], title, url } = Astro.props
 ---
 
 <article class={cx.article}>
-  {cover && <Cover cover={cover} title={title} />}
   <Title title={title} link={link ? link : url} isExternal={!!link} />
   <Details link={link} date={date} />
+  {cover && <Cover cover={cover} title={title} />}
   <Body>
     <slot />
   </Body>

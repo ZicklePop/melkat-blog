@@ -14,17 +14,17 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.2",
-    "@astrojs/netlify": "^2.5.2",
-    "@astrojs/rss": "^2.4.3",
-    "@astrojs/sitemap": "^2.0.1",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/check": "^0.2.0",
+    "@astrojs/netlify": "^3.0.1",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "@leeoniya/ufuzzy": "^1.0.8",
     "@tailwindcss/typography": "^0.5.9",
     "@types/lodash": "^4.14.196",
     "@types/markdown-it": "^12.2.3",
     "@types/sanitize-html": "^2.9.0",
-    "astro": "^2.9.7",
+    "astro": "^3.0.7",
     "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
@@ -33,8 +33,8 @@
     "prettier": "3.0.0",
     "prettier-plugin-astro": "^0.11.0",
     "sanitize-html": "^2.11.0",
-    "sharp": "^0.32.4",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

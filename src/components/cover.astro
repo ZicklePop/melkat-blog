@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components'
+import { Image } from 'astro:assets'
 
 export interface Props {
   title: string
@@ -7,18 +7,10 @@ export interface Props {
 }
 
 const cx = {
-  img: 'h-16 rounded ml-2 mb-2 float-right',
+  img: 'rounded-lg aspect-video object-cover mb-3',
 }
 
 const { title, cover } = Astro.props
 ---
 
-<Picture
-  alt={title}
-  aspectRatio={16 / 9}
-  background={undefined}
-  class={cx.img}
-  sizes="(min-device-pixel-ratio: 2) 360px, (min-device-pixel-ratio: 2) 240px, 120px)"
-  src={cover}
-  widths={[120, 240, 360]}
-/>
+<Image alt={title} class={cx.img} src={cover} width={560} height={315} />

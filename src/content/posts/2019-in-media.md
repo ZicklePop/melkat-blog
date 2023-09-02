@@ -39,7 +39,7 @@ This year I must have spent a paycheck or two of money at Bandcamp. A rough coun
 - Tami T: High Piched and Moist — [bandcamp](https://tamit.bandcamp.com/album/high-pitched-and-moist)
 - The Raconteurs: Help Me Stranger — apple music
 - TWICE: &Twice — apple music
-- Twinkle Park: All Fall Floral — [bandcamp](https://twinklepark.bandcamp.com/album/all-fall-floral)
+- Twinkle Park: All Fall Floral — [bandcamp](https://smilingbroadly.bandcamp.com/album/all-fall-floral)
 
 
 ### Singles, EPs, and Etc
