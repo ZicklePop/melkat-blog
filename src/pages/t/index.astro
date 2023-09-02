@@ -22,8 +22,8 @@ const sortedData = getTagsByCount(allPosts)
       {
         sortedData.map(({ key, count }) => (
           <li>
-            <a href={`/t/${key}`}>{key}</a>
-            {count} {count === 1 ? 'post' : 'posts'}
+            <a href={`/t/${key}`}>{key}</a> {` ${count} `}{' '}
+            {count === 1 ? 'post' : 'posts'}
           </li>
         ))
       }

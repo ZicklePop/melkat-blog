@@ -10,7 +10,7 @@ export const prerender = true
 
 const parser = new MarkdownIt()
 
-export async function get() {
+export async function GET() {
   const posts = await getCollection('posts', noDrafts)
   return rss({
     title: blogTitle,

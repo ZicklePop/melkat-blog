@@ -22,8 +22,8 @@ const sortedData = getDomainsByCount(allPosts)
       {
         sortedData.map(({ key, count }) => (
           <li>
-            <a href={`/d/${key}`}>{key}</a>
-            {count} {count === 1 ? 'post' : 'posts'}
+            <a href={`/d/${key}`}>{key}</a> {` ${count} `}{' '}
+            {count === 1 ? 'post' : 'posts'}
           </li>
         ))
       }
