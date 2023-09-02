@@ -12,7 +12,7 @@ export const cxs = {
   h1: 'font-light text-4xl my-6',
   h2: 'mb-4 text-xl font-medium',
   li: 'inline-block uppercase my-1',
-  prose: 'prose prose-melkat dark:prose-invert',
+  prose: 'prose prose-melkat dark:prose-invert md:prose-lg',
 }
 
 export default {
