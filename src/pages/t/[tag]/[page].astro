@@ -21,7 +21,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   let allTags = getAllTags(allPosts)
 
-  return allTags?.map(tag => {
+  return allTags?.flatMap(tag => {
     const filtered = getPostsByTag(allPosts, tag)
     return paginate(filtered, {
       params: { tag },

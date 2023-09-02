@@ -21,7 +21,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   const allDomains = getAllDomains(allPosts)
 
-  return allDomains?.map(domain => {
+  return allDomains?.flatMap(domain => {
     const filtered = getPostsByDomain(allPosts, domain)
     return paginate(filtered, {
       params: { domain },
