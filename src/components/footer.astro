@@ -12,7 +12,7 @@ const cx = {
 const { showSearch = true } = Astro.props
 ---
 
-<footer transition:persist class={cx.footer} role="contentinfo">
+<footer class={cx.footer} role="contentinfo">
   {
     showSearch && (
       <div class={cx.search}>
