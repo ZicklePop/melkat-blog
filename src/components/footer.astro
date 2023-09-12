@@ -21,9 +21,10 @@ const { showSearch = true } = Astro.props
     )
   }
   <p class={cx.p}>
-    <a class={cx.a} href="/d">browse domains</a>
-    {' • '}
-    <a class={cx.a} href="/t">browse tags</a>
+    {'browse by '}
+    <a class={cx.a} href="/d">links</a>
+    {' and '}
+    <a class={cx.a} href="/t">tags</a>
     <br />
     <a class={cx.a} href="/rss.xml">rss feed</a>
     {' • '}
