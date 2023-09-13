@@ -25,4 +25,4 @@ The structure is basically `city name:server name`. You can find Mullvad's list 
 
 Feel free to customize this shortcut to suit your needs. I know some people have more than one Wi-Fi network they trust, city names alone may not be specific enough for you.
 
-[**Download Auto Exit Nodes Shortcut**](https://www.icloud.com/shortcuts/1dc9d5e15e3944628aca66b37c85f24d)
+[**Download Auto Exit Nodes Shortcut**](https://www.icloud.com/shortcuts/4b2c836b2ebd42f08d2d56aa3bc9ea7c)
