@@ -16,4 +16,7 @@ Disallow: /
 User-agent: Omgilibot
 Disallow: /
 
+User-agent: FacebookBot
+Disallow: /
+
 Sitemap: https://melkat.blog/sitemap-0.xml
