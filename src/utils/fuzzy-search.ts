@@ -19,10 +19,12 @@ export default function fuzzySearch(q?: string, entries?: Array<EntryProp>) {
   }
   const stringDb = getSearchableDb(entries)
   const idxs = uf.filter(stringDb, q)
-  const info = uf.info(idxs, stringDb, q)
-  const order = uf.sort(info, stringDb, q)
+  const info = idxs && uf.info(idxs, stringDb, q)
+  const order = info && uf.sort(info, stringDb, q)
   return map(order, i => {
-    const idx = idxs[i]
-    return entries[idx]
+    const idx = idxs && idxs[i]
+    if (idx) {
+      return entries[idx]
+    }
   }).slice(0, pageSize * 2)
 }

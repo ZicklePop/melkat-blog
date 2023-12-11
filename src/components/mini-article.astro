@@ -1,0 +1,17 @@
+---
+import Details from './details.astro'
+import Title from './title.astro'
+
+export interface Props {
+  date: Date
+  title: string
+  url: string
+}
+
+const { date, title, url } = Astro.props
+---
+
+<div>
+  <Title title={title} link={url} small={true} />
+  <Details date={date} />
+</div>

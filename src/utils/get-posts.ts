@@ -58,3 +58,26 @@ export const getPostsByTag = (
   tag: string
 ): CollectionEntry<'posts'>[] =>
   posts.filter(({ data }) => data.tags && data.tags.includes(tag))
+
+export const getRelatedPosts = (
+  posts: CollectionEntry<'posts'>[],
+  post: CollectionEntry<'posts'>,
+  limit: number = 2
+): CollectionEntry<'posts'>[] => {
+  const hasSimilarTags = (t: string) => post.data.tags.includes(t)
+  const tagCounts = (i: number, v: string) =>
+    hasSimilarTags(v) ? i + 1 : i + 1
+  return posts
+    .filter(({ id }) => id !== post.id)
+    .filter((item: CollectionEntry<'posts'>) =>
+      item.data.tags.some(hasSimilarTags)
+    )
+    .sort((a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => {
+      const aTags = a.data.tags
+      const bTags = b.data.tags
+      const aCount = aTags.reduce(tagCounts, 0)
+      const bCount = bTags.reduce(tagCounts, 0)
+      return aCount === bCount ? 0 : aCount < bCount ? 1 : -1
+    })
+    .slice(0, limit)
+}

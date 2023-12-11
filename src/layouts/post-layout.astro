@@ -1,7 +1,14 @@
 ---
-import Layout from './base-layout.astro'
-import Article from '../components/article.astro'
+import { byDate } from '../utils/sort'
+import { getCollection } from 'astro:content'
+import { getRelatedPosts } from '../utils/get-posts'
+import { noDrafts } from '../utils/filter'
 import { title as blogTitle } from '../consts/config'
+import Article from '../components/article.astro'
+import Layout from './base-layout.astro'
+import RelatedArticles from '../components/related-articles.astro'
+import TruncatedContent from '../components/truncated-content.astro'
+import truncateMd from '../utils/truncate-md'
 import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
@@ -17,6 +24,17 @@ const {
 const permalink = `/p/${slug}`
 const isPermalink = `${Astro.url}`.indexOf('/p/') > -1
 const Component = isPermalink ? Layout : Fragment
+
+const truncatedMd = truncateMd(post.body)
+const wasTruncated = truncatedMd !== post.body
+
+let relatedPosts: CollectionEntry<'posts'>[] = []
+if (isPermalink) {
+  relatedPosts = await getCollection('posts', noDrafts)
+  relatedPosts = relatedPosts.sort(byDate)
+  relatedPosts = getRelatedPosts(relatedPosts, post)
+}
+
 const { Content } = await post.render()
 ---
 
@@ -34,6 +52,13 @@ const { Content } = await post.render()
     title={title}
     url={permalink}
   >
-    <Content />
+    {
+      isPermalink || !wasTruncated ? (
+        <Content />
+      ) : (
+        <TruncatedContent url={permalink} content={truncatedMd} />
+      )
+    }
   </Article>
+  {isPermalink && <RelatedArticles posts={relatedPosts} />}
 </Component>

@@ -27,6 +27,6 @@ const permalink = noResults ? '/q' : `/q?q=${encodeURIComponent(query)}`
     <label for="search">Search</label>
   </PageHeader>
   <Search defaultValue={query} />
-  {results.map(entry => <PostLayout post={entry} />)}
+  {results.map(entry => entry && <PostLayout post={entry} />)}
   {noResults && <p class={cx.p}>{'No results :('}</p>}
 </Layout>
