@@ -1,6 +1,6 @@
 ---
 cover: /img/uses.jpg
-date: 2022-04-12T04:53:33.458Z
+date: 2023-12-12T06:01:44.993Z
 tags: [post, uses, apps, hardware]
 title: Uses
 ---
@@ -15,28 +15,23 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [Blue Steelcase Gesture Office Chair](https://www.steelcase.com/products/office-chairs/gesture/)
 - [Everlasting Comfort Office Foot Rest](https://smile.amazon.com/Foot-Rest-Under-Desk-Footstool/dp/B07PGLBCFG)
 - [Office Owl Caster Wheels for Desk Chairs](https://smile.amazon.com/gp/product/B08JPXXK4C/)
-- [Supercope Cup Holder Clip](https://smile.amazon.com/gp/product/B07FSDZN1Y/)
+- [UPLIFT Clamp-On Cup Holder](https://www.upliftdesk.com/clamp-on-cup-holder-by-uplift-desk/)
 - [UPLIFT Bamboo Standing Desk](https://www.upliftdesk.com/uplift-v2-bamboo-standing-desk/) 
 - [UPLIFT Big Standard Keyboard Tray - Bamboo with Quick Adjust Mechanism](https://www.upliftdesk.com/big-standard-keyboard-bamboo-tray-system-by-uplift-desk/)
 
 
 ### Computers
 
-- iPad Pro - This is my main machine, to be honest. I use it for everything, yes even coding.
-- Custom PC - This is my default desk experience when I am not working. I enjoy the new Windows 11.
-- MacBook Pro - I basically just use this for work, building the iOS/macOS builds of my apps, or Facetime.
-- Surface Pro 6 - I picked up the Surface a while back and it still runs great and is a quick portable way to bring a Windows machine with me. It's great for low spec gaming too.
+- iPad Pro - My main machine, I use it for everything
+- Mac Studio - I use this for coding and building apps
+- Custom PC - My gaming machine
 
 
 ### The Input Club
 
-- [Blue Portico75 Keyboard](https://thekey.company/collections/in-stock/keyboards) - A 75% keyboard with a knob and a USB-C port.
-	- [Drop + Mito Keysterine Cyanide Keycap Set](https://drop.com/buy/keysterine-keycap-set?defaultSelectionIds=965918) - Translucent keycaps that match the blue Portico75.
-	- [SP-Star Marble Soda Original switches](https://thekey.company/collections/in-stock/products/sp-star-marble-soda-switches) Blue linear switches that are quiet enough and match the translucent blue of the Portico75 and Keysterine keycaps.
-- [Kensington VeriMark USB Fingerprint Key](https://smile.amazon.com/gp/product/B01NAVWPOJ) - This is finicky but when it works it's pretty cool.
+- [Keychron Q8](https://www.keychron.com/products/keychron-q8-alice-layout-qmk-custom-mechanical-keyboard?variant=40077526859865) - A blue Alice layout with a knob with Gateron G Pro Red switches.
+- [Kensington SlimBlade Trackball](https://www.kensington.com/p/products/ergonomic-desk-accessories/ergonomic-input-devices/slimblade-trackball/) - I learned during quarantine that my hand starts to hurt after long periods of using a regular mouse. I've now gone full trackball.
 - [Kone XP](https://www.roccat.com/products/kone-xp) - I wanted to try out a gaming mouse and this seemed like the perfect place to start. It's light and has automatic profile switching between apps and games.
-- [Logitech MX Ergo](https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.910-005178.html) - I learned during quarantine that my hand starts to hurt after long periods of using a regular mouse. The MX Vertical is great but I've wanted to try a trackball mouse for a while.
-- [Stream Deck](https://www.elgato.com/en/stream-deck) - The answer to the question, "omg where is the hang up button on Zoom?!" It's right there, on a physical button.
 
 
 ### The Audio Video Club
@@ -47,9 +42,8 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [FiiO BTR5 Bluetooth and USB-C DAC](https://www.fiio.com/btr5) - No headphone jack on the iOS devices anymore, so lets add it back through Bluetooth.
 - [Hatsune Miku Edition TASCAM VL-S3BT Speakers](https://tascam.com/us/product/vl-s3/)
 - [Opal C1](https://opalcamera.com) - This camera is pretty slick and in early beta. I hope to one day use it with Windows as well as Mac. As of this writing it runs 105°F when it's not in use, the software is lacking, and it only works in Zoom and Chrome.
-- [Pokémon Center × Grado Labs Pikachu Headphones](https://blog.gradolabs.com/pokemon-center-grado-headphones/) - Thic cable, amazing sound, wearing all day leads to them getting a little uncomfortable, but they have a Pikachu on them so it's five stars all around. And hey, approved by [DankPods](https://www.youtube.com/watch?v=jk-Tybi-ihw 'YouTube Video: The DankPods Headphone Starter Guide.').
 - [RAZER Kiyo Camera w/ Ring Light](https://www.razer.com/streaming-cameras/razer-kiyo) - Not a fan of Razer, but it solved a lighting issue for me. Where I cannot use the Opal C1, I will use this camera.
-- [Samson SR850 Headphones](https://smile.amazon.com/Samson-SR850-Semi-Open-Back-Reference-Headphones/dp/B002LBSEQS) with [Brainwavz Cooling Gel Earpads](https://smile.amazon.com/gp/product/B07SBT93R9/) - Long cable, amazing sound, and with the replacement earpads they are the most comfortable headphones I own. Great for all day wear. Also recommended by [DankPods](https://www.youtube.com/watch?v=jk-Tybi-ihw 'YouTube Video: The DankPods Headphone Starter Guide.')!
+- [Samson SR850 Headphones](https://smile.amazon.com/Samson-SR850-Semi-Open-Back-Reference-Headphones/dp/B002LBSEQS) with [Brainwavz Cooling Gel Earpads](https://smile.amazon.com/gp/product/B07SBT93R9/) - Long cable, amazing sound, and with the replacement earpads they are the most comfortable headphones I own. Great for all day wear. Recommended by [DankPods](https://www.youtube.com/watch?v=jk-Tybi-ihw 'YouTube Video: The DankPods Headphone Starter Guide.')!
 
 
 ## Software
@@ -59,16 +53,12 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [1Password](https://1password.com/) - Use a password manager. Use unique passwords. Use two-factor auth. Just do it, already.
 - [Affinity Designer](https://affinity.serif.com/en-us/designer/) - A full Illustrator experience on all of my devices, even iPad. No subscription fees.
 - [Affinity Photo](https://affinity.serif.com/en-us/photo/) - A full Photoshop experience on all of my devices, even iPad. No subscription fees.
-- [Fantastical](https://flexibits.com/fantastical) - Not available on Windows. Fantastical merges a variety of calendars and todo lists together with custom views and natural language processing.
-- [Microsoft Edge](https://www.microsoft.com/en-us/edge) - Another Chromium based browser but without all the Google stuff. Tab napping to save resources on tabs you aren't using is a huge plus.
-- [Obsidian](https://obsidian.md/) - A customizable library of Markdown files you can optionally apply end-to-end encryption to and sync.
 - [VS Code](https://code.visualstudio.com/) - A fast and reliable code editor that is extendible. Runs on any platform either natively or in the web browser.
 
 
 ### iOS
 
 - [Blink Shell](https://blink.sh/) - SSH and Mosh support, now with the ability to mount SSH connections to the Files app, and the ability to launch VS Code.
-- [Day One](https://dayoneapp.com/) - Keeping a journal is a rewarding way to see how far you've come and remember important events in your life.
 - [Inspect Browser](https://apps.pdyn.net/inspect/) - Inspect Element for iOS, not as full featured but the best and most reliable I've found.
 - [Textastic](https://www.textasticapp.com/) - Old reliable code editor. It's no VS Code, but it's pretty good for prototyping HTML or JavaScript.
 - [Working Copy](https://workingcopyapp.com/) - Git on iOS and it works with other apps.
@@ -85,13 +75,9 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [Alfred](https://www.alfredapp.com/) - Quickly perform tasks, find apps and files, and manage your clipboard history.
 - [Bartender](https://www.macbartender.com/) - Everyone wants to be in the macOS menu bar. Hide those distractions.
 - [Dash](https://kapeli.com/dash) - Stores coding documentation offline where you can search it for what you're looking for.
-- [Hazel](https://www.noodlesoft.com/) - Monitors files and performs actions when certain conditions are met. For example, I have a folder of Markdown files that will automatically commit itself to a Git repository when there are changes.
 - [ImageOptim](https://imageoptim.com/mac) - Please don't throw images up online without making sure their file size is as small as it can be without reducing image quality.
 - [iStat Menus](https://bjango.com/mac/istatmenus/) - What company spyware is causing my Mac to be so slow? Oh it's probably just Docker. I hate it when Docker eats all available resources when it's idle.
 - [iTerm](https://iterm2.com/) - A terminal that I can split the views in half vertically or horizontally. I swear I don't use most of what this offers.
-- [Keyboard Maestro](https://www.keyboardmaestro.com/) - Set up custom actions on your Mac. I use it to extend what my Steam Deck can do.
-- [Loopback](https://rogueamoeba.com/loopback/) - This is also primarily for the Steam Deck so I can play my annoying soundboard during work meetings.
-- [Shush](https://mizage.com/shush/) - This app hasn't been updated in sooooo long and I fear for the day it stops working. It's a great way to toggle the mute on your microphone or have a cough button.
 
 
 ## Customizations
@@ -105,7 +91,6 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 
 - [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) - There is nothing like a handy way to convert which case your text or variables are. 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Never spend another hour trying to debug code that would work if didn't make that typo.
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - This pair programmer's inteligence is like magic, but it does pay to keep an eye on it so it stays on track.
 - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) - Create and review PRs without having to find what your looking for in GitHub.
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Invite someone you trust to code along side you each from the comfort of each other's own VS Code.
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - I use this for connecting to a Windows Subsystem for Linux quite often, but it's also great for working over SSH.
