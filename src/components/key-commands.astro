@@ -1,0 +1,138 @@
+---
+import Button from './button.astro'
+import Kbd from './kbd.astro'
+import Modal from './modal.astro'
+import { cxs } from '../consts/config'
+---
+
+<Modal data-keys="hide">
+  <h2 class={cxs.h2}>Keyboard shortcuts</h2>
+  <ul class="mb-3">
+    <li><Kbd>j</Kbd> Scroll down</li>
+    <li><Kbd>k</Kbd> Scroll up</li>
+    <li><Kbd>l</Kbd> Next page</li>
+    <li><Kbd>h</Kbd> Previous page</li>
+  </ul>
+  <ul class="mb-3">
+    <li><Kbd>/</Kbd> Focus search</li>
+    <li><Kbd>t</Kbd> Browse tags</li>
+    <li><Kbd>d</Kbd> Browse domains</li>
+  </ul>
+  <ul class="mb-3">
+    <li><Kbd>?</Kbd> Toggle this modal</li>
+    <li><Kbd>esc</Kbd> Close modal</li>
+  </ul>
+  <div class="text-right">
+    <Button id="dismiss-modal" type="button">Dismiss</Button>
+  </div>
+</Modal>
+
+<script>
+  const keycommandsEl = document.querySelector('[data-keys]') as HTMLElement
+
+  const dismissBtn = document.getElementById('dismiss-modal') as HTMLElement
+  dismissBtn.onclick = () => {
+    keycommandsEl.dataset.keys = 'hide'
+    keycommandsEl.style.opacity = '0'
+    setTimeout(() => {
+      keycommandsEl.style.display = 'none'
+    }, 100)
+  }
+
+  window.onkeydown = e => {
+    const target = e.target as HTMLElement
+    const targetType = target?.tagName?.toLowerCase()
+
+    if (targetType === 'input' || targetType === 'textarea') {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        target.blur()
+      }
+      return
+    }
+
+    const searchEl = document.getElementById('search')
+    const prevEl = document.getElementById('prev')
+    const nextEl = document.getElementById('next')
+    const isShowingKeyCommands = keycommandsEl?.dataset?.keys === 'show'
+
+    const hideKeyCommands = () => {
+      if (keycommandsEl) {
+        keycommandsEl.dataset.keys = 'hide'
+        keycommandsEl.style.opacity = '0'
+        setTimeout(() => {
+          keycommandsEl.style.display = 'none'
+        }, 100)
+      }
+    }
+
+    const showKeyCommands = () => {
+      if (keycommandsEl) {
+        keycommandsEl.dataset.keys = 'show'
+        keycommandsEl.style.display = 'flex'
+        setTimeout(() => {
+          keycommandsEl.style.opacity = '1'
+        }, 100)
+      }
+    }
+
+    if (isShowingKeyCommands) {
+      hideKeyCommands()
+    }
+
+    if (keycommandsEl && e.key === '?') {
+      e.preventDefault()
+      if (!isShowingKeyCommands) {
+        showKeyCommands()
+      } else {
+        hideKeyCommands()
+      }
+    }
+
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      hideKeyCommands()
+    }
+
+    if (searchEl && e.key === '/') {
+      e.preventDefault()
+      searchEl.focus()
+    }
+
+    if (nextEl && e.key === 'l') {
+      e.preventDefault()
+      nextEl.click()
+    }
+
+    if (prevEl && e.key === 'h') {
+      e.preventDefault()
+      prevEl.click()
+    }
+
+    if (e.key === 'j') {
+      e.preventDefault()
+      window.scrollBy({
+        top: 100,
+        behavior: 'smooth',
+      })
+    }
+
+    if (e.key === 'k') {
+      e.preventDefault()
+      window.scrollBy({
+        top: -100,
+        behavior: 'smooth',
+      })
+    }
+
+    if (e.key === 't') {
+      e.preventDefault()
+      window.location.href = '/t'
+    }
+
+    if (e.key === 'd') {
+      e.preventDefault()
+      window.location.href = '/d'
+    }
+  }
+</script>

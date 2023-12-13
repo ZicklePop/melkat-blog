@@ -15,7 +15,7 @@ const { prev, next } = url
   <div class={cx.navigation}>
     {
       prev && (
-        <a href={prev} class={cxs.a} aria-label="Newer posts">
+        <a href={prev} class={cxs.a} title="Newer posts" id="prev">
           &#8592; Newer
         </a>
       )
@@ -27,7 +27,7 @@ const { prev, next } = url
   <div class={`${cx.navigation} justify-end`}>
     {
       next ? (
-        <a href={next} class={cxs.a} aria-label="Older posts">
+        <a href={next} class={cxs.a} title="Older posts" id="next">
           Older &#8594;
         </a>
       ) : (
