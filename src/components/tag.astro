@@ -5,12 +5,9 @@ export interface Props {
   tag: string
 }
 
-const cx = {
-  a: cxs.aHover,
-}
 const { tag } = Astro.props
 ---
 
-<a class={cx.a} href={`/t/${tag}`} aria-label={`Posts tagged #${tag}`}
+<a class={cxs.a} href={`/t/${tag}`} aria-label={`Posts tagged #${tag}`}
   >#{tag}
 </a>

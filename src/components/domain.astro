@@ -6,14 +6,10 @@ export interface Props {
   link: string
 }
 
-const cx = {
-  a: cxs.aHover,
-}
-
 const { link } = Astro.props
 const domain = getDomain(link)
 ---
 
-<a class={cx.a} href={`/d/${domain}`} aria-label={`Posts linking to ${domain}`}
+<a class={cxs.a} href={`/d/${domain}`} title={`Posts linking to ${domain}`}
   >{domain}
 </a>

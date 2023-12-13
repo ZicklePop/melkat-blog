@@ -1,5 +1,6 @@
 export const pageSize = 25
-export const description = 'hi there! please enjoy my blog!'
+export const description =
+  'hi there! please enjoy my blog of things i think are interesting'
 export const title = 'melkat.blog'
 export const baseUrl = 'https://melkat.blog'
 export const defaultCover = '/cover.png'

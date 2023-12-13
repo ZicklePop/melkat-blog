@@ -3,7 +3,6 @@ import Search from '../components/search.astro'
 import { cxs } from '../consts/config'
 
 const cx = {
-  a: cxs.aHover,
   footer: 'text-center leading-normal',
   p: 'my-4',
   search: 'max-w-md mx-auto',
@@ -22,20 +21,21 @@ const { showSearch = true } = Astro.props
   }
   <p class={cx.p}>
     {'browse by '}
-    <a class={cx.a} href="/d">links</a>
+    <a class={cxs.a} href="/d">links</a>
     {' and '}
-    <a class={cx.a} href="/t">tags</a>
+    <a class={cxs.a} href="/t">tags</a>
     <br />
-    <a class={cx.a} href="/rss.xml">rss feed</a>
+    <a class={cxs.a} href="/rss.xml">rss feed</a>
     {' • '}
-    <a class={cx.a} href="/feed.json">json feed</a>
+    <a class={cxs.a} href="/feed.json">json feed</a>
   </p>
   <p class={cx.p}>
     melkat emoji by
-    <a class={cx.a} href="https://dzuk.zone">dzuk</a>
+    <a class={cxs.a} href="https://dzuk.zone">dzuk</a>
   </p>
   <p class={cx.p}>
     a blog by
-    <a class={cx.a} href="https://melaniekat.com" rel="me">melanie kat</a> &lt;3
+    <a class={cxs.a} href="https://melaniekat.com" rel="me">melanie kat</a>
+     &lt;3
   </p>
 </footer>

@@ -18,7 +18,7 @@ const { title = '', link = '', isExternal = false, small = false } = Astro.props
     class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${
       isExternal ? cxs.a : cxs.aHover
     }`}
-    aria-label={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
+    title={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
     style={{ textWrap: 'balance' }}
   >
     {title}

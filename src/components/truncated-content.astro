@@ -1,7 +1,7 @@
 ---
 import { marked } from 'marked'
 
-const { content, url } = Astro.props
+const { content, title, url } = Astro.props
 
 const cx = {
   link: 'font-bold hover:underline',
@@ -11,4 +11,6 @@ const truncatedHtml = marked(content)
 ---
 
 <div set:html={truncatedHtml} />
-<a href={url} class={cx.link}>Continue reading</a>
+<a href={url} class={cx.link} title={`Continue reading ${title || 'this post'}`}
+  >Continue reading</a
+>

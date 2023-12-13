@@ -6,12 +6,9 @@ export interface Props {
   url: string
 }
 
-const cx = {
-  a: cxs.aHover,
-}
 const { title, url } = Astro.props
 ---
 
-<a class={cx.a} href={url} aria-label={`Permalink for ${title}`}
+<a class={cxs.a} href={url} title={`Permalink for ${title}`}
   ><span role="img" aria-label="Star icon">★</span> Permalink
 </a>
