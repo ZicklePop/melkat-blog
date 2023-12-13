@@ -14,6 +14,7 @@ import { title as blogTitle } from '../consts/config'
 
 export interface Props {
   post: CollectionEntry<'posts'>
+  permalink?: string
 }
 
 const { post } = Astro.props
@@ -21,17 +22,17 @@ const {
   data: { title, cover, date, link, tags },
   slug,
 } = post
+const { permalink = `/p/${slug}` } = Astro.props
 
-const permalink = `/p/${slug}`
-const isPermalink = `${Astro.url}`.indexOf('/p/') > -1
-const Component = isPermalink ? Layout : Fragment
+const isPostPage = `${Astro.url}`.indexOf('/p/') > -1
+const Component = isPostPage ? Layout : Fragment
 const description = stripMd(post.body.trim().split('\n')[0])
 
 const truncatedMd = truncateMd(post.body)
 const wasTruncated = truncatedMd !== post.body
 
 let relatedPosts: CollectionEntry<'posts'>[] = []
-if (isPermalink) {
+if (isPostPage) {
   relatedPosts = await getCollection('posts', noDrafts)
   relatedPosts = relatedPosts.sort(byDate)
   relatedPosts = getRelatedPosts(relatedPosts, post)
@@ -55,12 +56,12 @@ const { Content } = await post.render()
     url={permalink}
   >
     {
-      isPermalink || !wasTruncated ? (
+      isPostPage || !wasTruncated ? (
         <Content />
       ) : (
         <TruncatedContent title={title} url={permalink} content={truncatedMd} />
       )
     }
   </Article>
-  {isPermalink && <RelatedArticles posts={relatedPosts} />}
+  {isPostPage && <RelatedArticles posts={relatedPosts} />}
 </Component>
