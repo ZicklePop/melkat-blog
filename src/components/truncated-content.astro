@@ -1,6 +1,12 @@
 ---
 import { marked } from 'marked'
 
+export interface Props {
+  content: string
+  title?: string
+  url: string
+}
+
 const { content, title, url } = Astro.props
 
 const cx = {

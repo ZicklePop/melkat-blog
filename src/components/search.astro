@@ -1,6 +1,10 @@
 ---
 import Button from './button.astro'
 
+export interface Props {
+  defaultValue?: string
+}
+
 const cx = {
   form: 'mb-8 flex flex-row items-center',
   div: 'flex-grow mr-2',

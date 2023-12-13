@@ -2,6 +2,10 @@
 import Search from '../components/search.astro'
 import { cxs } from '../consts/config'
 
+export interface Props {
+  showSearch?: boolean
+}
+
 const cx = {
   footer: 'text-center leading-normal',
   p: 'my-4',

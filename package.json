@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "astro build",
-    "check": "astro check; prettier -c .",
+    "check": "astro check",
     "dev": "astro dev",
     "format": "prettier --write .",
     "lint": "prettier --check .",

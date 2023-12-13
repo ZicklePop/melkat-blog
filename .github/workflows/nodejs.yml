@@ -19,11 +19,14 @@ jobs:
       - name: npm install
         run: |
           npm ci
-      - name: npm build
+      - name: astro build
         run: |
           npm run build --if-present
-      - name: npm run lint
+      - name: prettier lint
         run: |
           npm run lint
+      - name: astro check
+        run: |
+          npm run check
         env:
           CI: true
