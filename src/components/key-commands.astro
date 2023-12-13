@@ -15,6 +15,7 @@ import { cxs } from '../consts/config'
   </ul>
   <ul class="mb-3">
     <li><Kbd>/</Kbd> Focus search</li>
+    <li><Kbd>g</Kbd> Go home</li>
     <li><Kbd>t</Kbd> Browse tags</li>
     <li><Kbd>d</Kbd> Browse domains</li>
   </ul>
@@ -123,6 +124,11 @@ import { cxs } from '../consts/config'
         top: -100,
         behavior: 'smooth',
       })
+    }
+
+    if (e.key === 'g') {
+      e.preventDefault()
+      window.location.href = '/'
     }
 
     if (e.key === 't') {
