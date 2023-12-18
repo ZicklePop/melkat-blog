@@ -97,6 +97,10 @@ import { cxs } from '../consts/config'
 
     if (searchEl && e.key === '/') {
       e.preventDefault()
+      searchEl.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      })
       searchEl.focus()
     }
 
