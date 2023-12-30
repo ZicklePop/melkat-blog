@@ -1,6 +1,5 @@
 ---
 date: 2019-12-16T05:00:28.303Z
-
 title: My 2019 in Media
 tags: [post, media]
 ---
