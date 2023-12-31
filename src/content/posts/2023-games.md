@@ -1,6 +1,6 @@
 ---
 cover: /img/2023-games.png
-date: 2023-12-31T00:14:34.826Z
+date: 2023-12-31T19:32:13.115Z
 title: My 2023 in Games
 tags: [post, media, games]
 ---
