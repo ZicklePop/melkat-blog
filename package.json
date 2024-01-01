@@ -19,7 +19,7 @@
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.4",
-    "@leeoniya/ufuzzy": "^1.0.13",
+    "@leeoniya/ufuzzy": "^1.0.14",
     "@tailwindcss/typography": "^0.5.10",
     "@types/lodash": "^4.14.202",
     "@types/markdown-it": "^13.0.7",
