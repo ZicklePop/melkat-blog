@@ -18,7 +18,7 @@ const query = searchParams.get('q') || ''
 let allPosts = await getCollection('posts', noDrafts)
 allPosts = allPosts.sort(byDate)
 const results = fuzzySearch(query, allPosts)
-const noResults = !!query && results.length <= 0
+const noResults = !!query && (!results || results.length <= 0)
 const permalink = noResults ? '/q' : `/q?q=${encodeURIComponent(query)}`
 ---
 
@@ -27,6 +27,6 @@ const permalink = noResults ? '/q' : `/q?q=${encodeURIComponent(query)}`
     <label for="search">Search</label>
   </PageHeader>
   <Search defaultValue={query} />
-  {results.map(entry => entry && <PostLayout post={entry} />)}
+  {results?.map(entry => entry && <PostLayout post={entry} />)}
   {noResults && <p class={cx.p}>{'No results :('}</p>}
 </Layout>

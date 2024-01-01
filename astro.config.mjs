@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config'
-import netlify from '@astrojs/netlify/functions'
+import netlify from '@astrojs/netlify'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 
