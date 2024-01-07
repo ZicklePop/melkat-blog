@@ -30,6 +30,7 @@ export async function GET() {
             '" /><br />'
           : ''
       }${sanitizeHtml(parser.render(post.body))}`,
+      author: 'Melanie Kat',
     })),
   })
 }
