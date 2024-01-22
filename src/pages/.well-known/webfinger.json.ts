@@ -3,7 +3,7 @@ const MY_FINGER =
 
 export const prerender = true
 
-export async function get() {
+export async function GET() {
   const res = await fetch(MY_FINGER)
   const json = await res.json()
   return {
