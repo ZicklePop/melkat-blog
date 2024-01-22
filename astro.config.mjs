@@ -14,6 +14,6 @@ export default defineConfig({
     }),
     sitemap(),
   ],
-  output: 'server',
+  output: 'hybrid',
   adapter: netlify(),
 })
