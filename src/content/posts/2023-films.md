@@ -5,12 +5,6 @@ title: My 2023 in Films
 tags: [post, media, movies]
 ---
 
-I was reading [Max Read](https://maxread.substack.com/) earlier this year and something he said really resonated with me.
-
-> A Letterboxd subscription costs me $20 year; in exchange for my money I’m given a handful of useful features, like notifications when a movie I want to see is added to a streaming service I subscribe to. (And, yes, I am also awarded a good-boy badge indicating that I am a paying customer.) But the real reason I pony up is for a quality beyond straightforward “utility,” a quality I usually refer to as “[Doesn’t Make Me Wish I Was Dead](https://maxread.substack.com/p/a-year-of-read-max).”
->
-"[Why would anyone subscribe to a social media platform?](https://maxread.substack.com/p/why-would-anyone-subscribe-to-a-social)" by Max Read 
-
  I used Letterboxd when it first came out but [I deleted my account in 2019 to protest the site's decision to protect nazis](https://letterboxd.com/journal/inglourious/), for which they later apologized. So I recreated my account and I started watching movies, something I didn't do much of.
 
 I ended up watching [150 films this year](https://letterboxd.com/zicklepop/year/2023/), with about a third of them being new [movies or series from 2023](https://letterboxd.com/zicklepop/films/year/2023/). As I went through them to see which ones I enjoyed the most, two stood out.
