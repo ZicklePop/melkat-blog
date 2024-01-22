@@ -15,6 +15,8 @@ const cx = {
 const { searchParams } = Astro.url
 const query = searchParams.get('q') || ''
 
+export const prerender = false
+
 let allPosts = await getCollection('posts', noDrafts)
 allPosts = allPosts.sort(byDate)
 const results = fuzzySearch(query, allPosts)

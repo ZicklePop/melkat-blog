@@ -6,7 +6,5 @@ export const prerender = true
 export async function GET() {
   const res = await fetch(MY_FINGER)
   const json = await res.json()
-  return {
-    body: JSON.stringify(json),
-  }
+  return new Response(JSON.stringify(json))
 }
