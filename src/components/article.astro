@@ -1,7 +1,7 @@
 ---
-import Details from './details.astro'
 import Body from './body.astro'
 import Cover from './cover.astro'
+import Details from './details.astro'
 import Tags from './tags.astro'
 import Title from './title.astro'
 
@@ -9,6 +9,7 @@ export interface Props {
   cover?: string
   date: Date
   link?: string
+  slug: string
   tags?: string[]
   title: string
   url: string
@@ -19,7 +20,7 @@ const cx = {
     'pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25',
 }
 
-const { cover, date, link, tags = [], title, url } = Astro.props
+const { cover, date, link, tags = [], title, slug, url } = Astro.props
 ---
 
 <article class={cx.article}>
@@ -29,5 +30,5 @@ const { cover, date, link, tags = [], title, url } = Astro.props
   <Body>
     <slot />
   </Body>
-  <Tags url={url} tags={tags} title={title} />
+  <Tags slug={slug} url={url} tags={tags} title={title} />
 </article>

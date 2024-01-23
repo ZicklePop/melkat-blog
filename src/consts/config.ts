@@ -12,7 +12,7 @@ export const cxs = {
     'no-underline hover:underline text-cerulean-700 dark:text-cerulean-500',
   h1: 'font-light text-4xl my-6',
   h2: 'mb-4 text-xl font-medium',
-  li: 'inline-block uppercase my-1',
+  li: 'inline-block my-1',
   prose: 'prose prose-melkat dark:prose-invert md:prose-lg',
 }
 

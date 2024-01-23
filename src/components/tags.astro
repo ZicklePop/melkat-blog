@@ -1,33 +1,47 @@
 ---
+import Like from './like.astro'
 import Permalink from './permalink.astro'
 import Tag from './tag.astro'
+import Share from './share.astro'
 import { cxs } from '../consts/config'
 
 export interface Props {
-  url: string
-  title: string
+  slug: string
   tags: string[]
+  title: string
+  url: string
 }
 
 const cx = {
+  container:
+    'flex flex-col mt-4 gap-y-2 md:gap-x-5 md:flex-row justify-between',
   li: cxs.li,
   tag: `${cxs.li} pr-1`,
-  ul: 'list-none mt-4',
+  ul: 'list-none',
 }
 
-const { url, tags, title } = Astro.props
+const { url, slug, tags, title } = Astro.props
 ---
 
-<ul class={cx.ul}>
-  <li class={cx.li}>
-    <Permalink url={url} title={title} />
-  </li>
-  {!!tags && <li class={cx.li}>•</li>}
-  {
-    tags.map(tag => (
-      <li class={cx.tag}>
-        <Tag tag={tag} />
-      </li>
-    ))
-  }
-</ul>
+<div class={cx.container}>
+  <ul class={`${cx.ul} shrink-0`}>
+    <li class={cx.li}>
+      <Permalink url={url} title={title} />
+    </li>
+    <li class={cx.li}>
+      <Like slug={slug} />
+    </li>
+    <li class={cx.li}>
+      <Share url={url} title={title} />
+    </li>
+  </ul>
+  <ul class={cx.ul}>
+    {
+      tags.map(tag => (
+        <li class={cx.tag}>
+          <Tag tag={tag} />
+        </li>
+      ))
+    }
+  </ul>
+</div>

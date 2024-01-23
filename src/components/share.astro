@@ -1,0 +1,32 @@
+---
+import { cxs } from '../consts/config'
+
+export interface Props {
+  title: string
+  url: string
+}
+
+const { title, url } = Astro.props
+---
+
+<share-btn data-title={title} data-url={url}>
+  <button class={cxs.a} title={`Share this post`}
+    ><span role="img" aria-label="Share icon">↑</span> Share
+  </button>
+</share-btn>
+<script>
+  class ShareButton extends HTMLElement {
+    constructor() {
+      super()
+      const { title, url } = this.dataset
+      const button = this.querySelector('button')
+      button?.addEventListener('click', () => {
+        navigator.share({
+          title,
+          url,
+        })
+      })
+    }
+  }
+  customElements.define('share-btn', ShareButton)
+</script>
