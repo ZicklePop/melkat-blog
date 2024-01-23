@@ -19,7 +19,11 @@ const { title, url } = Astro.props
     constructor() {
       super()
       const { title, url } = this.dataset
+      const canShare = navigator.share !== undefined
       const button = this.querySelector('button')
+      if (!canShare) {
+        button?.remove()
+      }
       button?.addEventListener('click', () => {
         navigator.share({
           title,
