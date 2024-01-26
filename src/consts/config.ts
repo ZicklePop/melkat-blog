@@ -1,4 +1,4 @@
-export const pageSize = 25
+export const pageSize = 15
 export const description =
   'hi there! please enjoy my blog of things i think are interesting'
 export const title = 'melkat.blog'
