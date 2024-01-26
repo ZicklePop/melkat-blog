@@ -1,4 +1,5 @@
 ---
+import Icon from './icon.astro'
 import { cxs } from '../consts/config'
 
 export interface Props {
@@ -6,30 +7,33 @@ export interface Props {
 }
 
 const { slug } = Astro.props
-const HEART_OUTLINE = '♡'
 ---
 
 <like-btn>
   <button
-    class={cxs.a}
+    class={cxs.aIcon}
     data-umami-event={`likes-${slug}`}
     title={`Like this post`}
     type="button"
   >
-    <span role="img" aria-label="Heart icon">{HEART_OUTLINE}</span> Like
+    <Icon type="like" />
+    <span>Like</span>
   </button>
 </like-btn>
 <script>
-  const HEART_FILLED = '♥'
   class LikeButton extends HTMLElement {
     constructor() {
       super()
       const button = this.querySelector('button')
-      const heart = button?.querySelector('span')
+      const svg = button?.querySelector('svg path')
+      const label = button?.querySelector('span')
       button?.addEventListener('click', () => {
         button.disabled = true
-        if (heart?.textContent) {
-          heart.textContent = HEART_FILLED
+        if (svg) {
+          svg.setAttribute('stroke', '#ea1869')
+        }
+        if (label?.textContent) {
+          label.textContent = 'Liked'
         }
       })
     }

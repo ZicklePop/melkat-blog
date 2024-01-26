@@ -1,4 +1,5 @@
 ---
+import Icon from './icon.astro'
 import { cxs } from '../consts/config'
 
 export interface Props {
@@ -10,8 +11,8 @@ const { title, url } = Astro.props
 ---
 
 <share-btn data-title={title} data-url={url}>
-  <button class={cxs.a} title={`Share this post`}
-    ><span role="img" aria-label="Share icon">↑</span> Share
+  <button class={cxs.aIcon} title={`Share this post`}
+    ><Icon type="share" /> Share
   </button>
 </share-btn>
 <script>

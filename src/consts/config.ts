@@ -10,9 +10,11 @@ export const cxs = {
   a: 'text-cerulean-700 dark:text-cerulean-500 underline',
   aHover:
     'no-underline hover:underline text-cerulean-700 dark:text-cerulean-500',
+  aIcon:
+    'text-cerulean-700 dark:text-cerulean-500 underline flex items-center gap-1',
   h1: 'font-light text-4xl my-6',
   h2: 'mb-4 text-xl font-medium',
-  li: 'inline-block my-1',
+  li: 'inline-block my-1 mr-2',
   prose: 'prose prose-melkat dark:prose-invert md:prose-lg',
 }
 

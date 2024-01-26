@@ -1,0 +1,38 @@
+---
+export interface Props {
+  className?: string
+  stroke?: string
+  strokeWidth?: number
+  type: 'permalink' | 'like' | 'share' | 'tag'
+}
+
+const {
+  className = 'w-4 h-4s inline transition-colors',
+  stroke = 'currentColor',
+  strokeWidth = 10,
+  type = 'permalink',
+} = Astro.props
+
+const paths = {
+  permalink:
+    'M15.5 67.5c0-16.458 13.542-30 30-30s30 13.542 30 30 13.542 30 30 30 30-13.542 30-30-13.542-30-30-30m-90 30c0 16.458 13.542 30 30 30',
+  like: 'M75.5 52.5c0-16.458-13.542-30-30-30s-30 13.542-30 30c0 32.915 27.085 60 60 60m60-60c0-16.458-13.542-30-30-30s-30 13.542-30 30',
+  share: 'm105.5 45-30-30-30 30m30-30v75m-45 0v30h75',
+  tag: 'M90.5 112.5v-30h30m-60 30v-60h60m-60 30h-30m30-30h-30m30 0v-30m30 30v-30',
+}
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xml:space="preserve"
+  fill-rule="evenodd"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  clip-rule="evenodd"
+  viewBox="0 0 151 135"
+  class={className}
+  aria-label={`${type} icon`}
+>
+  <path fill="none" stroke={stroke} stroke-width={strokeWidth} d={paths[type]}
+  ></path>
+</svg>
