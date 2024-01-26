@@ -1,4 +1,5 @@
 ---
+import Icon from './icon.astro'
 import { cxs } from '../consts/config'
 
 export interface Props {
@@ -8,6 +9,9 @@ export interface Props {
 const { tag } = Astro.props
 ---
 
-<a class={cxs.a} href={`/t/${tag}`} aria-label={`Posts tagged #${tag}`}
-  >#{tag}
+<a
+  class={`${cxs.aIcon} gap-0`}
+  href={`/t/${tag}`}
+  aria-label={`Posts tagged #${tag}`}
+  ><Icon type="tag" />{tag}
 </a>

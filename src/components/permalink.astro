@@ -1,4 +1,5 @@
 ---
+import Icon from './icon.astro'
 import { cxs } from '../consts/config'
 
 export interface Props {
@@ -9,6 +10,6 @@ export interface Props {
 const { title, url } = Astro.props
 ---
 
-<a class={cxs.a} href={url} title={`Permalink for ${title}`}
-  ><span role="img" aria-label="Star icon">★</span> Permalink
+<a class={cxs.aIcon} href={url} title={`Permalink for ${title}`}
+  ><Icon type="permalink" /> Permalink
 </a>
