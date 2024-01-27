@@ -34,12 +34,12 @@ module.exports = {
         },
         trace: {
           '0%': {
-            strokeDasharray: 16,
-            strokeDashoffset: 16,
+            strokeDasharray: '16',
+            strokeDashoffset: '16',
           },
           '100%': {
-            strokeDasharray: 16,
-            strokeDashoffset: 0,
+            strokeDasharray: '16',
+            strokeDashoffset: '0',
           },
         },
       },
