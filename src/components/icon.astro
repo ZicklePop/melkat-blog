@@ -1,5 +1,6 @@
 ---
 export interface Props {
+  appendClass?: string
   className?: string
   stroke?: string
   strokeWidth?: number
@@ -7,9 +8,10 @@ export interface Props {
 }
 
 const {
-  className = 'w-4 h-4s inline transition-colors',
+  appendClass = '',
+  className = 'w-4 h-4s inline',
   stroke = 'currentColor',
-  strokeWidth = 10,
+  strokeWidth = 11,
   type = 'permalink',
 } = Astro.props
 
@@ -30,7 +32,7 @@ const paths = {
   stroke-linejoin="round"
   clip-rule="evenodd"
   viewBox="0 0 151 135"
-  class={className}
+  class={`${className} ${appendClass}`}
   aria-label={`${type} icon`}
 >
   <path fill="none" stroke={stroke} stroke-width={strokeWidth} d={paths[type]}

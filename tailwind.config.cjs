@@ -3,6 +3,29 @@ module.exports = {
   plugins: [require('@tailwindcss/typography')],
   theme: {
     extend: {
+      animation: {
+        'single-ping': 'single-ping 1s cubic-bezier(0, 0, 0.2, 1)',
+        'single-spin': 'single-spin 500ms cubic-bezier(0, 0, 0.2, 1)',
+        trace: 'trace 1s cubic-bezier(0, 0, 0.2, 1) infinite',
+      },
+      keyframes: {
+        'single-ping': {
+          '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+          '75%': { transform: 'scale(2)', opacity: 0 },
+          '76%': { transform: 'scale(1)', opacity: 0 },
+        },
+        'single-spin': {
+          '50%': {
+            transform: 'scaleX(0)',
+          },
+        },
+        trace: {
+          '50%': {
+            strokeDasharray: '300',
+            strokeDashoffset: '300',
+          },
+        },
+      },
       colors: {
         'hot-pink': {
           50: '#fef1f7',

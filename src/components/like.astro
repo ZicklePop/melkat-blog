@@ -10,8 +10,11 @@ const { slug } = Astro.props
 ---
 
 <like-btn data-slug={`likes-${slug}`}>
-  <button class={cxs.aIcon} title={`Like this post`} type="button">
-    <Icon type="like" />
+  <button class={`${cxs.aIcon} group`} title={`Like this post`} type="button">
+    <Icon
+      type="like"
+      appendClass="transition-transform group-hover:scale-125 group-[.cursor-not-allowed]:scale-100"
+    />
     <span>Like</span>
   </button>
 </like-btn>
@@ -21,12 +24,15 @@ const { slug } = Astro.props
       super()
       const slug = this.dataset.slug || ''
       const button = this.querySelector('button')
-      const svg = button?.querySelector('svg path')
+      const svg = button?.querySelector('svg')
+      const path = button?.querySelector('svg path')
       const label = button?.querySelector('span')
       button?.addEventListener('click', () => {
         button.disabled = true
-        if (svg) {
-          svg.setAttribute('stroke', '#ea1869')
+        button.classList.add('cursor-not-allowed')
+        if (svg && path) {
+          svg.classList.add('motion-safe:animate-single-ping')
+          path.setAttribute('stroke', '#ea1869')
         }
         if (label?.textContent) {
           label.textContent = 'Liked'

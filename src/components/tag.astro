@@ -10,8 +10,8 @@ const { tag } = Astro.props
 ---
 
 <a
-  class={`${cxs.aIcon} gap-0`}
+  class={`${cxs.aIcon} gap-[0] group`}
   href={`/t/${tag}`}
   aria-label={`Posts tagged #${tag}`}
-  ><Icon type="tag" />{tag}
+  ><Icon type="tag" appendClass="group-hover:motion-safe:animate-trace" />{tag}
 </a>
