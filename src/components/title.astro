@@ -1,4 +1,5 @@
 ---
+import Icon from './icon.astro'
 import PageHeader from './page-header.astro'
 import { cxs } from '../consts/config'
 
@@ -15,12 +16,18 @@ const { title = '', link = '', isExternal = false, small = false } = Astro.props
 <PageHeader>
   <a
     href={link}
-    class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${
-      isExternal ? cxs.a : cxs.aHover
-    }`}
+    class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${cxs.aIcon} group`}
     title={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
     style={{ textWrap: 'balance' }}
   >
     {title}
+    {
+      isExternal && (
+        <Icon
+          type="external"
+          className="w-5 h-5 group-hover:motion-safe:animate-single-wobble"
+        />
+      )
+    }
   </a>
 </PageHeader>

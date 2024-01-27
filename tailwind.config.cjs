@@ -6,7 +6,8 @@ module.exports = {
       animation: {
         'single-ping': 'single-ping 1s cubic-bezier(0, 0, 0.2, 1)',
         'single-spin': 'single-spin 500ms cubic-bezier(0, 0, 0.2, 1)',
-        trace: 'trace 1s cubic-bezier(0, 0, 0.2, 1) infinite',
+        trace: 'trace 1s ease-in',
+        'single-wobble': 'single-wobble 1s cubic-bezier(0, 0, 0.2, 1)',
       },
       keyframes: {
         'single-ping': {
@@ -19,10 +20,25 @@ module.exports = {
             transform: 'scaleX(0)',
           },
         },
-        trace: {
+        'single-wobble': {
+          '0%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%, 75%': {
+            transform: 'rotate(-20deg)',
+          },
           '50%': {
-            strokeDasharray: '300',
-            strokeDashoffset: '300',
+            transform: 'rotate(20deg)',
+          },
+        },
+        trace: {
+          '0%': {
+            strokeDasharray: 16,
+            strokeDashoffset: 16,
+          },
+          '100%': {
+            strokeDasharray: 16,
+            strokeDashoffset: 0,
           },
         },
       },

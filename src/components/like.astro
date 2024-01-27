@@ -13,7 +13,7 @@ const { slug } = Astro.props
   <button class={`${cxs.aIcon} group`} title={`Like this post`} type="button">
     <Icon
       type="like"
-      appendClass="transition-transform group-hover:scale-125 group-[.cursor-not-allowed]:scale-100"
+      appendClass="motion-safe:transition-transform group-hover:scale-125 group-[.cursor-not-allowed]:scale-100"
     />
     <span>Like</span>
   </button>

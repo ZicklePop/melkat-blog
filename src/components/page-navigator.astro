@@ -1,4 +1,5 @@
 ---
+import Icon from './icon.astro'
 import { cxs } from '../consts/config'
 
 const cx = {
@@ -15,8 +16,14 @@ const { prev, next } = url
   <div class={cx.navigation}>
     {
       prev && (
-        <a href={prev} class={cxs.a} title="Newer posts" id="prev">
-          &#8592; Newer
+        <a
+          href={prev}
+          class={`${cxs.aIcon} group`}
+          title="Newer posts"
+          id="prev"
+        >
+          <Icon type="new" appendClass="group-hover:animate-single-wobble" />{' '}
+          Newer
         </a>
       )
     }
@@ -27,8 +34,14 @@ const { prev, next } = url
   <div class={`${cx.navigation} justify-end`}>
     {
       next ? (
-        <a href={next} class={cxs.a} title="Older posts" id="next">
-          Older &#8594;
+        <a
+          href={next}
+          class={`${cxs.aIcon} group`}
+          title="Older posts"
+          id="next"
+        >
+          Older{' '}
+          <Icon type="old" appendClass="group-hover:animate-single-wobble" />
         </a>
       ) : (
         ''

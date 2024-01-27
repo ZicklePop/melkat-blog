@@ -12,7 +12,10 @@ const { title, url } = Astro.props
 
 <share-btn data-title={title} data-url={url}>
   <button class={`${cxs.aIcon} group`} title={`Share this post`}
-    ><Icon type="share" appendClass="group-hover:motion-safe:animate-trace" /> Share
+    ><Icon
+      type="share"
+      appendClass="group-hover:motion-safe:animate-single-wobble"
+    /> Share
   </button>
 </share-btn>
 <script>
