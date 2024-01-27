@@ -12,9 +12,9 @@ module.exports = {
       },
       keyframes: {
         'single-ping': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 1 },
-          '75%': { transform: 'scale(2)', opacity: 0 },
-          '76%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '75%': { transform: 'scale(2)', opacity: '0' },
+          '76%': { transform: 'scale(1)', opacity: '0' },
         },
         'single-spin': {
           '50%': {
