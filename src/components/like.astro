@@ -32,7 +32,7 @@ const { slug } = Astro.props
         button.classList.add('cursor-not-allowed')
         if (svg && path) {
           svg.classList.add('motion-safe:animate-single-ping')
-          path.setAttribute('stroke', '#ea1869')
+          path.setAttribute('stroke', 'oklch(60.71% 0.2743 7.34)')
         }
         if (label?.textContent) {
           label.textContent = 'Liked'
