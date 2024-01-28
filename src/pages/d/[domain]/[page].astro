@@ -38,7 +38,7 @@ const { domain } = Astro.params
   title={`${title} - posts from #${domain}, page ${page.currentPage} of ${page.lastPage}`}
   permalink={`/d/${domain}/${page.currentPage}`}
 >
-  <PageHeader>Links to {domain}</PageHeader>
+  <PageHeader>Linked posts to {domain}</PageHeader>
   {page.data.map((entry: EntryProp) => <PostLayout post={entry} />)}
   <PageNavigator page={page} />
 </Layout>
