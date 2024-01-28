@@ -137,7 +137,7 @@ module.exports = {
         melkat: {
           css: {
             '--tw-prose-links': theme('colors.cerulean[700]'),
-            '--tw-prose-invert-links': theme('colors.cerulean[500]'),
+            '--tw-prose-invert-links': theme('colors.cerulean[600]'),
           },
         },
       }),

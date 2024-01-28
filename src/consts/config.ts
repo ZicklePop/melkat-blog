@@ -7,11 +7,11 @@ export const defaultCover = '/cover.png'
 export const baseCoverUrl = `${baseUrl}${defaultCover}`
 
 export const cxs = {
-  a: 'text-cerulean-700 dark:text-cerulean-500 underline',
+  a: 'text-cerulean-700 dark:text-cerulean-600 underline',
   aHover:
-    'no-underline hover:underline text-cerulean-700 dark:text-cerulean-500',
+    'no-underline hover:underline text-cerulean-700 dark:text-cerulean-600',
   aIcon:
-    'text-cerulean-700 dark:text-cerulean-500 underline flex items-center gap-1',
+    'text-cerulean-700 dark:text-cerulean-600 underline flex items-center gap-1',
   h1: 'font-light text-4xl my-6',
   h2: 'mb-4 text-xl font-medium',
   li: 'inline-block my-1 mr-2',
