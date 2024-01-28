@@ -16,16 +16,15 @@ const { title = '', link = '', isExternal = false, small = false } = Astro.props
 <PageHeader>
   <a
     href={link}
-    class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${cxs.aIcon} group`}
+    class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${cxs.a} group`}
     title={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
     style={{ textWrap: 'balance' }}
   >
-    {title}
-    {
+    {title}{
       isExternal && (
         <Icon
           type="external"
-          className="w-5 h-5 group-hover:motion-safe:animate-single-wobble"
+          className="ml-1 inline w-5 h-5 group-hover:motion-safe:animate-single-wobble"
         />
       )
     }

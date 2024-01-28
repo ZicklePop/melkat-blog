@@ -1,29 +1,31 @@
 ---
-import Layout from '../../layouts/base-layout.astro'
-import { cxs, title } from '../../consts/config'
+import { title } from '../../consts/config'
 import { getCollection } from 'astro:content'
 import { getTagsByCount } from '../../utils/get-posts'
 import { noDrafts } from '../../utils/filter'
+import Layout from '../../layouts/base-layout.astro'
+import PageHeader from '../../components/page-header.astro'
+import Tag from '../../components/tag.astro'
 
 export const prerender = true
 
-const cx = {
-  div: `${cxs.prose} mb-8`,
-}
-
 const allPosts = await getCollection('posts', noDrafts)
-const sortedData = getTagsByCount(allPosts)
+const sortedData = getTagsByCount(allPosts).filter(({ count }) => count > 1)
 ---
 
 <Layout title={`${title} - Posts by tag`} permalink="/t">
-  <div class={cx.div}>
-    <h2>Posts by tag</h2>
-    <ul>
+  <PageHeader> Posts by tag </PageHeader>
+  <div class="mb-8">
+    <ul
+      class="grid grid-cols-2 gap-y-4 gap-x-0 md:grid-cols-4 md:gap-x-2 md:py-2"
+    >
       {
         sortedData.map(({ key, count }) => (
           <li>
-            <a href={`/t/${key}`}>{key}</a> {` ${count} `}{' '}
-            {count === 1 ? 'post' : 'posts'}
+            <Tag tag={key} />
+            <span class="pl-4 text-sm font-semibold">
+              {`${count} ${count === 1 ? 'post' : 'posts'}`}
+            </span>
           </li>
         ))
       }

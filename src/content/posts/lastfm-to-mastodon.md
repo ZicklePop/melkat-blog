@@ -3,7 +3,7 @@ date: 2023-03-05T21:00:09.249Z
 title: Last.fm to Mastodon Profile
 tags: [link, mastodon, lastfm, scriptable]
 cover: /img/lastfm-to-mastodon.png
-link: https://paste.melkat.lol/last.fm-to-mastodon.js
+link: https://paste.melanie.lol/last.fm-to-mastodon.js
 ---
 
 At this point I’m just coming up with reasons to play with the Mastodon API. I don’t know. I haven’t used [Last.fm](https://www.last.fm/user/ZicklePop) in years but I started again recently just because I love logging things. I was also thinking what if I could automatically update my Mastodon profile with dynamic content. Mastodon profiles, by default, have up to four fields you can customize the label and content of. A common use for one of the fields to list their pronouns, link to their website, or share their location, so why not your last played track from Last.fm? My script works can work in two ways: it will look for a field titled `Last.fm` and set the value to the last played track, or it will look for a field value of a `last.fm` url and set the field title to the last played track.
