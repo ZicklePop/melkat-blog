@@ -24,7 +24,7 @@
     "@types/markdown-it": "^13.0.7",
     "@types/marked": "^6.0.0",
     "@types/sanitize-html": "^2.9.5",
-    "astro": "^4.2.1",
+    "astro": "^4.3.0",
     "autoprefixer": "^10.4.17",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
