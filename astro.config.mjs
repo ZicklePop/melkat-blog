@@ -14,5 +14,6 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+  output: 'hybrid',
   adapter: vercel(),
 })
