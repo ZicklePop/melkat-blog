@@ -1,0 +1,19 @@
+const id = 'falsehoods-around-names.md'
+const collection = 'posts'
+const slug = 'falsehoods-around-names'
+const body =
+  '\nIt is wild that this piece is 12 years old and constantly gets more relevant with age. I do not get why everyone wants to constantly gate keep names, like you would know better than the one telling you their name.\n'
+const data = {
+  date: new Date(1652733998225),
+  link: 'https:\u002F\u002Fwww.kalzumeus.com\u002F2010\u002F06\u002F17\u002Ffalsehoods-programmers-believe-about-names\u002F',
+  tags: ['article', 'tech', 'names'],
+  title: 'Falsehoods Programmers Believe About Names',
+}
+const _internal = {
+  filePath:
+    '/Users/melanie/Developer/melkat-blog/src/content/posts/falsehoods-around-names.md',
+  rawData:
+    '\ndate: 2022-05-16T20:46:38.225Z\nlink: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/\ntitle: Falsehoods Programmers Believe About Names\ntags: [article, tech, names]',
+}
+
+export { _internal, body, collection, data, id, slug }

@@ -1,0 +1,15 @@
+async function getMod() {
+  return import('./251027866_96E-tqVq.mjs')
+}
+const collectedLinks = []
+const collectedStyles = []
+const collectedScripts = []
+const defaultMod = {
+  __astroPropagation: true,
+  getMod,
+  collectedLinks,
+  collectedStyles,
+  collectedScripts,
+}
+
+export { defaultMod as default }

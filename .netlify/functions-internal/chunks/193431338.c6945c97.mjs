@@ -1,0 +1,20 @@
+const id = '193431338.md'
+const collection = 'posts'
+const slug = '193431338'
+const body =
+  "\nThe lore behind Fall Guys is as adorable as the little beans. That said, I can't wait for those eggs to hatch 👀\n"
+const data = {
+  cover: '\u002Fimg\u002F193431338.jpg',
+  date: new Date(1599541337002),
+  link: 'https:\u002F\u002Fwww.thegamer.com\u002Ffall-guys-secrets-lore-interview\u002F',
+  tags: ['article', 'games'],
+  title: 'Fall Guys Secrets - A Super Serious Lore Interview',
+}
+const _internal = {
+  filePath:
+    '/Users/melanie/Developer/melkat-blog/src/content/posts/193431338.md',
+  rawData:
+    '\ncover: /img/193431338.jpg\ndate: 2020-09-08T05:02:17.002Z\nlink: https://www.thegamer.com/fall-guys-secrets-lore-interview/\ntags: [article, games]\ntitle: Fall Guys Secrets - A Super Serious Lore Interview',
+}
+
+export { _internal, body, collection, data, id, slug }
