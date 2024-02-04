@@ -15,5 +15,7 @@ export default defineConfig({
     sitemap(),
   ],
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: vercel({
+    imageService: true,
+  }),
 })
