@@ -4,7 +4,7 @@ title: I rewrote my blog with Astro
 tags: [post, me, astro, javascript]
 cover: /img/astro-rewrite.png
 ---
-Welcome to the blog that was known as [melkat.link](https://melkat.link 'Old URL that redirects to this website').
+Welcome to the blog that was known as melkat.link.
 
 I had a fun technique for making a blog using a bookmarking service to act as my content management system. I never knew how the bookmarking service felt about how I was using it and it made my blog on external services.
 

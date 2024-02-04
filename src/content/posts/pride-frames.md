@@ -2,7 +2,7 @@
 date: 2023-09-27T17:22:13.426Z
 title: Pride Frames for Web
 tags: [link, me, queer, trans, apps]
-link: https://frames.melkat.gay
+link: https://pride.melaniekat.com
 cover: /img/pride-frames.png
 ---
 
