@@ -2,7 +2,7 @@
 cover: /img/audio-cast.jpg
 date: 2024-01-07T03:49:59.148Z
 title: A Podcast of Articles and Text
-tags: [post, shortcuts, ios, php]
+tags: [post, shortcuts, ios, php, podcasts]
 ---
 
 I recently mentioned that I like how modern read-later apps have natural-sounding text-to-speech capabilities. Safari just added the ability to read articles to you. It made me wonder if I could get something like that to read articles aloud without an internet connection.
