@@ -31,4 +31,6 @@ The rest of the shortcut is making a lot of Shortcuts conventions match how actu
 
 This is not perfect, but I think it will do what my dad needs. If you have a bunch of drastically different photo sizes, it can look a little funky. I could fix this by determining the image sizes and trying to make them  all similar by resizing and cropping. I played around with some ideas in a new shortcut, but I couldn't say for sure that I wasn't making things look worse, so I decided to scrap it and release it as is.
 
-[**Get Print Photos to Page.shortcut**](https://www.icloud.com/shortcuts/7a41312171dc417cab59d2b360c280af)
+[**Get Print Photos to Page.shortcut**](https://www.icloud.com/shortcuts/a9692c108b87450095d792b1ac0ec01e)
+
+_Update: Turns out, as of the time of this post, using the print action from a shortcut is only supported when you run a shortcut directly, not as a share sheet action. So I have replaced the Print action with Share so you can manually hit print._
