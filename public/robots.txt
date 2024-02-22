@@ -49,4 +49,19 @@ Disallow: /
 User-agent: DataForSeoBot
 Disallow: /
 
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Googlebot-Image 
+Disallow: /
+
+User-agent: msnbot-media 
+Disallow: /
+
+User-agent: yandex
+Disallow: /
+
+User-agent: ArcMobile2
+Disallow: /
+
 Sitemap: https://melkat.blog/sitemap-0.xml
