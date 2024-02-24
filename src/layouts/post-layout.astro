@@ -19,7 +19,7 @@ export interface Props {
 
 const { post } = Astro.props
 const {
-  data: { title, cover, date, link, tags },
+  data: { title, cover, coverAlt, date, link, tags },
   slug,
 } = post
 const { permalink = `/p/${slug}` } = Astro.props
@@ -49,6 +49,7 @@ const { Content } = await post.render()
 >
   <Article
     cover={cover}
+    coverAlt={coverAlt}
     date={date}
     link={link}
     slug={slug}
