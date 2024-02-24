@@ -1,5 +1,6 @@
 ---
 cover: /img/vr-sexism.jpg
+coverAlt: Four screenshots from a rollercoaster VR experience
 date: 2022-04-30T06:32:11.369Z
 title: "Virtual Reality Is Sexist: But It Does Not Have to Be"
 link: https://www.frontiersin.org/articles/10.3389/frobt.2020.00004/full

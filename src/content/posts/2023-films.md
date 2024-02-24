@@ -1,5 +1,6 @@
 ---
 cover: /img/2023-films.png
+coverAlt: Movie posters for Past Lives and Joe Pera Slow & Steady
 date: 2023-12-30T19:57:11.492Z
 title: My 2023 in Films
 tags: [post, media, movies]

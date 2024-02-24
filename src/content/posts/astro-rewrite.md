@@ -3,6 +3,7 @@ date: 2022-03-20T20:02:19.497Z
 title: I rewrote my blog with Astro
 tags: [post, me, astro, javascript]
 cover: /img/astro-rewrite.png
+coverAlt: Astro banner and logo that says Build fast websites, faster
 ---
 Welcome to the blog that was known as melkat.link.
 

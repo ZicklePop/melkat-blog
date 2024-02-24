@@ -26,7 +26,7 @@ export async function GET() {
             baseUrl +
             post.data.cover +
             '" alt="' +
-            post.data.title +
+            post.data.coverAlt +
             '" /><br />'
           : ''
       }${sanitizeHtml(parser.render(post.body))}`,

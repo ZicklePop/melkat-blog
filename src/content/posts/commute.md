@@ -1,5 +1,6 @@
 ---
 cover: /img/commute.jpg
+coverAlt: Pixel art of Golden Gate Bridge and a San Francisco building
 date: 2022-04-22T04:49:03.362Z
 title: Commute
 link: https://thisisstar.itch.io/commute

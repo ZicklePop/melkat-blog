@@ -3,6 +3,7 @@ date: 2023-02-15T23:45:48.893Z
 title: Toot.cards
 tags: [link, me, mastodon, javascript]
 cover: /img/toot-cards.png
+coverAlt: Line art of a simple megaphone
 link: https://toot.cards
 ---
 

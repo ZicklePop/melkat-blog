@@ -1,5 +1,6 @@
 ---
 cover: /img/lilgatorgame.png
+coverAlt: A gator holding a makeshift parachute jumping off a rock 
 date: 2022-12-31T18:27:50.074Z
 title: Lil Gator Game
 link: https://www.playtonicgames.com/game/lil-gator-game/

@@ -2,15 +2,15 @@
 import { Image } from 'astro:assets'
 
 export interface Props {
-  title: string
   cover: string
+  coverAlt: string
 }
 
 const cx = {
   img: 'rounded-lg aspect-video object-cover mb-3',
 }
 
-const { title, cover } = Astro.props
+const { cover, coverAlt } = Astro.props
 ---
 
-<Image alt={title} class={cx.img} src={cover} width={656} height={369} />
+<Image alt={coverAlt} class={cx.img} src={cover} width={656} height={369} />

@@ -1,5 +1,6 @@
 ---
 cover: /img/audio-cast.jpg
+coverAlt: A screenshot showing three apps on an iPad, the apps are Podcasts, Shortcuts, and Files demonstrating the setup for this post
 date: 2024-01-07T03:49:59.148Z
 title: A Podcast of Articles and Text
 tags: [post, shortcuts, ios, php, podcasts]

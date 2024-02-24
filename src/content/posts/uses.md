@@ -1,5 +1,6 @@
 ---
 cover: /img/uses.jpg
+coverAlt: A photo of my desk
 date: 2023-12-12T06:01:44.993Z
 tags: [post, uses, apps, hardware]
 title: Uses

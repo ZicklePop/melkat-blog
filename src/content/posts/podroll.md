@@ -3,6 +3,7 @@ date: 2024-02-20T04:35:34.366Z
 title: The Podcasts I Stuck With
 tags: [post, me, podcasts]
 cover: /img/podroll.png
+coverAlt: Podcast album art for Stop Podcasting Yourself and The Flop House
 ---
 
 There was a time when I listened to a wide variety of podcasts. I even subscribed to video podcasts! Are those even still a thing anymore? I've been subscribed to podcasts since Apple introduced them to iTunes in 2005 which is over half a lifetime ago for me. Anyway, those days are long gone. I heard a lot of people cut back on podcasts when the pandemic first hit, but for me, podcasts weren't just a commute thing. Though, ever since the Jambox and now the HomePod, I find myself listening to them primarily when I am doing my morning and evening routines in the bathroom.

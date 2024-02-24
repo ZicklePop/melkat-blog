@@ -3,6 +3,7 @@ date: 2023-09-05T05:22:21.488Z
 title: Leave a Note On Your Partner’s Lock Screen
 tags: [post, shortcuts, ios, anytext]
 cover: /img/notes-for-partner.png
+coverAlt: A iPhone lock screen with a widget that says "Happy second anniversary my love!!!!!!" and a bunch of heart emoji
 ---
 
 [Sindre Sorhus](https://sindresorhus.com/) launched yet another excellent free app for your iPhone and iPad: [Any Text](https://apps.apple.com/us/app/any-text-lock-screen-widgets/id1643199620). It’s a widget that lets you type text and have it show up as a lock screen widget.

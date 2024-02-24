@@ -3,6 +3,7 @@ date: 2024-02-21T21:50:07.473Z
 title: Print Photos to a Single Page
 tags: [post, shortcuts, ios]
 cover: /img/print-photos-to-page.jpg
+coverAlt: A screenshot of the iPad's print dialog with example output from this shortcut
 ---
 
 When the iPhone was released in 2007, it came without the ability to print. The concept of printing from a wireless device wasn't impossible, but it wasn't expected. In 2010, Apple introduced AirPrint, which finally brought printing to the iPhone. Well, not quite, because it definitely didn't work with your printer, so you had to install a  Mac-only third-party app to act as an AirPrint server. The lifespan of a printer isn't that long, so sometime in the next decade it became commonplace for your printer to support printing from an iPhone or iPad. So here we are 13 years after the release of AirPrint, and there isn't much more support for it in Apple's apps than there was when it first came out.

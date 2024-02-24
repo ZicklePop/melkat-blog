@@ -3,6 +3,7 @@ date: 2023-02-13T03:55:25.182Z
 title: Checking Your SF Jury Summon
 tags: [post, javascript, shortcuts, scriptable, sanfrancisco]
 cover: /img/sfjuryduty.jpg
+coverAlt: Two examples of the widget. One says You are safe and the other says You are wanted
 ---
 
 In San Francisco, when we get summoned for jury duty, we are lucky enough to have a [website to check](https://www.sfsuperiorcourt.org/divisions/jury-services/jury-reporting) that tells us it will be updated at 4:30 pm on weekdays. It's a pretty simple website, which makes it perfect for automating this task.
