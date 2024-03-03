@@ -10,7 +10,10 @@ export interface Props {
 const { title, url } = Astro.props
 ---
 
-<a class={`${cxs.aIcon} group`} href={url} title={`Permalink for ${title}`}
+<a
+  class={`${cxs.aIcon} group u-url`}
+  href={url}
+  title={`Permalink for ${title}`}
   ><Icon
     type="permalink"
     appendClass="group-hover:motion-safe:animate-single-spin"

@@ -16,7 +16,7 @@ const { title = '', link = '', isExternal = false, small = false } = Astro.props
 <PageHeader>
   <a
     href={link}
-    class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${cxs.a} group`}
+    class={`${small ? 'text-xl' : 'text-2xl md:text-3xl'} ${cxs.a} group p-name ${isExternal && 'u-in-reply-to'}`}
     title={`${isExternal ? 'Link to ' : 'Permalink for '}${title}`}
     style={{ textWrap: 'balance' }}
   >
