@@ -23,24 +23,22 @@ const { showSearch = true } = Astro.props
       </div>
     )
   }
-  <p class={`${cx.p} h-card`}>
+  <p class={cx.p}>
     {'browse by '}
-    <a class={`${cxs.a} u-url`} href="/d">links</a>
+    <a class={cxs.a} href="/d">links</a>
     {' and '}
-    <a class={`${cxs.a} u-url`} href="/t">tags</a>
+    <a class={cxs.a} href="/t">tags</a>
     <br />
-    <a class={`${cxs.a} u-url`} href="/rss.xml">rss feed</a>
+    <a class={cxs.a} href="/rss.xml">rss feed</a>
     {' • '}
-    <a class={`${cxs.a} u-url`} href="/feed.json">json feed</a>
+    <a class={cxs.a} href="/feed.json">json feed</a>
   </p>
-  <p class={`${cx.p} h-card`}>
+  <p class={cx.p}>
     a blog by
-    <a class={`${cxs.a} u-url p-name`} href="https://melaniekat.com" rel="me"
-      >melanie kat</a
-    >
+    <a class={cxs.a} href="https://melaniekat.com" rel="me">melanie kat</a>
     &lt;3
     <br />
-    <a class={`${cxs.a} u-url`} href="https://nyan.lol/@zicklepop" rel="me"
+    <a class={cxs.a} href="https://nyan.lol/@zicklepop" rel="me"
       >@zicklepop@nyan.lol</a
     >
   </p>
