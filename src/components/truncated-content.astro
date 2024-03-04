@@ -16,7 +16,7 @@ const cx = {
 const truncatedHtml = marked(content)
 ---
 
-<div set:html={truncatedHtml} />
+<div class="p-summary" set:html={truncatedHtml} />
 <a href={url} class={cx.link} title={`Continue reading ${title || 'this post'}`}
   >Continue reading</a
 >

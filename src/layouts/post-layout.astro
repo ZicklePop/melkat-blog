@@ -39,6 +39,7 @@ if (isPostPage) {
 }
 
 const { Content } = await post.render()
+const showTruncated = !isPostPage && wasTruncated
 ---
 
 <Component
@@ -56,13 +57,14 @@ const { Content } = await post.render()
     tags={tags}
     title={title}
     url={permalink}
-    truncated={wasTruncated}
   >
     {
-      isPostPage || !wasTruncated ? (
-        <Content />
-      ) : (
+      showTruncated ? (
         <TruncatedContent title={title} url={permalink} content={truncatedMd} />
+      ) : (
+        <div class="e-content">
+          <Content />
+        </div>
       )
     }
   </Article>
