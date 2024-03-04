@@ -13,7 +13,7 @@ export interface Props {
   slug: string
   tags?: string[]
   title: string
-  truncate?: boolean
+  truncated?: boolean
   url: string
 }
 
@@ -29,7 +29,7 @@ const {
   link,
   tags = [],
   title,
-  truncate = false,
+  truncated = false,
   slug,
   url,
 } = Astro.props
@@ -39,7 +39,7 @@ const {
   <Title title={title} link={link ? link : url} isExternal={!!link} />
   <Details link={link} date={date} />
   {cover && coverAlt && <Cover cover={cover} coverAlt={coverAlt} />}
-  <Body truncate={truncate}>
+  <Body truncated={truncated}>
     <slot />
   </Body>
   <Tags slug={slug} url={url} tags={tags} title={title} />
