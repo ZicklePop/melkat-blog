@@ -13,6 +13,7 @@ export interface Props {
   slug: string
   tags?: string[]
   title: string
+  truncate?: boolean
   url: string
 }
 
@@ -21,14 +22,24 @@ const cx = {
     'h-entry pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25',
 }
 
-const { cover, coverAlt, date, link, tags = [], title, slug, url } = Astro.props
+const {
+  cover,
+  coverAlt,
+  date,
+  link,
+  tags = [],
+  title,
+  truncate = false,
+  slug,
+  url,
+} = Astro.props
 ---
 
 <article class={cx.article}>
   <Title title={title} link={link ? link : url} isExternal={!!link} />
   <Details link={link} date={date} />
   {cover && coverAlt && <Cover cover={cover} coverAlt={coverAlt} />}
-  <Body>
+  <Body truncate={truncate}>
     <slot />
   </Body>
   <Tags slug={slug} url={url} tags={tags} title={title} />

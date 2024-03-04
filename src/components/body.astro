@@ -1,9 +1,13 @@
 ---
 import { cxs } from '../consts/config'
 
-const cx = {
-  div: `${cxs.prose} my-4 e-content`,
+export interface Props {
+  truncate?: boolean
 }
+
+const { truncate = false } = Astro.props
 ---
 
-<div class={cx.div}><slot /></div>
+<div class={`${cxs.prose} my-4 ${truncate ? 'p-summary' : 'e-content'}`}>
+  <slot />
+</div>
