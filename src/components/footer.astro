@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const cx = {
-  footer: 'h-card text-center leading-normal',
+  footer: 'text-center leading-normal',
   p: 'my-4',
   search: 'max-w-md mx-auto',
 }
@@ -23,7 +23,7 @@ const { showSearch = true } = Astro.props
       </div>
     )
   }
-  <p class={cx.p}>
+  <p class={`${cx.p} h-card`}>
     {'browse by '}
     <a class={`${cxs.a} u-url`} href="/d">links</a>
     {' and '}
@@ -33,7 +33,7 @@ const { showSearch = true } = Astro.props
     {' • '}
     <a class={`${cxs.a} u-url`} href="/feed.json">json feed</a>
   </p>
-  <p class={cx.p}>
+  <p class={`${cx.p} h-card`}>
     a blog by
     <a class={`${cxs.a} u-url`} href="https://melaniekat.com" rel="me"
       >melanie kat</a
