@@ -4,7 +4,7 @@ title: Hosting the Jamstack
 tags: [post, javascript]
 ---
 
-Vercel and Netlify offer amazing free hosting providers but what happens when you use more than they like? Well it's time to pay. Not only is it time to pay, but it's time to pay a lot and there are no in-between tiers. Both Netlify and Vercel start off at **$20 per month per person**.
+Vercel and Netlify offer amazing free hosting but what happens when you use more than they like? Well it's time to pay. Not only is it time to pay, but it's time to pay a lot and there are no in-between tiers. Both Netlify and Vercel start off at **$20 per month per person**.
 
 I found their free features to be great, and their integration with git repositories is pretty nice, but once you start trying to figure out what you need to pay for, it gets confusing. You see, those prices I listed are just the “basics,” and when you go over things like traffic limits, build times, edge function usage, and many other bullet points on their very long pricing chart pages, you end up with additional fees.
 
