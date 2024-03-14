@@ -4,7 +4,7 @@
   "license": "Unlicense",
   "private": true,
   "scripts": {
-    "build": "astro build --remote",
+    "build": "astro build",
     "check": "astro check",
     "dev": "astro dev",
     "format": "prettier --write .",
