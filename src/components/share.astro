@@ -14,7 +14,7 @@ const { title, url } = Astro.props
   <button class={`${cxs.aIcon} group`} title={`Share this post`}
     ><Icon
       type="share"
-      appendClass="motion-safe:transition-transform group-hover:scale-125 group-[.cursor-not-allowed]:scale-100"
+      appendClass="group-hover:motion-safe:animate-single-wobble"
     /> Share
   </button>
 </share-btn>
@@ -25,16 +25,10 @@ const { title, url } = Astro.props
       const { title, url } = this.dataset
       const canShare = navigator.share !== undefined
       const button = this.querySelector('button')
-      const svg = button?.querySelector('svg')
-      const path = button?.querySelector('svg path')
       if (!canShare) {
         button?.remove()
       }
       button?.addEventListener('click', () => {
-        if (svg && path) {
-          svg.classList.add('motion-safe:animate-single-ping')
-          path.setAttribute('stroke', 'oklch(60.71% 0.2743 7.34)')
-        }
         navigator.share({
           title,
           url,
