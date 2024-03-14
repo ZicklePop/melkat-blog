@@ -6,7 +6,7 @@
   "scripts": {
     "build": "astro build --remote",
     "check": "astro check",
-    "dev": "astro dev",
+    "dev": "astro dev --remote",
     "format": "prettier --write .",
     "lint": "prettier --check .",
     "prepare": "husky install",

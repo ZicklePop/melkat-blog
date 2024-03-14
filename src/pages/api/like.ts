@@ -18,9 +18,9 @@ export async function POST({ clientAddress, request }: APIContext) {
   }
 
   const [currentSalt] = await db.select().from(Meta).where(eq(Meta.key, 'salt'))
-  const currentSaltUpdated = currentSalt.updated.toISOString().split('T')[0]
+  const currentSaltUpdated = currentSalt?.updated?.toISOString().split('T')[0]
   const currentDate = new Date().toISOString().split('T')[0]
-  let salt = currentSalt.value
+  let salt = currentSalt?.value
 
   // Needs fresh salt
   if (!currentSalt || currentSaltUpdated !== currentDate) {
