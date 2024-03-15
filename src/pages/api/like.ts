@@ -1,16 +1,31 @@
-import { db, desc, eq, Likes, Meta } from 'astro:db'
-import { count } from 'drizzle-orm'
-import type { APIContext } from 'astro'
 import { getRandomValues, getHash } from '../../utils/cryptography'
+import {
+  getCurrentSalt,
+  getLikesForSlug,
+  getPostsByLikes,
+  likePostBySlug,
+  updateSalt,
+} from '../../utils/db'
+import type { APIContext } from 'astro'
 
 export const prerender = false
 
-export async function GET() {
-  const likes = await db
-    .select({ slug: Likes.slug, count: count() })
-    .from(Likes)
-    .groupBy(Likes.slug)
-    .orderBy(desc(count()))
+function getSlug(url: string): string | null {
+  return url ? new URL(url).searchParams.get('slug') : null
+}
+
+export async function GET({ request }: APIContext) {
+  const slug = getSlug(request.url)
+
+  if (slug) {
+    return new Response(
+      JSON.stringify({
+        count: await getLikesForSlug(slug),
+      })
+    )
+  }
+
+  const likes = await getPostsByLikes()
 
   return new Response(
     JSON.stringify({
@@ -20,8 +35,8 @@ export async function GET() {
 }
 
 export async function POST({ clientAddress, request }: APIContext) {
-  const data = await request.json()
-  const slug = data?.slug
+  const slug = getSlug(request.url)
+
   if (!slug) {
     return new Response(
       JSON.stringify({
@@ -31,7 +46,7 @@ export async function POST({ clientAddress, request }: APIContext) {
     )
   }
 
-  const [currentSalt] = await db.select().from(Meta).where(eq(Meta.key, 'salt'))
+  const currentSalt = await getCurrentSalt()
   const currentSaltUpdated = currentSalt?.updated?.toISOString().split('T')[0]
   const currentDate = new Date().toISOString().split('T')[0]
   let salt = currentSalt?.value
@@ -39,26 +54,18 @@ export async function POST({ clientAddress, request }: APIContext) {
   // Needs fresh salt
   if (!salt || currentSaltUpdated !== currentDate) {
     salt = getRandomValues()
-    await db
-      .update(Meta)
-      .set({ value: salt, updated: new Date() })
-      .where(eq(Meta.key, 'salt'))
+    await updateSalt(salt)
   }
 
   const ua = request.headers.get('user-agent')
   const hash = await getHash(`${slug}${clientAddress}${ua}${salt}`)
-  if (slug && hash) {
-    await db.insert(Likes).values({ hash, slug }).onConflictDoNothing()
+  if (hash && slug) {
+    await likePostBySlug(hash, slug)
   }
-
-  const [{ count: likeCount }] = await db
-    .select({ count: count() })
-    .from(Likes)
-    .where(eq(Likes.slug, slug))
 
   return new Response(
     JSON.stringify({
-      count: likeCount,
+      count: await getLikesForSlug(slug),
     })
   )
 }
