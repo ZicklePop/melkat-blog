@@ -6,6 +6,5 @@ export default async function seed() {
   await db.insert(Meta).values({
     key: 'salt',
     value: getRandomValues(),
-    updated: new Date(),
   })
 }

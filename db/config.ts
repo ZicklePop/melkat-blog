@@ -4,7 +4,7 @@ const Meta = defineTable({
   columns: {
     key: column.text({ primaryKey: true }),
     value: column.text(),
-    updated: column.date(),
+    updated: column.date({ default: new Date() }),
   },
 })
 
@@ -12,6 +12,7 @@ const Likes = defineTable({
   columns: {
     hash: column.text({ primaryKey: true }),
     slug: column.text(),
+    date: column.date({ default: new Date() }),
   },
 })
 

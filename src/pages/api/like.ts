@@ -1,9 +1,23 @@
-import { db, eq, Likes, Meta } from 'astro:db'
+import { db, desc, eq, Likes, Meta } from 'astro:db'
 import { count } from 'drizzle-orm'
 import type { APIContext } from 'astro'
 import { getRandomValues, getHash } from '../../utils/cryptography'
 
 export const prerender = false
+
+export async function GET() {
+  const likes = await db
+    .select({ slug: Likes.slug, count: count() })
+    .from(Likes)
+    .groupBy(Likes.slug)
+    .orderBy(desc(count()))
+
+  return new Response(
+    JSON.stringify({
+      likes,
+    })
+  )
+}
 
 export async function POST({ clientAddress, request }: APIContext) {
   const data = await request.json()
@@ -32,7 +46,7 @@ export async function POST({ clientAddress, request }: APIContext) {
   }
 
   const ua = request.headers.get('user-agent')
-  const hash = await getHash(`${clientAddress}${ua}${salt}`)
+  const hash = await getHash(`${slug}${clientAddress}${ua}${salt}`)
   if (slug && hash) {
     await db.insert(Likes).values({ hash, slug }).onConflictDoNothing()
   }
