@@ -1,7 +1,5 @@
 ---
-import { count } from 'drizzle-orm'
 import { cxs } from '../consts/config'
-import { db, eq, Likes } from 'astro:db'
 import { likeLabel } from '../utils/like-label'
 import Icon from './icon.astro'
 
@@ -10,11 +8,6 @@ export interface Props {
 }
 
 const { slug } = Astro.props
-
-const [{ count: likeCount }] = await db
-  .select({ count: count() })
-  .from(Likes)
-  .where(eq(Likes.slug, slug))
 ---
 
 <like-btn data-slug={slug}>
@@ -23,7 +16,7 @@ const [{ count: likeCount }] = await db
       type="like"
       appendClass="motion-safe:transition-transform group-hover:scale-125 group-[.cursor-not-allowed]:scale-100"
     />
-    <span>{likeLabel(likeCount)}</span>
+    <span>Like</span>
   </button>
 </like-btn>
 <script>
