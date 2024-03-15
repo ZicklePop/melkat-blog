@@ -23,7 +23,7 @@ export async function POST({ clientAddress, request }: APIContext) {
   let salt = currentSalt?.value
 
   // Needs fresh salt
-  if (!currentSalt || currentSaltUpdated !== currentDate) {
+  if (!salt || currentSaltUpdated !== currentDate) {
     salt = getRandomValues()
     await db
       .update(Meta)
