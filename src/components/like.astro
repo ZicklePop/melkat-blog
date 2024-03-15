@@ -8,6 +8,7 @@ import Icon from './icon.astro'
 export interface Props {
   slug: string
 }
+
 const { slug } = Astro.props
 
 const [{ count: likeCount }] = await db
@@ -16,7 +17,7 @@ const [{ count: likeCount }] = await db
   .where(eq(Likes.slug, slug))
 ---
 
-<like-btn data-slug={slug} data-likes={likeCount}>
+<like-btn data-slug={slug}>
   <button class={`${cxs.aIcon} group`} title={`Like this post`} type="button">
     <Icon
       type="like"
@@ -26,13 +27,10 @@ const [{ count: likeCount }] = await db
   </button>
 </like-btn>
 <script>
-  import { likeLabel } from '../utils/like-label'
-
   class LikeButton extends HTMLElement {
     constructor() {
       super()
       const slug = this.dataset.slug || ''
-      const initialLikes = parseInt(this.dataset.likes || '0')
       const button = this.querySelector('button')
       const svg = button?.querySelector('svg')
       const path = button?.querySelector('svg path')
@@ -45,7 +43,7 @@ const [{ count: likeCount }] = await db
           path.setAttribute('stroke', 'oklch(60.71% 0.2743 7.34)')
         }
         if (label?.textContent) {
-          label.textContent = likeLabel(initialLikes + 1)
+          label.textContent = 'Liked'
         }
         fetch(`/api/like`, {
           method: 'POST',
@@ -54,13 +52,6 @@ const [{ count: likeCount }] = await db
           },
           body: JSON.stringify({ slug }),
         })
-          .then(res => res.json())
-          .then(json => {
-            const { count } = json
-            if (count && label?.textContent) {
-              label.textContent = likeLabel(count)
-            }
-          })
       })
     }
   }
