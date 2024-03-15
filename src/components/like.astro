@@ -1,9 +1,9 @@
 ---
-import { db, eq, Likes } from 'astro:db'
 import { count } from 'drizzle-orm'
-import Icon from './icon.astro'
 import { cxs } from '../consts/config'
+import { db, eq, Likes } from 'astro:db'
 import { likeLabel } from '../utils/like-label'
+import Icon from './icon.astro'
 
 export interface Props {
   slug: string
@@ -14,8 +14,6 @@ const [{ count: likeCount }] = await db
   .select({ count: count() })
   .from(Likes)
   .where(eq(Likes.slug, slug))
-
-export const prerender = false
 ---
 
 <like-btn data-slug={slug} data-likes={likeCount}>

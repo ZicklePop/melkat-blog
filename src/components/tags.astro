@@ -29,7 +29,7 @@ const { url, slug, tags, title } = Astro.props
       <Permalink url={url} title={title} />
     </li>
     <li class={cx.li}>
-      <Like slug={slug} client:load />
+      <Like slug={slug} />
     </li>
     <li class={cx.li}>
       <Share url={url} title={title} />
