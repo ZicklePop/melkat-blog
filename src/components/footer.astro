@@ -7,8 +7,8 @@ export interface Props {
 }
 
 const cx = {
-  footer: 'text-center leading-normal',
-  p: 'my-4',
+  footer: 'w-full mb-5',
+  p: 'text-center',
   search: 'max-w-md mx-auto',
 }
 
@@ -23,23 +23,27 @@ const { showSearch = true } = Astro.props
       </div>
     )
   }
-  <p class={cx.p}>
-    {'browse by '}
-    <a class={cxs.a} href="/d">links</a>
-    {' and '}
-    <a class={cxs.a} href="/t">tags</a>
-    <br />
-    <a class={cxs.a} href="/rss.xml">rss feed</a>
-    {' • '}
-    <a class={cxs.a} href="/feed.json">json feed</a>
-  </p>
-  <p class={cx.p}>
-    a blog by
-    <a class={cxs.a} href="https://melaniekat.com" rel="me">melanie kat</a>
-    &lt;3
-    <br />
-    <a class={cxs.a} href="https://nyan.lol/@zicklepop" rel="me"
-      >@zicklepop@nyan.lol</a
-    >
-  </p>
+  <div class="flex flex-col md:flex-row justify-between gap-5">
+    <p class={`${cx.p} md:text-left`}>
+      {'browse by '}
+      <a class={cxs.a} href="/d">links</a>{', '}
+      <a class={cxs.a} href="/t">tags</a>{', or '}
+      <a class={cxs.a} href="/l">likes</a>
+      <br />
+      subscribe to the
+      <a class={cxs.a} href="/rss.xml">rss</a>
+      {' or '}
+      <a class={cxs.a} href="/feed.json">json</a>
+      feed
+    </p>
+    <p class={`${cx.p} md:text-right`}>
+      a blog by
+      <a class={cxs.a} href="https://melaniekat.com" rel="me">melanie kat</a>
+      &lt;3
+      <br />
+      <a class={cxs.a} href="https://nyan.lol/@zicklepop" rel="me">
+        @zicklepop@nyan.lol
+      </a>
+    </p>
+  </div>
 </footer>

@@ -5,14 +5,18 @@ import PostLayout from '../../layouts/post-layout.astro'
 import { getEntry } from 'astro:content'
 import { getPostsByLikes } from '../../utils/db'
 import { pageSize } from '../../consts/config'
-import type { CollectionEntry } from 'astro:content'
 
 export const prerender = false
 
+const cx = {
+  p: 'pv-8 mb-8',
+}
+
 const likes = await getPostsByLikes()
-const results: CollectionEntry<'posts'>[] = await Promise.all(
+const results = await Promise.all(
   likes.map(async ({ slug }) => await getEntry('posts', slug))
 )
+const noResults = !results || results.length <= 0
 ---
 
 <Layout title="melkat.blog - Most liked posts" permalink={'/l'}>
@@ -22,4 +26,5 @@ const results: CollectionEntry<'posts'>[] = await Promise.all(
       ?.slice(0, pageSize)
       ?.map(entry => entry && <PostLayout post={entry} />)
   }
+  {noResults && <p class={cx.p}>{'No results :('}</p>}
 </Layout>
