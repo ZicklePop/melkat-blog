@@ -1,5 +1,4 @@
-import { db, desc, eq, Likes, Meta } from 'astro:db'
-import { count } from 'drizzle-orm'
+import { count, db, desc, eq, Likes, Meta } from 'astro:db'
 
 export async function getLikesForSlug(slug: string): Promise<number> {
   const [{ count: likeCount }] = await db
