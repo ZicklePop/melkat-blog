@@ -1,7 +1,7 @@
 ---
 cover: /img/beryl-tailscale-mullvad.png
 coverAlt: Beryl Router's Tailscale Configuration Screen in Safari and Inspect Browser
-date: 2024-04-12T20:25:16+0000
+date: 2024-04-12T05:44:55.629Z
 title: How I Set Up My Travel Router with Tailscale's Mullvad Exit Nodes
 tags: [post, tailscale, mullvad, beryl, ios]
 ---
