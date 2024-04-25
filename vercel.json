@@ -6,7 +6,7 @@
         {
           "type": "header",
           "key": "User-Agent",
-          "value": "(.*(AdsBot-Google|Amazonbot|anthropic-ai|Applebot|ArcMobile2|AwarioRssBot|AwarioSmartBot|Bytespider|CCBot|ChatGPT-User|Claude-Web|ClaudeBot|cohere-ai|DataForSeoBot|Diffbot|FacebookBot|FriendlyCrawler|Google-Extended|Googlebot-Image|Googlebot-Image|GoogleOther|GPTBot|ImagesiftBot|magpie-crawler|Meltwater|msnbot-media|omgili|omgilibot|peer39_crawler|PerplexityBot|PiplBot|Seekr|yandex|YouBot|Safari).*)"
+          "value": "(.*(AdsBot-Google|Amazonbot|anthropic-ai|Applebot|ArcMobile2|AwarioRssBot|AwarioSmartBot|Bytespider|CCBot|ChatGPT-User|Claude-Web|ClaudeBot|cohere-ai|DataForSeoBot|Diffbot|FacebookBot|FriendlyCrawler|Google-Extended|Googlebot-Image|Googlebot-Image|GoogleOther|GPTBot|ImagesiftBot|magpie-crawler|Meltwater|msnbot-media|omgili|omgilibot|peer39_crawler|PerplexityBot|PiplBot|Seekr|yandex|YouBot).*)"
         }
       ],
       "destination": "https://duck.com",
