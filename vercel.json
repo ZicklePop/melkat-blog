@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    {
+      "source": "/.well-known/webfinger",
+      "destination": "http://nyan.lol/.well-known/webfinger?resource=acct:zicklepop@nyan.lol"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "User-Agent",
+          "value": "(.*(AdsBot-Google|Amazonbot|anthropic-ai|Applebot|ArcMobile2|AwarioRssBot|AwarioSmartBot|Bytespider|CCBot|ChatGPT-User|Claude-Web|ClaudeBot|cohere-ai|DataForSeoBot|Diffbot|FacebookBot|FriendlyCrawler|Google-Extended|Googlebot-Image|Googlebot-Image|GoogleOther|GPTBot|ImagesiftBot|magpie-crawler|Meltwater|msnbot-media|omgili|omgilibot|peer39_crawler|PerplexityBot|PiplBot|Seekr|yandex|YouBot|Safari).*)"
+        }
+      ],
+      "destination": "https://duck.com",
+      "permanent": false
+    }
+  ]
+}
