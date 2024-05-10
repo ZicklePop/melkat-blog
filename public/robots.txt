@@ -23,6 +23,7 @@ User-agent: Googlebot-Image
 User-agent: GoogleOther
 User-agent: GPTBot
 User-agent: ImagesiftBot
+User-agent: img2dataset
 User-agent: magpie-crawler
 User-agent: Meltwater
 User-agent: msnbot-media
