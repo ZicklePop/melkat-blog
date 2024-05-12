@@ -5,12 +5,22 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        'fade-in': 'fade-in 300ms cubic-bezier(0, 0, 0.2, 1)',
         'single-ping': 'single-ping 1s cubic-bezier(0, 0, 0.2, 1)',
         'single-spin': 'single-spin 500ms cubic-bezier(0, 0, 0.2, 1)',
-        trace: 'trace 1s ease-in',
         'single-wobble': 'single-wobble 1s cubic-bezier(0, 0, 0.2, 1)',
+        'slide-up': 'slide-up 300ms cubic-bezier(0, 0, 0.2, 1)',
+        trace: 'trace 1s ease-in',
       },
       keyframes: {
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
         'single-ping': {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },
           '75%': { transform: 'scale(2)', opacity: '0' },
@@ -30,6 +40,16 @@ module.exports = {
           },
           '50%': {
             transform: 'rotate(20deg)',
+          },
+        },
+        'slide-up': {
+          '0%': {
+            transform: 'scale(.5) translateY(200%)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'scale(1)',
+            opacity: '1',
           },
         },
         trace: {

@@ -1,11 +1,10 @@
 ---
 import Button from './button.astro'
 import Kbd from './kbd.astro'
-import Modal from './modal.astro'
 import { cxs } from '../consts/config'
 ---
 
-<Modal data-keys="hide">
+<div id="key-commands" popover>
   <h2 class={cxs.h2}>Keyboard shortcuts</h2>
   <ul class="mb-3">
     <li><Kbd>l</Kbd> Next page</li>
@@ -14,21 +13,19 @@ import { cxs } from '../consts/config'
     <li><Kbd>?</Kbd> Toggle this modal</li>
   </ul>
   <div class="text-right">
-    <Button id="dismiss-modal" type="button">Dismiss</Button>
+    <Button
+      popovertarget="key-commands"
+      popovertargetaction="hide"
+      type="button"
+    >
+      Dismiss
+    </Button>
   </div>
-</Modal>
+</div>
 <script>
   window.onkeydown = e => {
-    const keycommandsEl = document.querySelector('[data-keys]') as HTMLElement
-    const dismissBtn = document.getElementById('dismiss-modal') as HTMLElement
+    const keycommandsEl = document.getElementById('key-commands') as HTMLElement
 
-    dismissBtn.onclick = () => {
-      keycommandsEl.dataset.keys = 'hide'
-      keycommandsEl.style.opacity = '0'
-      setTimeout(() => {
-        keycommandsEl.style.display = 'none'
-      }, 100)
-    }
     const target = e.target as HTMLElement
     const targetType = target?.tagName?.toLowerCase()
 
@@ -40,33 +37,14 @@ import { cxs } from '../consts/config'
     const prevEl = document.getElementById('prev')
     const nextEl = document.getElementById('next')
 
-    const hideKeyCommands = () => {
-      keycommandsEl.dataset.keys = 'hide'
-      keycommandsEl.style.opacity = '0'
-      setTimeout(() => {
-        keycommandsEl.style.display = 'none'
-      }, 100)
-    }
-
-    const showKeyCommands = () => {
-      keycommandsEl.dataset.keys = 'show'
-      keycommandsEl.style.display = 'flex'
-      setTimeout(() => {
-        keycommandsEl.style.opacity = '1'
-      }, 100)
-    }
-
     if (keycommandsEl && e.key === '?') {
       e.preventDefault()
-      if (keycommandsEl?.dataset?.keys === 'show') {
-        hideKeyCommands()
-      } else {
-        showKeyCommands()
-      }
+      keycommandsEl.togglePopover()
     }
 
     if (searchEl && e.key === '/') {
       e.preventDefault()
+      keycommandsEl.hidePopover()
       searchEl.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
