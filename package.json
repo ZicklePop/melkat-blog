@@ -9,9 +9,10 @@
     "dev": "astro dev",
     "format": "prettier --write .",
     "lint": "prettier --check .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "test": "astro check && prettier --check ."
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
