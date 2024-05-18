@@ -1,6 +1,6 @@
 ---
 import Icon from './icon.astro'
-import { cxs } from '../consts/config'
+import { baseUrl, cxs } from '../consts/config'
 
 export interface Props {
   title: string
@@ -10,23 +10,43 @@ export interface Props {
 const { title, url } = Astro.props
 ---
 
-<share-btn data-title={title} data-url={url}>
-  <button class={`${cxs.aIcon} group`} title={`Share this post`}
+<share-btn data-title={title} data-url={`${baseUrl}${url}`}>
+  <button class={`${cxs.aIcon} group hidden`} title={`Share this post`}
     ><Icon
       type="share"
       appendClass="group-hover:motion-safe:animate-single-wobble"
     /> Share
   </button>
+  <a
+    class={`${cxs.aIcon} group`}
+    title={`Share this post`}
+    href={`https://shareopenly.org/share/?url=${baseUrl + url}&text=${title}`}
+    ><Icon
+      type="share"
+      appendClass="group-hover:motion-safe:animate-single-wobble"
+    /> Share
+  </a>
 </share-btn>
 <script>
   class ShareButton extends HTMLElement {
+    static tagName = 'share-btn'
+
+    static register(
+      tagName = this.tagName,
+      registry = globalThis.customElements
+    ) {
+      registry?.define(tagName, this)
+    }
+
     constructor() {
       super()
       const { title, url } = this.dataset
       const canShare = navigator.share !== undefined
       const button = this.querySelector('button')
-      if (!canShare) {
-        button?.remove()
+      const link = this.querySelector('a')
+      if (canShare) {
+        link?.classList.toggle('hidden')
+        button?.classList.toggle('hidden')
       }
       button?.addEventListener('click', () => {
         navigator.share({
@@ -36,5 +56,5 @@ const { title, url } = Astro.props
       })
     }
   }
-  customElements.define('share-btn', ShareButton)
+  ShareButton.register()
 </script>
