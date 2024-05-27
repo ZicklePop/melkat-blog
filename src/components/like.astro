@@ -9,39 +9,108 @@ export interface Props {
 const { slug } = Astro.props
 ---
 
-<like-btn data-slug={slug}>
-  <button class={`${cxs.aIcon} group`} title={`Like this post`} type="button">
-    <Icon
-      type="like"
-      appendClass="motion-safe:transition-transform group-hover:scale-125 group-[.cursor-not-allowed]:scale-100"
-    />
-    <span>Like</span>
-  </button>
-</like-btn>
+<kudos-btn data-path={`/p/${slug}`}>
+  <div class="block">
+    <button
+      class={`${cxs.aIcon} no-underline group disabled:cursor-not-allowed`}
+      title={`Like this post`}
+      type="button"
+    >
+      <Icon
+        type="like"
+        appendClass="motion-safe:transition-transform group-hover:scale-125 group-disabled:scale-100 group-disabled:*:stroke-hot-pink-600"
+      />
+      <span class="kudos-count"></span>
+      <span class="underline"
+        >Like<span class="hidden group-disabled:inline">d</span></span
+      >
+    </button>
+  </div>
+</kudos-btn>
 <script>
-  class LikeButton extends HTMLElement {
+  class KudosButton extends HTMLElement {
+    static tagName = 'kudos-btn'
+
+    kudos_collect_url = 'https://tinylytics.app/kudos/bmr9oFv6ozTGGRC8r8yQ'
+    kudos_path = window.location.pathname
+    kudos_count = 0
+    private_kudos = false
+    existing_kudos = false
+    no_store = false
+
+    static register(
+      tagName = this.tagName,
+      registry = globalThis.customElements
+    ) {
+      registry?.define(tagName, this)
+    }
+
     constructor() {
       super()
-      const slug = this.dataset.slug || ''
+      if (this.dataset.path) {
+        this.kudos_path = this.dataset.path || window.location.pathname
+      }
+      if (this.dataset.ignore) {
+        this.no_store = !!this.dataset.ignore
+      }
+      if (this.dataset.private) {
+        this.private_kudos = !!this.dataset.private
+      }
+      this.getKudosCount()
+      this.existing_kudos = !!localStorage.getItem(
+        `tiny_kudos_${this.kudos_path}`
+      )
+
       const button = this.querySelector('button')
       const svg = button?.querySelector('svg')
-      const path = button?.querySelector('svg path')
-      const label = button?.querySelector('span')
-      button?.addEventListener('click', () => {
+
+      if (this.existing_kudos && button) {
         button.disabled = true
-        button.classList.add('cursor-not-allowed')
-        if (svg && path) {
-          svg.classList.add('motion-safe:animate-single-ping')
-          path.setAttribute('stroke', 'oklch(60.71% 0.2743 7.34)')
-        }
-        if (label?.textContent) {
-          label.textContent = 'Liked'
-        }
-        fetch(`/api/like?slug=${slug}`, {
-          method: 'POST',
+      } else if (button) {
+        button?.addEventListener('click', () => {
+          button.disabled = true
+          if (svg) {
+            svg.classList.add('motion-safe:animate-single-ping')
+          }
+          this.kudos_count++
+          this.setKudosCount()
+          this.updateKudosCount()
         })
+      }
+    }
+
+    getKudosCount() {
+      if (this.private_kudos) {
+        return
+      }
+      fetch(`${this.kudos_collect_url}.json?path=${this.kudos_path}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.count != null) {
+            this.kudos_count = data.count
+            this.updateKudosCount()
+          }
+        })
+    }
+
+    setKudosCount() {
+      fetch(`${this.kudos_collect_url}.json?path=${this.kudos_path}`, {
+        method: 'post',
       })
+        .then(response => response.json())
+        .then(data => {
+          if (data.id != null && !this.no_store) {
+            localStorage.setItem(`tiny_kudos_${this.kudos_path}`, data.id)
+          }
+        })
+    }
+
+    updateKudosCount() {
+      const counter = this.querySelector('.kudos-count') as HTMLSpanElement
+      if (counter && !this.private_kudos && this.kudos_count !== 0) {
+        counter.textContent = `${this.kudos_count}`
+      }
     }
   }
-  customElements.define('like-btn', LikeButton)
+  KudosButton.register()
 </script>
