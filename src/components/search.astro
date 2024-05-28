@@ -17,17 +17,19 @@ const cx = {
 const { defaultValue = '' } = Astro.props
 ---
 
-<form action="/q" class={cx.form} method="get">
-  <div class={cx.div}>
-    <label class={cx.label} for="search">Search</label>
-    <input
-      class={cx.input}
-      type="search"
-      id="search"
-      name="q"
-      placeholder="Search for posts"
-      value={defaultValue}
-    />
-  </div>
-  <Button type="submit">Search</Button>
-</form>
+<search>
+  <form action="/q" class={cx.form} method="get">
+    <div class={cx.div}>
+      <label class={cx.label} for="search">Search</label>
+      <input
+        class={cx.input}
+        type="search"
+        id="search"
+        name="q"
+        placeholder="Search for posts"
+        value={defaultValue}
+      />
+    </div>
+    <Button type="submit">Search</Button>
+  </form>
+</search>
