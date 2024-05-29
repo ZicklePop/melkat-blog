@@ -28,15 +28,17 @@ const { slug } = Astro.props
   </div>
 </kudos-btn>
 <script>
-  class KudosButton extends HTMLElement {
+  class KudosBtn extends HTMLElement {
     static tagName = 'kudos-btn'
+    static tinylyticsEmbedUrl = 'https://tinylytics.app/embed/'
+    static tinylyticsKudosUrl = 'https://tinylytics.app/kudos/'
 
-    kudos_collect_url = 'https://tinylytics.app/kudos/bmr9oFv6ozTGGRC8r8yQ'
-    kudos_path = window.location.pathname
-    kudos_count = 0
-    private_kudos = false
     existing_kudos = false
+    kudos_count = 0
+    kudos_path = window.location.pathname
     no_store = false
+    private_kudos = false
+    show_zero = false
 
     static register(
       tagName = this.tagName,
@@ -45,8 +47,23 @@ const { slug } = Astro.props
       registry?.define(tagName, this)
     }
 
-    constructor() {
-      super()
+    get siteIdFromScript() {
+      const scriptEl = document.querySelector(
+        `script[src^="${KudosBtn.tinylyticsEmbedUrl}"]`
+      ) as HTMLScriptElement
+      return (
+        scriptEl &&
+        scriptEl.src &&
+        scriptEl.src.replace(KudosBtn.tinylyticsEmbedUrl, '').replace('.js', '')
+      )
+    }
+
+    get kudosApiUrl() {
+      const id = this.dataset.id || this.siteIdFromScript
+      return `${KudosBtn.tinylyticsKudosUrl}${id}`
+    }
+
+    connectedCallback() {
       if (this.dataset.path) {
         this.kudos_path = this.dataset.path || window.location.pathname
       }
@@ -56,6 +73,9 @@ const { slug } = Astro.props
       if (this.dataset.private) {
         this.private_kudos = !!this.dataset.private
       }
+      if (this.dataset.zeroes) {
+        this.show_zero = !!this.dataset.zeroes
+      }
       this.getKudosCount()
       this.existing_kudos = !!localStorage.getItem(
         `tiny_kudos_${this.kudos_path}`
@@ -63,7 +83,6 @@ const { slug } = Astro.props
 
       const button = this.querySelector('button')
       const svg = button?.querySelector('svg')
-
       if (this.existing_kudos && button) {
         button.disabled = true
       } else if (button) {
@@ -83,7 +102,7 @@ const { slug } = Astro.props
       if (this.private_kudos) {
         return
       }
-      fetch(`${this.kudos_collect_url}.json?path=${this.kudos_path}`)
+      fetch(`${this.kudosApiUrl}.json?path=${this.kudos_path}`)
         .then(response => response.json())
         .then(data => {
           if (data.count != null) {
@@ -94,7 +113,7 @@ const { slug } = Astro.props
     }
 
     setKudosCount() {
-      fetch(`${this.kudos_collect_url}.json?path=${this.kudos_path}`, {
+      fetch(`${this.kudosApiUrl}.json?path=${this.kudos_path}`, {
         method: 'post',
       })
         .then(response => response.json())
@@ -106,11 +125,14 @@ const { slug } = Astro.props
     }
 
     updateKudosCount() {
-      const counter = this.querySelector('.kudos-count') as HTMLSpanElement
-      if (counter && !this.private_kudos && this.kudos_count !== 0) {
+      const counter = this.querySelector('.kudos-count')
+      const isZero = this.kudos_count === 0
+      const shouldShowCounter = counter && !this.private_kudos && !isZero
+      const shouldShowZeroCounter = counter && isZero && this.show_zero
+      if (shouldShowCounter || shouldShowZeroCounter) {
         counter.textContent = `${this.kudos_count}`
       }
     }
   }
-  KudosButton.register()
+  KudosBtn.register()
 </script>
