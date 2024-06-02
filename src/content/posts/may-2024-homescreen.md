@@ -9,7 +9,7 @@ coverAlt: iPad Pro and iPhone Pro Max
 What's different:
 
 - [Textastic](https://apps.apple.com/us/app/textastic-code-editor/id1049254261) - A simple text editor that I can use to write HTML and see it previewed. I've used this app for over a decade now, geez!
-- [Gibberish](https://apps.apple.com/us/app/gibberish-writer/id6475566085) - And a Dinosaur keeps making these bite sized app with full sized usefulness. This one is a iMessage-for-Notes app with the ability to publish them to a [Gibber Blog](https://gibber.blog/). I used this to write [The Absurd World of Children's Smart Watches](https://melkat.me/the-absurd-world-of-childrens-smart-watches)
+- [Gibberish](https://apps.apple.com/us/app/gibberish-writer/id6475566085) - And a Dinosaur keeps making these bite sized app with full sized usefulness. This one is a iMessage-for-Notes app with the ability to publish them to a [Gibber Blog](https://gibber.blog/). I used this to write [The Absurd World of Children's Smart Watches](https://melkat.blog/p/childrens-smart-watches)
 - [Status.lol](https://apps.apple.com/us/app/status-log/id6444921793) - I love this app made by the [omg.lol](https://home.omg.lol/referred-by/melanie) community for the omg.lol community.
 - [Inspect](https://apps.apple.com/us/app/inspect-browser/id1203594958) - The best "inspect element" for mobile.
 - [Darkroom](https://apps.apple.com/us/app/darkroom-photo-video-editor/id953286746) - I also got this app a decade ago, wtf! I love that commitment. To be honest I never really used it, but I've been playing a lot with…
