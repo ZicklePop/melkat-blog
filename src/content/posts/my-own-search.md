@@ -3,7 +3,7 @@ date: 2024-05-22T20:30:00Z
 title: I guess I'm my own search engine
 tags: [post, tech, hosting]
 cover: /img/my-own-search.png
-coverAlt: Left: Custom web portal with a search bar. Right: Customized self-hosted search engine SearXNG
+coverAlt: Left - Custom web portal with a search bar. Right - Customized self-hosted search engine SearXNG
 ---
 
 I can't believe it's come to this but I have spun up my own search engine with [SearXNG](https://github.com/searxng/searxng). I love self-hosting things inside my private Tailscale network that my wife and I have access to. I don't know that I'd love it if I had to debug and constantly do maintenance on it, to be honest. That's why my time self-hosting an [Invidious](https://invidious.io/) server ended after a week.
