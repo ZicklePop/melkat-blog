@@ -2,7 +2,7 @@
 cover: /img/uses.jpg
 coverAlt: A photo of my desk
 date: 2023-12-12T06:01:44.993Z
-tags: [post, uses, apps, hardware]
+tags: [post, apps, hardware, slashpage]
 title: Uses
 ---
 Inspired by [uses.tech](https://uses.tech), I have written up my current setup. I will try to keep this post updated as things change.
