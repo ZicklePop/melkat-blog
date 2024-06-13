@@ -16,15 +16,17 @@ const { prev, next } = url
   <div class={cx.navigation}>
     {
       prev && (
-        <a
-          href={prev}
-          class={`${cxs.aIcon} group`}
-          title="Newer posts"
-          id="prev"
-        >
-          <Icon type="new" appendClass="group-hover:animate-single-wobble" />{' '}
-          Newer
-        </a>
+        <key-down data-key="h">
+          <a
+            href={prev}
+            class={`${cxs.aIcon} group`}
+            title="Newer posts"
+            id="prev"
+          >
+            <Icon type="new" appendClass="group-hover:animate-single-wobble" />{' '}
+            Newer
+          </a>
+        </key-down>
       )
     }
   </div>
@@ -34,15 +36,17 @@ const { prev, next } = url
   <div class={`${cx.navigation} justify-end`}>
     {
       next ? (
-        <a
-          href={next}
-          class={`${cxs.aIcon} group`}
-          title="Older posts"
-          id="next"
-        >
-          Older{' '}
-          <Icon type="old" appendClass="group-hover:animate-single-wobble" />
-        </a>
+        <key-down data-key="l">
+          <a
+            href={next}
+            class={`${cxs.aIcon} group`}
+            title="Older posts"
+            id="next"
+          >
+            Older{' '}
+            <Icon type="old" appendClass="group-hover:animate-single-wobble" />
+          </a>
+        </key-down>
       ) : (
         ''
       )

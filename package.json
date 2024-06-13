@@ -25,6 +25,7 @@
     "@types/markdown-it": "^14.1.1",
     "@types/marked": "^6.0.0",
     "@types/sanitize-html": "^2.9.5",
+    "@zicklepop/key-down": "^1.0.1",
     "astro": "^4.9.2",
     "autoprefixer": "^10.4.17",
     "husky": "^9.0.11",

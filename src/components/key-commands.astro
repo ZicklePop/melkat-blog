@@ -22,44 +22,13 @@ import { cxs } from '../consts/config'
     </Button>
   </div>
 </div>
-<script>
-  window.onkeydown = e => {
-    const keycommandsEl = document.getElementById('key-commands') as HTMLElement
-
-    const target = e.target as HTMLElement
-    const targetType = target?.tagName?.toLowerCase()
-
-    if (targetType === 'input' || targetType === 'textarea') {
-      return
-    }
-
-    const searchEl = document.getElementById('search')
-    const prevEl = document.getElementById('prev')
-    const nextEl = document.getElementById('next')
-
-    if (keycommandsEl && e.key === '?') {
-      e.preventDefault()
-      keycommandsEl.togglePopover()
-    }
-
-    if (searchEl && e.key === '/') {
-      e.preventDefault()
-      keycommandsEl.hidePopover()
-      searchEl.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      })
-      searchEl.focus()
-    }
-
-    if (nextEl && e.key === 'l') {
-      e.preventDefault()
-      nextEl.click()
-    }
-
-    if (prevEl && e.key === 'h') {
-      e.preventDefault()
-      prevEl.click()
-    }
-  }
-</script>
+<key-down data-key="?">
+  <button
+    class="sr-only"
+    type="button"
+    popovertarget="key-commands"
+    popovertargetaction="toggle"
+  >
+    Toggle keyboard shortcuts
+  </button>
+</key-down>
