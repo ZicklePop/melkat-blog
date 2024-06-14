@@ -21,7 +21,12 @@ const { defaultValue = '' } = Astro.props
   <form action="/q" class={cx.form} method="get">
     <div class={cx.div}>
       <label class={cx.label} for="search">Search</label>
-      <key-down data-key="/" data-shiftKey="false" data-action="focus">
+      <key-down
+        data-key="/"
+        data-shiftKey="false"
+        data-action="focus"
+        data-scroll="true"
+      >
         <input
           class={cx.input}
           type="search"
