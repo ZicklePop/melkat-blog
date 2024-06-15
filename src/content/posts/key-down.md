@@ -69,4 +69,5 @@ Learn more:
 
 - [On GitHub](https://github.com/zicklepop/key-down)
 - [On NPM](https://www.npmjs.com/package/@zicklepop/key-down)
+- [On JSR](https://jsr.io/@zicklepop/key-down)
 - [Try out some demos](http://zicklepop.github.io/key-down/demo.html)
