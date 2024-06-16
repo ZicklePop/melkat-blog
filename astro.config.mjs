@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel/serverless'
+import node from '@astrojs/node'
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +15,7 @@ export default defineConfig({
     sitemap(),
   ],
   output: 'hybrid',
-  adapter: vercel({
-    imageService: true,
+  adapter: node({
+    mode: 'standalone',
   }),
 })
