@@ -6,13 +6,13 @@ cover: /img/glowing-up.jpg
 coverAlt: The Pink Opaque ghost doodle from the movie I Saw the TV Glow
 ---
 
-**Warning**: Light spoilers for the movie "I Saw the TV Glow." Keep reading only if you need convincing to see the movie or have already seen it.
+**Warning**: Very light spoilers for the movie "I Saw the TV Glow." Keep reading only if you need convincing to see the movie or have already seen it.
 
 Last night I watched "I Saw the TV Glow" by Jane Schoenbrun for the first time. I'm not sure my head is even done processing it, but I want to talk about how much I related to it. From growing up on the couch, to watching Nickelodeon exclusively, to discovering who I was the whole time in my late 20s.
 
 Yes, this is an A24 horror film and I would agree that it is horror, but it doesn't have jump scares or gore. In fact, if you aren't queer I don't know that you would find it scary at all. You need to pick up on queer narratives and have empathy for them. I'm not saying this film is "difficult" but I am saying I checked a couple of boxes that I have to assume helped connect me to it.
 
-> "I… I… I think that… I like TV shows."
+> I… I… I think that… I like TV shows.
 
 The movie follows two kids who gather to watch The Pink Opaque. Growing up with the young adult network, I loved shows like Clarissa Explains it All, The Secret World of Alex Mack, Allen Strange, The Mystery Files of Shelby Woo, and even the Animorphs TV show. There was one show that messed me up quite a bit and I would race to change the channel every time it came on: Are You Afraid of the Dark. I don't think The Pink Opaque is supposed to be any single show, but you can definitely see the inspirations from Nickelodeon's 90's live-action shows.
 
@@ -24,7 +24,7 @@ The most important part of Nickelodeon, especially looking back, was that its go
 
 I had VHS tapes of Nickelodeon shows my mom would record herself or get one of her friends to record for me. I watched them all the time. My dad liked to drive a van while he worked, so he had a little 6-inch CRT TV with a built-in VHS player that he tied down to the floor behind the driver's seat. He took the middle seat out of his van and I could sit on the back seat and watch Rugrats while he drove around the state. My parents taught me time by measuring roughly 15 minute intervals as "1 Rugrats." They would tell me where we were going was "2 Rugrats" away.
 
-> "Isn't that a show for girls?"
+> Isn't that a show for girls?
 
 I knew who I wanted to be growing up. I wanted to be like Alex Mack and go on adventures. I wanted to be able to transform in to something else like on the Animorphs. I wanted to make things on computers like Clarissa Explains It All. I never understood what the deeper thing at play here was. Well, I did, but I was told it wasn't possible to be a girl, so I put out of my mind.
 
@@ -32,7 +32,7 @@ At school I was weird. I was weird amongst other kids who hadn't been told being
 
 My memories of being a kid are basically all Nickelodeon shows in some form. I look back fondly on them. In my late teens I found a way to revisit some of these shows through [publicly available internet data](https://nyan.lol/@zicklepop/112609986890748740). They didn't hold up to what I had felt watching them as a kid. It disappointed me quite a bit.
 
-> "I know it's scary. That's part of it."
+> I know it's scary. That's part of it.
 
 Most of the things I've mentioned have an obvious connection that a very specific type of shithead would make quickly in order to try to shame me. You see, I couldn't have the girlhood I desired, but I got to experience it through the media I consumed. Is it the same? No, but it's what I had available and it felt safe.
 
