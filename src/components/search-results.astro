@@ -1,0 +1,137 @@
+---
+
+---
+
+<search-results></search-results>
+<script>
+  import uFuzzy from '@leeoniya/ufuzzy'
+  import { pageSize } from '../consts/config'
+  import formatDate from '../utils/format-date'
+  const uf = new uFuzzy()
+
+  type Item = {
+    content_html?: string
+    tags?: string[]
+    title?: string
+    external_url?: string
+    url?: string
+    date_published?: string
+  }
+  type Items = Item[]
+
+  class SearchResults extends HTMLElement {
+    static tagName = 'search-results'
+
+    static register(
+      tagName = this.tagName,
+      registry = globalThis.customElements
+    ) {
+      registry?.define(tagName, this)
+    }
+
+    get query() {
+      const params = new URLSearchParams(document.location.search)
+      return params.get('q')
+    }
+
+    connectedCallback() {
+      if (this.query) {
+        this.fetchResults()
+          .then(({ items }: { items: Items }) => {
+            const results = this.fuzzySearch(items)
+            if (results && results.length > 0) {
+              results.forEach(i => i && this.buildItem(i))
+            } else {
+              this.buildError()
+            }
+          })
+          .catch(() => {
+            this.buildError('Something went wrong :O')
+          })
+      }
+    }
+
+    async fetchResults() {
+      return await fetch('/feed.json').then(r => r.json())
+    }
+
+    fuzzySearch(items: Items) {
+      const q = this.query
+      if (!q || !items) {
+        return []
+      }
+      const stringDb = items.map(
+        ({ content_html = '', tags = [], title = '', external_url = '' }) =>
+          `${title} ${external_url} ${tags.join(' ')} ${content_html} `
+      )
+      const idxs = uf.filter(stringDb, q)
+      const info = idxs && uf.info(idxs, stringDb, q)
+      const order = info && uf.sort(info, stringDb, q)
+      return order
+        ?.map(i => {
+          const idx = idxs && idxs[i]
+          if (idx) {
+            return items[idx]
+          }
+        })
+        .slice(0, pageSize)
+    }
+
+    buildItem({ url, title, date_published }: Item) {
+      const divEl = document.createElement('div')
+      const h2El = document.createElement('h2')
+      const aEl = document.createElement('a')
+      const pEl = document.createElement('p')
+      const timeEl = document.createElement('time')
+
+      divEl.classList.add(
+        'h-entry',
+        'pb-2',
+        'my-8',
+        'border-solid',
+        'border-b',
+        'cv-auto',
+        'border-black/10',
+        'dark:border-white/25'
+      )
+      h2El.classList.add('mb-4', 'text-pretty', 'text-xl', 'font-medium')
+      aEl.classList.add(
+        'text-xl',
+        'group',
+        'p-name',
+        'text-cerulean-700',
+        'dark:text-cerulean-600',
+        'underline'
+      )
+      pEl.classList.add('uppercase', 'text-sm', 'my-4')
+      timeEl.classList.add('dt-published')
+
+      if (url) {
+        aEl.href = url
+      }
+      if (title) {
+        aEl.textContent = title
+        aEl.title = `Permalink for ${title}`
+      }
+
+      if (date_published) {
+        timeEl.setAttribute('datetime', date_published)
+        timeEl.textContent = formatDate(date_published)
+      }
+
+      pEl.appendChild(timeEl)
+      h2El.appendChild(aEl)
+      divEl.appendChild(h2El)
+      divEl.appendChild(pEl)
+      this.appendChild(divEl)
+    }
+
+    buildError(str: string = 'No results :(') {
+      const pEl = document.createElement('p')
+      pEl.classList.add('py-3', 'mb-8')
+      pEl.textContent = str
+      this.appendChild(pEl)
+    }
+  }
+  SearchResults.register()
+</script>

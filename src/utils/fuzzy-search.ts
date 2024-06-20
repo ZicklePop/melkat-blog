@@ -5,13 +5,14 @@ import type { CollectionEntry } from 'astro:content'
 type EntryProp = CollectionEntry<'posts'>
 
 const uf = new uFuzzy()
-const getSearchableDb = (db: Array<EntryProp>) =>
-  db.map(
+export function getSearchableDb(db: Array<EntryProp>) {
+  return db.map(
     ({ body = '', data: { title, tags, link } }) =>
-      `${title} ${body} ${link} ${tags.join(' ')}`
+      `${title} ${body} ${link || ''} ${tags.join(' ')}`
   )
+}
 
-export default function fuzzySearch(q?: string, entries?: Array<EntryProp>) {
+export function fuzzySearch(q?: string, entries?: Array<EntryProp>) {
   if (!q || !entries) {
     return []
   }

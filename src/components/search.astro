@@ -1,10 +1,6 @@
 ---
 import Button from './button.astro'
 
-export interface Props {
-  defaultValue?: string
-}
-
 const cx = {
   form: 'mb-8 flex flex-row items-center',
   div: 'flex-grow mr-2',
@@ -13,29 +9,28 @@ const cx = {
     'appearance-none motion-safe:transition border-0 outline-none placeholder:text-gray-600 dark:placeholder:text-gray-400 bg-transparent ring-2 ring-cerulean-601/50 focus:ring-cerulean-501/75 rounded-lg px-4 py-2 w-full shadow-lg focus:shadow-md shadow-cerulean-501/20 focus:shadow-cerulean-501/50 text-lg',
   p: 'mb-8 italic',
 }
-
-const { defaultValue = '' } = Astro.props
 ---
 
 <search>
   <form action="/q" class={cx.form} method="get">
     <div class={cx.div}>
       <label class={cx.label} for="search">Search</label>
-      <key-down
-        data-key="/"
-        data-shiftKey="false"
-        data-action="focus"
-        data-scroll="true"
-      >
-        <input
-          class={cx.input}
-          type="search"
-          id="search"
-          name="q"
-          placeholder="Search for posts"
-          value={defaultValue}
-        />
-      </key-down>
+      <keep-search>
+        <key-down
+          data-key="/"
+          data-shiftKey="false"
+          data-action="focus"
+          data-scroll="true"
+        >
+          <input
+            class={cx.input}
+            type="search"
+            id="search"
+            name="q"
+            placeholder="Search for posts"
+          />
+        </key-down>
+      </keep-search>
     </div>
     <Button type="submit">Search</Button>
   </form>

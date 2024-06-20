@@ -1,34 +1,27 @@
 ---
 import Layout from '../../layouts/base-layout.astro'
 import PageHeader from '../../components/page-header.astro'
-import PostLayout from '../../layouts/post-layout.astro'
 import Search from '../../components/search.astro'
-import fuzzySearch from '../../utils/fuzzy-search'
-import { byDate } from '../../utils/sort'
-import { getCollection } from 'astro:content'
-import { noDrafts } from '../../utils/filter'
+import SearchResults from '../../components/search-results.astro'
 
 const cx = {
   p: 'pv-8 mb-8',
 }
-
-const { searchParams } = Astro.url
-const query = searchParams.get('q') || ''
-
-export const prerender = false
-
-let allPosts = await getCollection('posts', noDrafts)
-allPosts = allPosts.sort(byDate)
-const results = fuzzySearch(query, allPosts)
-const noResults = !!query && (!results || results.length <= 0)
-const permalink = noResults ? '/q' : `/q?q=${encodeURIComponent(query)}`
 ---
 
-<Layout title="melkat.blog - Search" permalink={permalink} showSearch={false}>
+<Layout title="melkat.blog - Search" showSearch={false}>
   <PageHeader>
     <label for="search">Search</label>
   </PageHeader>
-  <Search defaultValue={query} />
-  {results?.map(entry => entry && <PostLayout post={entry} />)}
-  {noResults && <p class={cx.p}>{'No results :('}</p>}
+  <Search />
+  <SearchResults />
 </Layout>
+<script>
+  const params = new URLSearchParams(document.location.search)
+  const query = params.get('q')
+  const searchEl = document.getElementById('search') as HTMLInputElement
+  const hasValue = !!searchEl.value
+  if (query && searchEl && !hasValue) {
+    searchEl.value = query
+  }
+</script>

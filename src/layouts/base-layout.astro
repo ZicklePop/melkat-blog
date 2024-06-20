@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import KeyCommands from '../components/key-commands.astro'
@@ -62,7 +61,6 @@ const {
     <link rel="canonical" href={`${baseUrl}${permalink}`} />
     <link rel="icon" href="/favicon.ico" />
     <link rel="mask-icon" sizes="any" href="/mask-icon.svg" color="#0caceb" />
-    <ViewTransitions />
   </head>
   <body class={className}>
     <p hidden>
