@@ -3,10 +3,6 @@ import Layout from '../../layouts/base-layout.astro'
 import PageHeader from '../../components/page-header.astro'
 import Search from '../../components/search.astro'
 import SearchResults from '../../components/search-results.astro'
-
-const cx = {
-  p: 'pv-8 mb-8',
-}
 ---
 
 <Layout title="melkat.blog - Search" showSearch={false}>
@@ -16,10 +12,10 @@ const cx = {
   <Search />
   <SearchResults />
 </Layout>
-<script>
+<script is:inline>
   const params = new URLSearchParams(document.location.search)
   const query = params.get('q')
-  const searchEl = document.getElementById('search') as HTMLInputElement
+  const searchEl = document.getElementById('search')
   const hasValue = !!searchEl.value
   if (query && searchEl && !hasValue) {
     searchEl.value = query
