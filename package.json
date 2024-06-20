@@ -22,7 +22,6 @@
     "@leeoniya/ufuzzy": "^1.0.14",
     "@tailwindcss/typography": "^0.5.12",
     "@types/markdown-it": "^14.1.1",
-    "@types/marked": "^6.0.0",
     "@types/sanitize-html": "^2.9.5",
     "@zicklepop/key-down": "^1.0.1",
     "astro": "^4.11.0",
