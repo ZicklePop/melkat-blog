@@ -19,7 +19,7 @@ function fetch(url) {
   return JSON.parse(requestString);
 }
 
-const json = fetch("https://melaniekat.com/gifs/api")
+const json = fetch("/gifs/api")
 console.log(JSON.stringify(json))
 ```
 
