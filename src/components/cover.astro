@@ -13,4 +13,11 @@ const cx = {
 const { cover, coverAlt } = Astro.props
 ---
 
-<Image alt={coverAlt} class={cx.img} src={cover} width={656} height={369} />
+<Image
+  alt={coverAlt}
+  class={cx.img}
+  src={cover}
+  densities={[1, 2, 3]}
+  width={656}
+  height={369}
+/>
