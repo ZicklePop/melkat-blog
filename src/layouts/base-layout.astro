@@ -1,14 +1,14 @@
 ---
-import Footer from "../components/footer.astro";
-import Header from "../components/header.astro";
-import KeyCommands from "../components/key-commands.astro";
-import "../styles/global.css";
+import Footer from "@/src/components/footer.astro";
+import Header from "@/src/components/header.astro";
+import KeyCommands from "@/src/components/key-commands.astro";
+import "@/src/styles/global.css";
 import {
 	baseUrl,
 	description as blogDescription,
 	title as blogTitle,
 	defaultCover,
-} from "../consts/config";
+} from "@/src/consts/config";
 
 export interface Props {
 	className?: string;

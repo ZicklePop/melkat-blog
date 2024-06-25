@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import PageNavigator from "../components/page-navigator.astro";
-import { pageSize } from "../consts/config";
-import Layout from "../layouts/base-layout.astro";
-import PostLayout from "../layouts/post-layout.astro";
-import { noDrafts } from "../utils/filter";
-import { byDate } from "../utils/sort";
+import PageNavigator from "@/src/components/page-navigator.astro";
+import { pageSize } from "@/src/consts/config";
+import Layout from "@/src/layouts/base-layout.astro";
+import PostLayout from "@/src/layouts/post-layout.astro";
+import { noDrafts } from "@/src/utils/filter";
+import { byDate } from "@/src/utils/sort";
 
 export const prerender = true;
 

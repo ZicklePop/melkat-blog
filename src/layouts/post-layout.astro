@@ -1,15 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import Article from "../components/article.astro";
-import RelatedArticles from "../components/related-articles.astro";
-import TruncatedContent from "../components/truncated-content.astro";
-import { title as blogTitle } from "../consts/config";
-import { noDrafts } from "../utils/filter";
-import { getRelatedPosts } from "../utils/get-posts";
-import { byDate } from "../utils/sort";
-import stripMd from "../utils/strip-md";
-import truncateMd from "../utils/truncate-md";
+import Article from "@/src/components/article.astro";
+import RelatedArticles from "@/src/components/related-articles.astro";
+import TruncatedContent from "@/src/components/truncated-content.astro";
+import { title as blogTitle } from "@/src/consts/config";
+import { noDrafts } from "@/src/utils/filter";
+import { getRelatedPosts } from "@/src/utils/get-posts";
+import { byDate } from "@/src/utils/sort";
+import stripMd from "@/src/utils/strip-md";
+import truncateMd from "@/src/utils/truncate-md";
 import Layout from "./base-layout.astro";
 
 export interface Props {

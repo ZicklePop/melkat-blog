@@ -1,15 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import PageHeader from "@/src/components/page-header.astro";
+import PageNavigator from "@/src/components/page-navigator.astro";
+import { pageSize, title } from "@/src/consts/config";
+import Layout from "@/src/layouts/base-layout.astro";
+import PostLayout from "@/src/layouts/post-layout.astro";
+import { hasLinkNoDrafts } from "@/src/utils/filter";
+import { getAllDomains, getPostsByDomain } from "@/src/utils/get-posts";
+import { byDate } from "@/src/utils/sort";
 import type { GetStaticPathsOptions } from "astro";
-import PageHeader from "../../../components/page-header.astro";
-import PageNavigator from "../../../components/page-navigator.astro";
-import { pageSize, title } from "../../../consts/config";
-import Layout from "../../../layouts/base-layout.astro";
-import PostLayout from "../../../layouts/post-layout.astro";
-import { hasLinkNoDrafts } from "../../../utils/filter";
-import { getAllDomains, getPostsByDomain } from "../../../utils/get-posts";
-import { byDate } from "../../../utils/sort";
 
 export const prerender = true;
 

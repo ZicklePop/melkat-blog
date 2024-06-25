@@ -1,9 +1,9 @@
 import { getCollection } from "astro:content";
+import { baseUrl, title as blogTitle, description } from "@/src/consts/config";
+import { noDrafts } from "@/src/utils/filter";
+import { byDate } from "@/src/utils/sort";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
-import { baseUrl, title as blogTitle, description } from "../consts/config";
-import { noDrafts } from "../utils/filter";
-import { byDate } from "../utils/sort";
 
 export const prerender = true;
 
