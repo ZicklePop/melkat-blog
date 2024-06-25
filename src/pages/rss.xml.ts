@@ -24,7 +24,7 @@ export async function GET() {
         post.data.cover
           ? '<img src="' +
             baseUrl +
-            post.data.cover +
+            post.data.cover.src +
             '" alt="' +
             post.data.coverAlt +
             '" /><br />'

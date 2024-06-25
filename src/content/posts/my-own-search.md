@@ -2,7 +2,7 @@
 date: 2024-05-22T20:30:00Z
 title: I guess I'm my own search engine
 tags: [post, tech, hosting]
-cover: /img/my-own-search.png
+cover: ./my-own-search.png
 coverAlt: Left - Custom web portal with a search bar. Right - Customized self-hosted search engine SearXNG
 ---
 

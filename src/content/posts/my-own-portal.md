@@ -2,7 +2,7 @@
 date: 2024-05-10T04:44:00Z
 title: My Own Intranet Portal
 tags: [post, hosting, javascript]
-cover: /img/my-own-portal.png
+cover: ./my-own-portal.png
 coverAlt: A web page split in two to show light mode (left) and dark mode (right) it features a status bar with a clock, icon, and 5 status indicator dots. under it is a frosted grid of icons for various self-hosted services
 ---
 
@@ -12,7 +12,7 @@ The page itself is just a single html file that loads up [TailwindCSS](https://t
 
 App-list takes an array of JavaScript objects and generates the grid of emoji icon'd apps.
 
-![three icons of emoji with the center one hovered and highlighted](https://melkat.blog/img/my-own-portal2.jpg)
+![three icons of emoji with the center one hovered and highlighted](./my-own-portal2.jpg)
 
 The config for these looks like this:
 
@@ -38,7 +38,7 @@ const config = [
 
 Status-dots might be less apparent what it's doing, but if you look at the menu bar in the top right you see five white dots. These are made out of [Uptime Kuma's status badges](https://github.com/louislam/uptime-kuma/wiki/Badge). Basically, if Uptime Kuma detects an outage the badge color will change from white to red. It doesn't auto-refresh but maybe it should!
 
-![five white status dots in the top right](https://melkat.blog/img/my-own-portal3.jpg)
+![five white status dots in the top right](./my-own-portal3.jpg)
 
 Their config looks like this and is made up of the Uptime Kuma monitor ID and a name
 
@@ -57,7 +57,7 @@ const statuses = [
 
 And the final web component that this is made up of is current-date-time. This is just cosmetic to match the aesthetic, but it is functional.
 
-![A screenshot of an iPad with a clock that reads suspiciously like the one on my portal](https://melkat.blog/img/my-own-portal4.jpg)
+![A screenshot of an iPad with a clock that reads suspiciously like the one on my portal](./my-own-portal4.jpg)
 
 I took some advice I was reading about what makes a good web component: sometime simple that compliments already present elements, so it is used like this:
     

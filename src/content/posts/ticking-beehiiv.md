@@ -10,7 +10,7 @@ At the beginning of the year, people left Substack for places like Buttondown, G
 
 The front page of their site boasts that you can talk to their "Chatbot Assistant." You can easily get it to lie and make up fake features. That's just what they have on the surface. If you dig a little deeper in their "beehive academy" you can see that they will also let you have AI write your newsletter for you or generate images out of copyrighted works.
 
-![Two pages from Beehiiv that are announcing their set of generative AI tools](https://melkat.blog/img/ticking-beehiiv.jpg)
+![Two pages from Beehiiv that are announcing their set of generative AI tools](./ticking-beehiiv.jpg)
 
 They prefaced this with a bold and absurd thing to say about yourself:
 
@@ -19,11 +19,11 @@ They prefaced this with a bold and absurd thing to say about yourself:
 
 Who are you? Why are you talking to me like this? I don't know about you… but I. AM. NOT. IMPRESSED. I think people who actually want to support and receive newsletters would prefer to not have plagiarized AI sludge thrown at their face. This is a feature you make to spam people with your brand, not to "grow" your audience.
 
-![A webpage that says WEB 3 & CRYPTO — BEEHIV FOR WEB 3 & CRYPTO CREATORS — beehiv is the most powerful newsletter platform on the planet](https://melkat.blog/img/ticking-beehiiv2.jpg)
+![A webpage that says WEB 3 & CRYPTO — BEEHIV FOR WEB 3 & CRYPTO CREATORS — beehiv is the most powerful newsletter platform on the planet](./ticking-beehiiv2.jpg)
 
 The next thing that makes me incredibly skeptical of Beehiiv is featured heavily in their navigation bar: "Beehiiv is for Web 3 & Crypto Creators." This takes you to a page where they talk about their dedication to the financial scam industry and all the hustle bros they are partnered with. You guys know the hype on this con died years ago right? The fad now is AI sludge. Where's your "Beehiiv for Bernie Madoff" page? You must have replaced your marketing team with an AI prompt before they got around to implementing that one.
 
-![A webpage that says PARTNER WITH PREMIUM BRANDS — Monetize your newsletter in seconds. It then shows a bunch of brand logos like Apollo.io, Brooklinen, Wander, BetterHelp, HIMs, naked wines, and Crowdstreet](https://melkat.blog/img/ticking-beehiiv3.jpg)
+![A webpage that says PARTNER WITH PREMIUM BRANDS — Monetize your newsletter in seconds. It then shows a bunch of brand logos like Apollo.io, Brooklinen, Wander, BetterHelp, HIMs, naked wines, and Crowdstreet](./ticking-beehiiv3.jpg)
 
 Here's one last thing that is a red flag for people wanting to use Beehiiv: they are a wanna-be ad network. Obviously, ads aren't a viable solution for web content and we can see this by looking at the state of journalism.
 

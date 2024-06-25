@@ -2,7 +2,7 @@
 date: 2023-03-05T21:00:09.249Z
 title: Last.fm to Mastodon Profile
 tags: [link, mastodon, lastfm, scriptable]
-cover: /img/lastfm-to-mastodon.png
+cover: ./lastfm-to-mastodon.png
 coverAlt: A screenshot of a Mastodon bio showing that the person is listening to 100 gecs album 10,000 gecs and the song Doritos & Fritos with a link to the persons last.fm profile
 link: https://paste.melanie.lol/last.fm-to-mastodon.js
 ---

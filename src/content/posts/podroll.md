@@ -2,7 +2,7 @@
 date: 2024-02-20T04:35:34.366Z
 title: The Podcasts I Stuck With
 tags: [post, me, podcasts, slashpage]
-cover: /img/podroll.png
+cover: ./podroll.png
 coverAlt: Podcast album art for Stop Podcasting Yourself and The Flop House
 ---
 

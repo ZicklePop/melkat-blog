@@ -1,5 +1,5 @@
 ---
-cover: /img/dankpods-starter.jpg
+cover: ./dankpods-starter.jpg
 coverAlt: Thumbnail to DankPods video with the text Choosing headphones Is hard aye!
 date: 2022-04-21T22:43:46.501Z
 link: https://www.youtube.com/watch?v=jk-Tybi-ihw

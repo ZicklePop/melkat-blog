@@ -1,5 +1,5 @@
 ---
-cover: /img/2023-games.png
+cover: ./2023-games.png
 coverAlt: Game poster art for Like a Dragon Ishin and Gaiden, and Suika Game
 date: 2023-12-31T19:32:13.115Z
 title: My 2023 in Games

@@ -2,7 +2,7 @@
 date: 2024-03-17T05:38:35.679Z
 title: My Decade in San Francisco
 tags: [post, me, sanfrancisco]
-cover: /img/decade-in-sf.jpg
+cover: ./decade-in-sf.jpg
 coverAlt: A panoramic of the city of San Francisco
 ---
 

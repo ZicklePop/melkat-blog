@@ -2,7 +2,7 @@
 date: 2023-02-13T03:55:25.182Z
 title: Checking Your SF Jury Summon
 tags: [post, javascript, shortcuts, scriptable, sanfrancisco]
-cover: /img/sfjuryduty.jpg
+cover: ./sfjuryduty.jpg
 coverAlt: Two examples of the widget. One says You are safe and the other says You are wanted
 ---
 

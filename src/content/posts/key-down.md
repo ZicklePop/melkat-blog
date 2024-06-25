@@ -2,7 +2,7 @@
 title: key-down, A Web Component for Key Commands
 tags: [post, me, javascript]
 date: 2024-06-14T11:53:52-07:00
-cover: /img/key-down.jpg
+cover: ./key-down.jpg
 coverAlt: A screen shot of the key commands modal on this blog
 ---
 

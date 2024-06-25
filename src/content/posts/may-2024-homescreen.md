@@ -2,7 +2,7 @@
 date: 2024-06-01T04:21:00Z
 title: May Home Screens
 tags: [post, me, homescreen]
-cover: /img/may-2024-homescreen.png
+cover: ./may-2024-homescreen.png
 coverAlt: iPad Pro and iPhone Pro Max
 ---
 

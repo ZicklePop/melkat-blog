@@ -2,7 +2,7 @@
 title: Glowing Up
 tags: [post, me, movies, trans]
 date: 2024-06-17T12:54:53-07:00
-cover: /img/glowing-up.jpg
+cover: ./glowing-up.jpg
 coverAlt: The Pink Opaque ghost doodle from the movie I Saw the TV Glow
 ---
 

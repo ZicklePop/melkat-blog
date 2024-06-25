@@ -2,7 +2,7 @@
 date: 2023-02-21T06:09:03.490Z
 title: My Essential Apps
 tags: [link, apps, me]
-cover: /img/essential-apps.jpg
+cover: ./essential-apps.jpg
 coverAlt: A screenshot of the Notion spreadsheet linked to for this post
 link: https://melkat.notion.site/melkat/4e7c399f100c46eeae6d04d1dcd644a0
 ---

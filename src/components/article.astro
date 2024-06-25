@@ -5,17 +5,6 @@ import Details from './details.astro'
 import Tags from './tags.astro'
 import Title from './title.astro'
 
-export interface Props {
-  cover?: string
-  coverAlt?: string
-  date: Date
-  link?: string
-  slug: string
-  tags?: string[]
-  title: string
-  url: string
-}
-
 const cx = {
   article:
     'h-entry pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25',

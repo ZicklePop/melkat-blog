@@ -1,5 +1,5 @@
 ---
-cover: /img/apps-i-use.png
+cover: ./apps-i-use.png
 coverAlt: A grid of all the app icons mentioned in this post
 date: 2024-01-02T17:55:49.821Z
 title: Apps I Use

@@ -1,5 +1,5 @@
 ---
-cover: /img/beryl-tailscale-mullvad.png
+cover: ./beryl-tailscale-mullvad.png
 coverAlt: Beryl Router's Tailscale Configuration Screen in Safari and Inspect Browser
 date: 2024-04-12T05:44:55.629Z
 title: How I Set Up My Travel Router with Tailscale's Mullvad Exit Nodes
@@ -10,7 +10,7 @@ After my last trip, I bought what might be one of my favorite routers ever, let 
 
 The web interface for GL-iNet's Tailscale configuration leaves a lot to be desired and I am currently in a hotel room with my iPad. So I loaded up the admin web page with the [Inspect Browser](https://apps.apple.com/us/app/inspect-browser/id1203594958) for iOS so I could take a look at the list of IP addresses it populates the dropdown box with. This gave me an array of about [430 IP addresses](https://paste.melanie.lol/tailscale-mullvad-exit-node-ips.txt). These addresses are not labeled anywhere online that I could find, so I ran one of them at random through the app [Net Analyzer](https://apps.apple.com/us/app/network-analyzer-pro/id557405467) and it was able to tell me that `100.102.95.55` has a PTR record pointing at a `de-fra-wg-008.mullvad.ts.net` address. That's helpful! Now I know which Mullvad server this is, and can visually see that it's a Wireguard (wg) server in Frankfurt (fra), Germany (de) server, which we can confirm against [Mullvad's server list](https://mullvad.net/en/servers). So now I just need to go through all 430 or so IP addresses. So I wrote a shell script to do just that. Oh, and I need a way to run that shell command on my iPad. For this I used [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243) which has File.app integration which means I can use any app on my iPad to write and edit files directly to the app's file system.
 
-![Net Analyzer doing a lookup on a Tailscale IP address for a Mullvad exit node](https://melkat.blog/img/beryl-tailscale-mullvad2.png)
+![Net Analyzer doing a lookup on a Tailscale IP address for a Mullvad exit node](./beryl-tailscale-mullvad2.png)
 
 I took all of these IP addresses and saved it to a file in iSH at `/root/ips.txt`. I don't know if these IP addresses are the same for everyone, but I think they might be, so I have published them [here](https://paste.melanie.lol/tailscale-mullvad-exit-node-ips.txt).
 

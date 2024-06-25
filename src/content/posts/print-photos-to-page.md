@@ -2,7 +2,7 @@
 date: 2024-02-21T21:50:07.473Z
 title: Print Photos to a Single Page
 tags: [post, shortcuts, ios]
-cover: /img/print-photos-to-page.jpg
+cover: ./print-photos-to-page.jpg
 coverAlt: A screenshot of the iPad's print dialog with example output from this shortcut
 ---
 

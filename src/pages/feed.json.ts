@@ -30,7 +30,7 @@ export async function GET() {
           post.data.cover
             ? '<img src="' +
               baseUrl +
-              post.data.cover +
+              post.data.cover.src +
               '" alt="' +
               post.data.coverAlt +
               '" /><br />'
@@ -39,9 +39,7 @@ export async function GET() {
         date_published: post.data.date.toISOString(),
         external_url: post.data.link,
         id: `${baseUrl}/p/${post.slug}`,
-        image: post.data.cover
-          ? `${baseUrl}${post.data.cover.replace(/\/$/, '')}`
-          : undefined,
+        image: post.data.cover ? `${baseUrl}${post.data.cover.src}` : undefined,
         tags: post.data.tags,
         title: post.data.title,
         url: `${baseUrl}/p/${post.slug}`,

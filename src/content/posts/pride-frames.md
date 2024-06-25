@@ -3,7 +3,7 @@ date: 2023-09-27T17:22:13.426Z
 title: Pride Frames for Web
 tags: [link, me, queer, trans, apps]
 link: https://pride.melaniekat.com
-cover: /img/pride-frames.png
+cover: ./pride-frames.png
 coverAlt: The website for Pride Frames running on an iPad and iPhone in light and dark modes
 ---
 

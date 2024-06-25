@@ -1,5 +1,5 @@
 ---
-cover: /img/how-to-read-news.png
+cover: ./how-to-read-news.png
 coverAlt: Three popular news websites with ads and popups covering everything.
 date: 2024-03-17T17:45:45.332Z
 title: How to Read a News Website

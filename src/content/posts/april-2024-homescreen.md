@@ -2,7 +2,7 @@
 date: 2024-04-28T17:20:00Z
 title: April Home Screens
 tags: [post, me, homescreen]
-cover: /img/april-2024-homescreen.png
+cover: ./april-2024-homescreen.png
 coverAlt: iPad Pro and iPhone Pro Max
 ---
 

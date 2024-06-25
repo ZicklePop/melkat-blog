@@ -2,7 +2,7 @@
 date: 2023-09-05T05:22:21.488Z
 title: Leave a Note On Your Partner’s Lock Screen
 tags: [post, shortcuts, ios, anytext]
-cover: /img/notes-for-partner.png
+cover: ./notes-for-partner.png
 coverAlt: A iPhone lock screen with a widget that says "Happy second anniversary my love!!!!!!" and a bunch of heart emoji
 ---
 
