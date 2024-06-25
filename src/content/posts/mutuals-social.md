@@ -2,8 +2,10 @@
 date: 2023-02-15T23:57:20.976Z
 title: Melanie's Mutuals
 tags: [link, me, mastodon, javascript]
-link: https://melaniekat.com/mutuals
+link: https://melaniekat.com/
 ---
+
+**Update**: I've turned off this website for now. I might bring it back, who knows!
 
 Only Mutuals. That was the joke I couldn't get out of my head. So I decided to make a website that only my mutual followers could access. Nothing risqué, just things for my friends: like the wallpapers I used to design and so on.
 
