@@ -1,14 +1,12 @@
 ---
+cover: ./childrens-smart-watches.png
+coverAlt: An ugly Mandolorian smart watch for kids with a camera on the top part.
 date: 2024-05-29T13:45:36-07:00
 title: The Absurd World of Children's Smart Watches
 tags: [post, tech]
 ---
 
-This morning I decided to log in to my Verizon account to look for ways to, uh, ultimately increase my bill. In doing so I saw that Verizon sold a Disney watch for kids.
-
-![An ugly Mandolorian smart watch for kids with a camera on the top part.](./childrens-smart-watches.png)
-
-…and I was like, "lol, what." Then I became obsessed with the reviews for a Verizon product on a Verizon website. Obviously these reviews go through some sort of censorship right? But they are so bad!
+This morning I decided to log in to my Verizon account to look for ways to, uh, ultimately increase my bill. In doing so I saw that Verizon sold a Disney watch for kids. My first reaction was "lol, what." Then I became obsessed with the reviews for a Verizon product on a Verizon website. Obviously these reviews go through some sort of censorship right? But they are so bad!
 
 ![A blurry image of a smart watch with orange and blue keys with just the keys of the left side of a normal keyboard](./childrens-smart-watches2.png)
 
