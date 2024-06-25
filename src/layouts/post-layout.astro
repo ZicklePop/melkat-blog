@@ -1,45 +1,45 @@
 ---
-import Article from '../components/article.astro'
-import Layout from './base-layout.astro'
-import RelatedArticles from '../components/related-articles.astro'
-import TruncatedContent from '../components/truncated-content.astro'
-import stripMd from '../utils/strip-md'
-import truncateMd from '../utils/truncate-md'
-import type { CollectionEntry } from 'astro:content'
-import { byDate } from '../utils/sort'
-import { getCollection } from 'astro:content'
-import { getRelatedPosts } from '../utils/get-posts'
-import { noDrafts } from '../utils/filter'
-import { title as blogTitle } from '../consts/config'
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import Article from "../components/article.astro";
+import RelatedArticles from "../components/related-articles.astro";
+import TruncatedContent from "../components/truncated-content.astro";
+import { title as blogTitle } from "../consts/config";
+import { noDrafts } from "../utils/filter";
+import { getRelatedPosts } from "../utils/get-posts";
+import { byDate } from "../utils/sort";
+import stripMd from "../utils/strip-md";
+import truncateMd from "../utils/truncate-md";
+import Layout from "./base-layout.astro";
 
 export interface Props {
-  post: CollectionEntry<'posts'>
-  permalink?: string
+	post: CollectionEntry<"posts">;
+	permalink?: string;
 }
 
-const { post } = Astro.props
+const { post } = Astro.props;
 const {
-  data: { title, cover, coverAlt, date, link, tags },
-  slug,
-} = post
-const { permalink = `/p/${slug}` } = Astro.props
+	data: { title, cover, coverAlt, date, link, tags },
+	slug,
+} = post;
+const { permalink = `/p/${slug}` } = Astro.props;
 
-const isPostPage = `${Astro.url}`.indexOf('/p/') > -1
-const Component = isPostPage ? Layout : Fragment
-const description = stripMd(post.body.trim().split('\n')[0])
+const isPostPage = `${Astro.url}`.indexOf("/p/") > -1;
+const Component = isPostPage ? Layout : Fragment;
+const description = stripMd(post.body.trim().split("\n")[0]);
 
-const truncatedMd = truncateMd(post.body)
-const wasTruncated = truncatedMd !== post.body
+const truncatedMd = truncateMd(post.body);
+const wasTruncated = truncatedMd !== post.body;
 
-let relatedPosts: CollectionEntry<'posts'>[] = []
+let relatedPosts: CollectionEntry<"posts">[] = [];
 if (isPostPage) {
-  relatedPosts = await getCollection('posts', noDrafts)
-  relatedPosts = relatedPosts.sort(byDate)
-  relatedPosts = getRelatedPosts(relatedPosts, post)
+	relatedPosts = await getCollection("posts", noDrafts);
+	relatedPosts = relatedPosts.sort(byDate);
+	relatedPosts = getRelatedPosts(relatedPosts, post);
 }
 
-const { Content } = await post.render()
-const showTruncated = !isPostPage && wasTruncated
+const { Content } = await post.render();
+const showTruncated = !isPostPage && wasTruncated;
 ---
 
 <Component

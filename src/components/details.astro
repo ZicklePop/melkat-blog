@@ -1,22 +1,22 @@
 ---
-import Domain from './domain.astro'
-import Date from './date.astro'
+import Domain from "./domain.astro";
+import Time from "./time.astro";
 
 export interface Props {
-  date: Date
-  link?: string
-  seperator?: string
+	date: Date;
+	link?: string;
+	seperator?: string;
 }
 
 const cx = {
-  details: 'uppercase text-sm my-4',
-}
+	details: "uppercase text-sm my-4",
+};
 
-const { date, link, seperator = ' • ' } = Astro.props
+const { date, link, seperator = " • " } = Astro.props;
 ---
 
 <p class={cx.details}>
   {link && <Domain link={link} />}
   {link ? seperator : ''}
-  <Date date={date} />
+  <Time datetime={date} />
 </p>

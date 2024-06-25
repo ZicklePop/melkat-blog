@@ -1,13 +1,13 @@
 ---
-import getDomain from '../utils/get-domain'
-import { cxs } from '../consts/config'
+import { cxs } from "../consts/config";
+import getDomain from "../utils/get-domain";
 
 export interface Props {
-  link: string
+	link: string;
 }
 
-const { link } = Astro.props
-const domain = getDomain(link)
+const { link } = Astro.props;
+const domain = getDomain(link);
 ---
 
 <a class={cxs.a} href={`/d/${domain}`} title={`Posts linking to ${domain}`}

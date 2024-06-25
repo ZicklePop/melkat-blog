@@ -1,19 +1,19 @@
 ---
-import { marked } from 'marked'
+import { marked } from "marked";
 
 export interface Props {
-  content: string
-  title?: string
-  url: string
+	content: string;
+	title?: string;
+	url: string;
 }
 
-const { content, title, url } = Astro.props
+const { content, title, url } = Astro.props;
 
 const cx = {
-  link: 'font-bold hover:underline',
-}
+	link: "font-bold hover:underline",
+};
 
-const truncatedHtml = marked(content)
+const truncatedHtml = marked(content);
 ---
 
 <div class="p-summary" set:html={truncatedHtml} />

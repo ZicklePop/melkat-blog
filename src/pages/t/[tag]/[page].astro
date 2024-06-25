@@ -1,37 +1,37 @@
 ---
-import Layout from '../../../layouts/base-layout.astro'
-import PageHeader from '../../../components/page-header.astro'
-import PageNavigator from '../../../components/page-navigator.astro'
-import PostLayout from '../../../layouts/post-layout.astro'
-import type { CollectionEntry } from 'astro:content'
-import type { GetStaticPathsOptions } from 'astro'
-import { byDate } from '../../../utils/sort'
-import { getAllTags, getPostsByTag } from '../../../utils/get-posts'
-import { getCollection } from 'astro:content'
-import { hasTagsNoDrafts } from '../../../utils/filter'
-import { pageSize, title } from '../../../consts/config'
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions } from "astro";
+import PageHeader from "../../../components/page-header.astro";
+import PageNavigator from "../../../components/page-navigator.astro";
+import { pageSize, title } from "../../../consts/config";
+import Layout from "../../../layouts/base-layout.astro";
+import PostLayout from "../../../layouts/post-layout.astro";
+import { hasTagsNoDrafts } from "../../../utils/filter";
+import { getAllTags, getPostsByTag } from "../../../utils/get-posts";
+import { byDate } from "../../../utils/sort";
 
-type EntryProp = CollectionEntry<'posts'>
+type EntryProp = CollectionEntry<"posts">;
 
-export const prerender = true
+export const prerender = true;
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  let allPosts = await getCollection('posts', hasTagsNoDrafts)
-  allPosts = allPosts.sort(byDate)
+	let allPosts = await getCollection("posts", hasTagsNoDrafts);
+	allPosts = allPosts.sort(byDate);
 
-  let allTags = getAllTags(allPosts)
+	const allTags = getAllTags(allPosts);
 
-  return allTags?.flatMap(tag => {
-    const filtered = getPostsByTag(allPosts, tag)
-    return paginate(filtered, {
-      params: { tag },
-      pageSize,
-    })
-  })
+	return allTags?.flatMap((tag) => {
+		const filtered = getPostsByTag(allPosts, tag as string);
+		return paginate(filtered, {
+			params: { tag: tag as string },
+			pageSize,
+		});
+	});
 }
 
-const { page } = Astro.props
-const { tag } = Astro.params
+const { page } = Astro.props;
+const { tag } = Astro.params;
 ---
 
 <Layout

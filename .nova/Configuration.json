@@ -1,9 +1,9 @@
 {
-  "workspace.art_style" : 0,
-  "workspace.color" : 8,
-  "workspace.name" : "melkat-blog",
-  "workspace.preview_append_paths" : false,
-  "workspace.preview_root" : "src\/pages",
-  "workspace.preview_type" : "custom",
-  "workspace.preview_url" : "http:\/\/localhost:4321\/"
+	"workspace.art_style": 0,
+	"workspace.color": 8,
+	"workspace.name": "melkat-blog",
+	"workspace.preview_append_paths": false,
+	"workspace.preview_root": "src/pages",
+	"workspace.preview_type": "custom",
+	"workspace.preview_url": "http://localhost:4321/"
 }

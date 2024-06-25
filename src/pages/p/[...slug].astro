@@ -1,23 +1,23 @@
 ---
-import PostLayout from '../../layouts/post-layout.astro'
-import { getCollection } from 'astro:content'
-import { noDrafts } from '../../utils/filter'
+import { getCollection } from "astro:content";
+import PostLayout from "../../layouts/post-layout.astro";
+import { noDrafts } from "../../utils/filter";
 
-export const prerender = true
+export const prerender = true;
 
 export async function getStaticPaths() {
-  const entries = await getCollection('posts', noDrafts)
-  return entries.map(entry => ({
-    params: {
-      slug: entry.slug,
-    },
-    props: {
-      entry,
-    },
-  }))
+	const entries = await getCollection("posts", noDrafts);
+	return entries.map((entry) => ({
+		params: {
+			slug: entry.slug,
+		},
+		props: {
+			entry,
+		},
+	}));
 }
 
-const { entry } = Astro.props
+const { entry } = Astro.props;
 ---
 
 <PostLayout post={entry} />

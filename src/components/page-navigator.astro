@@ -1,15 +1,15 @@
 ---
-import Icon from './icon.astro'
-import { cxs } from '../consts/config'
+import { cxs } from "../consts/config";
+import Icon from "./icon.astro";
 
 const cx = {
-  box: 'mb-8 flex items-center justify-between',
-  pageCount: 'flex items-center',
-  navigation: 'w-32 flex items-center',
-}
+	box: "mb-8 flex items-center justify-between",
+	pageCount: "flex items-center",
+	navigation: "w-32 flex items-center",
+};
 
-const { url = {}, currentPage = '1', lastPage = '1' } = Astro.props.page
-const { prev, next } = url
+const { url = {}, currentPage = "1", lastPage = "1" } = Astro.props.page;
+const { prev, next } = url;
 ---
 
 <div class={cx.box}>

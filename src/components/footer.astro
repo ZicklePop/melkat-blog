@@ -1,18 +1,18 @@
 ---
-import Search from '../components/search.astro'
-import { cxs } from '../consts/config'
+import Search from "../components/search.astro";
+import { cxs } from "../consts/config";
 
 export interface Props {
-  showSearch?: boolean
+	showSearch?: boolean;
 }
 
 const cx = {
-  footer: 'w-full mb-5',
-  p: 'text-center',
-  search: 'max-w-md mx-auto',
-}
+	footer: "w-full mb-5",
+	p: "text-center",
+	search: "max-w-md mx-auto",
+};
 
-const { showSearch = true } = Astro.props
+const { showSearch = true } = Astro.props;
 ---
 
 <footer class={cx.footer} role="contentinfo">

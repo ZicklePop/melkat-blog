@@ -1,16 +1,16 @@
 ---
-import MiniArticle from '../components/mini-article.astro'
-import type { CollectionEntry } from 'astro:content'
+import type { CollectionEntry } from "astro:content";
+import MiniArticle from "../components/mini-article.astro";
 
 export interface Props {
-  posts: CollectionEntry<'posts'>[]
+	posts: CollectionEntry<"posts">[];
 }
 
 const cx = {
-  wrapper: `grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 my-16`,
-}
+	wrapper: "grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 my-16",
+};
 
-const { posts } = Astro.props
+const { posts } = Astro.props;
 ---
 
 <div class={cx.wrapper}>

@@ -1,16 +1,25 @@
 ---
-import Body from './body.astro'
-import Cover from './cover.astro'
-import Details from './details.astro'
-import Tags from './tags.astro'
-import Title from './title.astro'
+import Body from "./body.astro";
+import Cover from "./cover.astro";
+import Details from "./details.astro";
+import Tags from "./tags.astro";
+import Title from "./title.astro";
 
 const cx = {
-  article:
-    'h-entry pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25',
-}
+	article:
+		"h-entry pb-8 mb-8 border-solid border-b cv-auto border-black/10 dark:border-white/25",
+};
 
-const { cover, coverAlt, date, link, tags = [], title, slug, url } = Astro.props
+const {
+	cover,
+	coverAlt,
+	date,
+	link,
+	tags = [],
+	title,
+	slug,
+	url,
+} = Astro.props;
 ---
 
 <article class={cx.article}>

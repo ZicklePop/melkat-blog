@@ -1,25 +1,25 @@
 ---
-import Permalink from './permalink.astro'
-import Tag from './tag.astro'
-import Share from './share.astro'
-import { cxs } from '../consts/config'
+import { cxs } from "../consts/config";
+import Permalink from "./permalink.astro";
+import Share from "./share.astro";
+import Tag from "./tag.astro";
 
 export interface Props {
-  slug: string
-  tags: string[]
-  title: string
-  url: string
+	slug: string;
+	tags: string[];
+	title: string;
+	url: string;
 }
 
 const cx = {
-  container:
-    'flex flex-col mt-4 gap-y-2 md:gap-x-5 md:flex-row justify-between',
-  li: cxs.li,
-  tag: `${cxs.li} md:mr-0 md:ml-2`,
-  ul: 'list-none',
-}
+	container:
+		"flex flex-col mt-4 gap-y-2 md:gap-x-5 md:flex-row justify-between",
+	li: cxs.li,
+	tag: `${cxs.li} md:mr-0 md:ml-2`,
+	ul: "list-none",
+};
 
-const { url, tags, title } = Astro.props
+const { url, tags, title } = Astro.props;
 ---
 
 <div class={cx.container}>
