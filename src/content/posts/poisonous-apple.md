@@ -35,6 +35,6 @@ So back to the 404 Media article that is [based on a Mastodon thread by Gjøvik]
 
 > The inspection was supposed to be unannounced so EPA surprises the inspected party who has no chance to cover up issues before EPA gets inside. However city HazMat tipped off Apple & EPA was greeted by Apple's EH&S team. Note: what EPA found was AFTER Apple had time to clean up.
 >
-> Ashley M. Gjøvik (@ashleygjovik@mastodon.social) [Jun 23, 2024 at 3:54PM](https://mastodon.social/@ashleygjovik/112668396498960649)
+> Ashley M. Gjøvik (@ashleygjovik) [Jun 23, 2024 at 3:54PM](https://mastodon.social/@ashleygjovik/112668396498960649)
 
 Apple was even tipped off to the surprise inspection. I have to wonder if they even tried to destroy any evidence, if so they did a very bad job of it. They were even inspected again in January 2024, this year. If I were being investigated by the U.S. Department of Justice for being an unfair monopoly, I'd simply not be an unfair monopoly. But if I absolutely had to be a monopoly, I'd at least try to make it less obvious, but I guess that's what the words on the photo of Ghandi meant by "Think Different."

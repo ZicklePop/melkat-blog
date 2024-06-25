@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: JustinBeckwith/linkinator-action@v1
         with:
-          paths: '**/*.md'
+          paths: "**/*.md"
           timeout: 30000
-          linksToSkip: 'https://example.com/,https://sevenseasentertainment.com/,https://www.fiio.com/,https://velocity.silverlakesoftware.com/,https://imageoptim.com/,https://www.kickstarter.com/,https://1blocker.com/,https://www.animeherald.com,https://www.project-voltage.jp,https://www.textasticapp.com/,https://routinehub.co/,https://www.thegamer.com/,https://thefrankiedlc.substack.com,https://jezebel.com/,https://psnprofiles.com/,https://www.bookforum.com,https://ko-fi.com,https://flaminghydra.com,https://bjango.com/,https://translifeline.org/,http://ko-fi.com/,https://jsr.io/,https://zaimki.pl/,https://hil-speed.hetzner.com/,https://coryd.dev/'
+          linksToSkip: "https://example.com/,https://sevenseasentertainment.com/,https://www.fiio.com/,https://velocity.silverlakesoftware.com/,https://imageoptim.com/,https://www.kickstarter.com/,https://1blocker.com/,https://www.animeherald.com,https://www.project-voltage.jp,https://www.textasticapp.com/,https://routinehub.co/,https://www.thegamer.com/,https://thefrankiedlc.substack.com,https://jezebel.com/,https://psnprofiles.com/,https://www.bookforum.com,https://ko-fi.com,https://flaminghydra.com,https://bjango.com/,https://translifeline.org/,http://ko-fi.com/,https://jsr.io/,https://zaimki.pl/,https://hil-speed.hetzner.com/,https://coryd.dev/,https://www.last.fm/"
