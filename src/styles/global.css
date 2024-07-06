@@ -3,15 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-white text-gray-700 dark:bg-black dark:text-gray-300;
-  }
+	body {
+		@apply bg-white text-gray-700 dark:bg-black dark:text-gray-300;
+	}
 
-  [popover]:popover-open {
-    @apply animate-slide-up motion-reduce:duration-0 rounded-xl shadow-xl shadow-cerulean-501/20 bg-white/95 dark:bg-black/95 p-6 max-h-[100svh] w-80 overflow-auto ring-2 ring-cerulean-500 text-gray-700 dark:text-gray-300;
-  }
+	[popover]:popover-open {
+		@apply animate-slide-up motion-reduce:duration-0 rounded-xl shadow-xl shadow-cerulean-501/20 bg-white/95 dark:bg-black/95 p-6 max-h-[100svh] w-80 md:w-[30rem] overflow-auto ring-2 ring-cerulean-500 text-gray-700 dark:text-gray-300;
+	}
 
-  [popover]::backdrop {
-    @apply animate-fade-in motion-reduce:duration-0 bg-white/15 dark:bg-black/15 backdrop-blur-sm;
-  }
+	[popover]::backdrop {
+		@apply animate-fade-in motion-reduce:duration-0 bg-white/15 dark:bg-black/15 backdrop-blur-sm;
+	}
+
+	article[data-selected]:focus {
+		@apply border-transparent rounded-md outline-offset-8;
+	}
 }

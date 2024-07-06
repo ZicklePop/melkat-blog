@@ -22,7 +22,7 @@ const {
 } = Astro.props;
 ---
 
-<article class={cx.article}>
+<article tabindex="-1" class={cx.article}>
   <Title title={title} link={link ? link : url} isExternal={!!link} />
   <Details link={link} date={date} />
   {cover && coverAlt && <Cover cover={cover} coverAlt={coverAlt} />}
