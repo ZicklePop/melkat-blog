@@ -78,13 +78,13 @@
     }
 
     buildItem({ url, title, date_published }: Item) {
-      const divEl = document.createElement('div')
+      const articleEl = document.createElement('article')
       const h2El = document.createElement('h2')
       const aEl = document.createElement('a')
       const pEl = document.createElement('p')
       const timeEl = document.createElement('time')
-
-      divEl.classList.add(
+			articleEl.setAttribute('tabindex', '-1')
+      articleEl.classList.add(
         'h-entry',
         'pb-2',
         'my-8',
@@ -121,9 +121,9 @@
 
       pEl.appendChild(timeEl)
       h2El.appendChild(aEl)
-      divEl.appendChild(h2El)
-      divEl.appendChild(pEl)
-      this.appendChild(divEl)
+      articleEl.appendChild(h2El)
+      articleEl.appendChild(pEl)
+      this.appendChild(articleEl)
     }
 
     buildError(str: string = 'No results :(') {

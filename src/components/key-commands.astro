@@ -107,7 +107,7 @@ import Kbd from "./kbd.astro";
 		  getSelected(DIR.PREV)
 		}
 		if (e.key === "Enter" && targetType === "article" && target.hasAttribute('data-selected')) {
-			const permalink = target?.querySelector('li > [title^="Permalink"]') as HTMLElement
+			const permalink = target?.querySelector('a[title^="Permalink"]') as HTMLElement
 			permalink?.click();
 		}
 	})
