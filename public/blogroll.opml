@@ -77,6 +77,10 @@
         xmlUrl="https://infrequently.org/feed/" htmlUrl="https://infrequently.org/" />
       <outline text="Jake Archibald's blog" title="Jake Archibald's blog" type="rss"
         xmlUrl="https://jakearchibald.com/posts.rss" htmlUrl="https://jakearchibald.com/" />
+      <outline text="JEDDACP.ME" title="JEDDACP.ME" type="rss" xmlUrl="https://jeddacp.me/feed/"
+        htmlUrl="https://jeddacp.me/" />
+      <outline text="jbowdre's weblog" title="jbowdre's weblog" type="rss"
+        xmlUrl="https://blog.jbowdre.lol/feed/" htmlUrl="https://blog.jbowdre.lol/" />
       <outline text="Jeff Lemire's Blog" title="Jeff Lemire's Blog" type="rss"
         xmlUrl="http://jefflemire.blogspot.com/feeds/posts/default"
         htmlUrl="http://jefflemire.blogspot.com/" />
@@ -84,6 +88,8 @@
         xmlUrl="https://www.joshwcomeau.com/rss.xml" htmlUrl="https://www.joshwcomeau.com/" />
       <outline text="Julia Evans" title="Julia Evans" type="rss" xmlUrl="https://jvns.ca/atom.xml"
         htmlUrl="http://jvns.ca" />
+      <outline text="Notes by JCProbably" title="Notes by JCProbably" type="rss"
+        xmlUrl="https://notes.jeddacp.com/feed/" htmlUrl="https://notes.jeddacp.com/" />
       <outline text="Kent C. Dodds Blog" title="Kent C. Dodds Blog" type="rss"
         xmlUrl="https://kentcdodds.com/blog/rss.xml" htmlUrl="https://kentcdodds.com/blog" />
       <outline text="Kev Quirk" title="Kev Quirk" type="rss" xmlUrl="https://kevquirk.com/feed"
