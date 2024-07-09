@@ -1,6 +1,6 @@
 ---
 title: Unsafe Pricing at Any Scale
-tags: [post, tech, javascript]
+tags: [post, tech, javascript, hosting, criticism]
 date: 2024-06-21T12:06:27-07:00
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: 2024-04-04T15:44:00Z
 title: Mario Mario vs Mario
-tags: [post, games, film]
+tags: [post, games, film, criticism]
 ---
 
 A hot take I have been mulling on since my wife got me to watch the 1993 Mario movie: **Super Mario Bros. (1993) is better than The Super Mario Bros. Movie (2023)**. While I recognize that the '90s movie was [a mess to make](https://maximumfun.org/episodes/flop-house/fh-mini-39-we-talk-to-a-super-mario-bros-screenwriter/), it tries so much harder than the ['23 version](https://www.flophousepodcast.com/2023/07/episode-399-the-super-mario-bros-movie/). The newer film wasn't made for me, full stop. It wasn't made for people who grew up with Mario, it was made for people who have yet to grow up with Mario.

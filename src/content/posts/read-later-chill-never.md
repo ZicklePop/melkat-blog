@@ -1,6 +1,6 @@
 ---
 title: Read Later Apps Have No Chill
-tags: [post, tech]
+tags: [post, tech, criticism, apps]
 date: 2024-06-11T12:32:59-07:00
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Apple's Privacy Protections Aren't Enough
-tags: [post, tech]
+tags: [post, tech, criticism, security]
 date: 2024-07-06T13:10:22-07:00
 ---
 

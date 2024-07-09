@@ -1,6 +1,6 @@
 ---
 title: Not my first time, not my last
-tags: [post, me, trans]
+tags: [post, me, trans, criticism]
 date: 2024-06-05T13:14:59-07:00
 ---
 

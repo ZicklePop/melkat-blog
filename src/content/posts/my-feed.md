@@ -1,7 +1,7 @@
 ---
 date: 2024-04-10T04:54:00Z
 title: My Online Activity Feed
-tags: [post, me]
+tags: [post, me, code]
 ---
 
 The other day I joked on Mastodon

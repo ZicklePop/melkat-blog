@@ -1,7 +1,7 @@
 ---
 date: 2024-06-03T12:43:36-07:00
 title: There's a Ticking Noise in the Beehiiv
-tags: [post, tech]
+tags: [post, tech, criticism]
 ---
 
 Last year when Jonathan M. Katz dropped his bombshell piece about the [Substack's nazi problem](https://www.theatlantic.com/ideas/archive/2023/11/substack-extremism-nazi-white-supremacy-newsletters/676156/) he wasn't saying anything trans people didn't already know. As one since-paywalled post said, "trans people are always the canaries in the coal mine." Substack has always courted this kind of bigoted content, but unfortunately the rights of queer people take a back seat and we have to rely on cis allies to voice the same opinions before it gets taken seriously. (Credit to [Luke O'Neil](https://www.welcometohellworld.com) and [Seth Simons](https://www.humorism.xyz) who ditched Substack early on over trans rights.) This finally lead to a large amount of people leaving Substack. Oddly enough, some doubled down, some tried to argue that a few nazis is fine actually, and others started new Substacks! C'mon, grow up. How desperate must you be to willingly go to the [nazi bar](https://en.wiktionary.org/wiki/Nazi_bar) to beg for money?

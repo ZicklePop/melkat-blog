@@ -1,7 +1,7 @@
 ---
 date: 2024-06-25T12:53:30-07:00
 title: California Apple Manufacturing Facility Has 19 'Potential Violations' of EPA Regulations
-tags: [link, apple, tech]
+tags: [link, apple, tech, criticism]
 link: https://www.404media.co/california-apple-manufacturing-facility-has-19-potential-violations-of-epa-regulations/
 cover: ./poisonous-apple.png
 coverAlt: "A photograph from a legal document that reads: A photo of three vents connected to Apple's 55-gallon container filled with 'Activated Carbon'. The two vents on the left are emergency vents for the double-walled tank. The vent on the right is the main vent."

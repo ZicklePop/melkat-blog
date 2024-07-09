@@ -1,7 +1,7 @@
 ---
 date: 2019-12-16T05:00:28.303Z
 title: My 2019 in Media
-tags: [post, media]
+tags: [post, me, media]
 ---
 
 Ranking things is a fools task. I may be a fool, but I can’t bother to do all that. So here is a simple list of things that I had a good time with in 2019. While I tried to stick to things that released this year, let’s be honest: releases are tricky. Sometimes things come out in one country on one platform before releasing elsewhere. I also made no attempt to limit or hit a certain number of items for a list.

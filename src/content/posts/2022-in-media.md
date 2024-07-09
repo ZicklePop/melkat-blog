@@ -1,7 +1,7 @@
 ---
 date: 2022-12-18T04:10:01.149Z
 title: My 2022 in Media
-tags: [post, media]
+tags: [post, me, media]
 ---
 
 What even is time anymore? Everything feels like it's still 2020. This was the year knowing the days of the week went out the window. What I can remember is: playing every Yakuza game and watching Smosh and Good Mythical Morning to keep myself grounded.

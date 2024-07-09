@@ -1,6 +1,6 @@
 ---
 title: Duopolies Are Just Monopolies
-tags: [post]
+tags: [post, criticism]
 date: 2024-07-02T08:24:34-07:00
 ---
 

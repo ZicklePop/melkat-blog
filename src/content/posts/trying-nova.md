@@ -1,6 +1,6 @@
 ---
 title: Trying to Like Nova
-tags: [post, apps]
+tags: [post, apps, criticism]
 date: 2024-07-08T14:03:43-07:00
 cover: ./trying-nova.png
 coverAlt: A bunch of Nova crash dialogs.

@@ -1,6 +1,6 @@
 ---
 title: My App Privacy Checkup
-tags: [post, tech]
+tags: [post, tech, security]
 date: 2024-06-27T12:06:43-07:00
 ---
 

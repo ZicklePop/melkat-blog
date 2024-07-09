@@ -1,6 +1,6 @@
 ---
 title: key-down, A Web Component for Key Commands
-tags: [post, me, javascript]
+tags: [post, me, javascript, code]
 date: 2024-06-14T11:53:52-07:00
 cover: ./key-down.jpg
 coverAlt: A screen shot of the key commands modal on this blog
@@ -8,9 +8,9 @@ coverAlt: A screen shot of the key commands modal on this blog
 
 After my [false start](https://melkat.blog/p/fix-your-heart) of releasing web component packages on NPM, I decided to take a portion of this website I've never mentioned is a feature here and give it it's own proper web component. [Introducing the `<key-down>` web component.](https://github.com/ZicklePop/key-down)
 
-Did you know that this blog has key commands? I added it months ago behind a custom modal system you could activate by pressing `Shift+/` or `?` to explain the other key commands. When I replaced the modal with the [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API), I started tearing apart the logic for key commands too. 
+Did you know that this blog has key commands? I added it months ago behind a custom modal system you could activate by pressing `Shift+/` or `?` to explain the other key commands. When I replaced the modal with the [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API), I started tearing apart the logic for key commands too.
 
-To quickly focus on the search box on my blog you can press `/`, a common method for searching on websites and Vim. To make this happen I [wrap the input box](https://github.com/ZicklePop/melkat-blog/blob/394a65ee89eed61d041ee7d77e26af914b0101b9/src/components/search.astro#L24-L29) with my key-down component. 
+To quickly focus on the search box on my blog you can press `/`, a common method for searching on websites and Vim. To make this happen I [wrap the input box](https://github.com/ZicklePop/melkat-blog/blob/394a65ee89eed61d041ee7d77e26af914b0101b9/src/components/search.astro#L24-L29) with my key-down component.
 
 The code looks like this:
 

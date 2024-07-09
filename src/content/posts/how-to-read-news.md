@@ -3,7 +3,7 @@ cover: ./how-to-read-news.png
 coverAlt: Three popular news websites with ads and popups covering everything.
 date: 2024-03-17T17:45:45.332Z
 title: How to Read a News Website
-tags: [post, apps, ios, safari, pc, macos]
+tags: [post, apps, ios, safari, pc, macos, criticism]
 ---
 So you want to read a dying media publication. You might think that you can _simply_ walk in to a news website and read it. Well! You'd be wrong. You've run out of free articles this month. You need to subscribe to our email newsletter. You also need to provide a credit card for a subscription that requires you to call a phone number to cancel.
 
@@ -15,7 +15,7 @@ Here are some ways to improve this experience better without rewarding bad behav
 
 The easiest method is to use your browser's reader mode feature. This will bring up a view of just the article and nothing else. In browsers like Safari and Firefox, you can look for a reader icon in your address bar. It's usually something that looks like a document with lines on it to represent text. In Safari, it might be hidden behind either a circle with three dots in it or an icon with two A's (aA).
 
-If you have a keyboard, you can press `Command + Shift + R` in Safari. For Firefox, it is `Command + Option + R` on Mac or `Control + Alt + R` on Windows and Linux. 
+If you have a keyboard, you can press `Command + Shift + R` in Safari. For Firefox, it is `Command + Option + R` on Mac or `Control + Alt + R` on Windows and Linux.
 
 Safari on iOS goes one step further because when you tap on the icon with two A's (aA) there is a menu labeled `Website Settings`. In it, you can turn on this neat feature so that whenever you are on a publication's website, it will automatically activate reader mode when there is an article. You do this by turning on `Use Reader Automatically`.
 

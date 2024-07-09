@@ -1,6 +1,6 @@
 ---
 title: Escape from Next.js
-tags: [post, tech, javascript]
+tags: [post, tech, javascript, criticism, hosting]
 date: 2024-06-22T09:13:47-07:00
 ---
 

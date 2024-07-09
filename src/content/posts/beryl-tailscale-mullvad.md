@@ -3,7 +3,7 @@ cover: ./beryl-tailscale-mullvad.png
 coverAlt: Beryl Router's Tailscale Configuration Screen in Safari and Inspect Browser
 date: 2024-04-12T05:44:55.629Z
 title: How I Set Up My Travel Router with Tailscale's Mullvad Exit Nodes
-tags: [post, tailscale, mullvad, beryl, ios]
+tags: [post, tailscale, mullvad, beryl, ios, hardware]
 ---
 
 After my last trip, I bought what might be one of my favorite routers ever, let alone a travel router, the [GL-iNet's Beryl AX (GL-MT3000)](https://www.gl-inet.com/products/gl-mt3000/). One of the killer features for me was that, unlike my collection of tiny TP-Link travel routers, was that it has built-in Wireguard and Tailscale support. I've written before about [using Tailscale's Mullvad integration for added security on public Wi-Fi networks](https://melkat.blog/p/tailscale-nearby-exit-nodes), but what about when your router is connected to someone else's network?

@@ -1,6 +1,6 @@
 ---
 title: Dejamming the Front-End
-tags: [post, tech]
+tags: [post, tech, hosting]
 date: 2024-07-01T12:02:46-07:00
 ---
 

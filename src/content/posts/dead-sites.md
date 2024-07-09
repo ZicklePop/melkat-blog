@@ -1,7 +1,7 @@
 ---
 date: 2024-05-18T16:07:00Z
 title: That site you use is dead
-tags: [post, tech]
+tags: [post, tech, criticism]
 ---
 
 Since November 2022, people have been creating these long convoluted guides to figure out how to keep using a toxic and hostile social media site. It's funny, because Twitter has been considered confusing and convoluted since its inception: "why would anyone use that?" "so you tell people when you eat a sandwich?" and "I don't get it." Simply put, Twitter never really took off outside of some passionate clout chasers and bots. Even after it died that November, it hasn't stopped some people with some very unhealthy habits from trying to resuscitate a dead bird.

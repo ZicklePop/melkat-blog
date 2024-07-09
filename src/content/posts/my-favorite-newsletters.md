@@ -1,7 +1,7 @@
 ---
 date: 2024-01-23T06:01:13.615Z
 title: My Favorite Newsletters
-tags: [post, newsletters]
+tags: [post, newsletters, me]
 ---
 
 The world of newsletters has both exploded and imploded in the last few years. I'm fairly new to the scene myself. After trying a bunch over the last year or so, here are the ones I like that I find insightful.
@@ -34,7 +34,7 @@ I don't spend a lot of time following the day's stories as they happen. It's nic
 ## Citation Needed
 
 by Molly White, [citationneeded.news](https://citationneeded.news/)
-> Keep up with the happenings in the tech world without all the boosterism. 
+> Keep up with the happenings in the tech world without all the boosterism.
 
 You may know Molly White from [Web3 is Going Just Great](https://web3isgoinggreat.com). I don't have an interest in cryptocurrency, but I do love watching venture capitalists suffer.
 

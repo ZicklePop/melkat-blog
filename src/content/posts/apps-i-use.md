@@ -3,7 +3,7 @@ cover: ./apps-i-use.png
 coverAlt: A grid of all the app icons mentioned in this post
 date: 2024-01-02T17:55:49.821Z
 title: Apps I Use
-tags: [post, uses, apps]
+tags: [post, uses, me, apps]
 ---
 
 Everything wants to be a subscription service. That's not always a bad thing, but it does challenge me to try to limit the number of subscriptions I have and rely on things I'm already paying for rather than getting another service that does a similar thing.

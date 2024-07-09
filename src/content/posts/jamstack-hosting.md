@@ -1,7 +1,7 @@
 ---
 date: 2024-03-09T21:17:16.439Z
 title: Hosting the Jamstack
-tags: [post, javascript]
+tags: [post, javascript, hosting]
 ---
 
 Vercel and Netlify offer amazing free hosting but what happens when you use more than they like? Well it's time to pay. Not only is it time to pay, but it's time to pay a lot and there are no in-between tiers. Both Netlify and Vercel start off at **$20 per month per person**.

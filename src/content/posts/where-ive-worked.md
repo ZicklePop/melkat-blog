@@ -1,7 +1,7 @@
 ---
 date: 2024-05-11T16:44:00Z
 title: Where I've Worked
-tags: [post, me]
+tags: [post, me, criticism]
 ---
 
 I feel like if someone wanted to, they could probably figure out where I have worked. My last employer featured me on their blog and until recently I didn't know that I was featured a second time! As I try to figure out what I want to work on next, maybe it would be beneficial to, you know, mention that stuff.
@@ -16,7 +16,7 @@ Scammers love to target employees of a company in hopes of manipulating them eit
 
 Businesses also love to make decisions that are, to put it lightly, controversial. When this happens they don't really ask their employees because they know most of them would say "could we not?" This leads to customers saying "could you not?" Employees probably agree with the customer and have raised these concerns themselves but…
 
-> "I think maybe there is no borderline between countries now because we all live in the same country, it's called capitalism -- I think that's the reason."  
+> "I think maybe there is no borderline between countries now because we all live in the same country, it's called capitalism -- I think that's the reason."
 -- [Bong Joon-ho](https://blog.blcklst.com/the-black-list-interview-bong-joon-ho-on-parasite-5fd0cb0baa12?gi=34cffae3d6d8) (Parasite director)
 
 This isn't to say customers shouldn't complain and raise a stink. I appreciate the stink. We need more stink.

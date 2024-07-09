@@ -1,7 +1,7 @@
 ---
 title: What happened to 1Password?
 date: 2024-06-08T09:12:40-07:00
-tags: [post, tech]
+tags: [post, tech, apps]
 ---
 
 For nearly _20 years_, 1Password has been a favorite among people on their Apple devices. It's probably one of the most important applications one can have. It's what a password manager should be: secure, platform agnostic, and reliable. Well, _it was at one time_ reliable.

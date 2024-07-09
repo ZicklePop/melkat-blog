@@ -2,7 +2,7 @@
 cover: ./uses.jpg
 coverAlt: A photo of my desk
 date: 2023-12-12T06:01:44.993Z
-tags: [post, apps, hardware, slashpage]
+tags: [post, me, apps, hardware, slashpage]
 title: Uses
 ---
 Inspired by [uses.tech](https://uses.tech), I have written up my current setup. I will try to keep this post updated as things change.
@@ -17,7 +17,7 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 - [Everlasting Comfort Office Foot Rest](https://smile.amazon.com/Foot-Rest-Under-Desk-Footstool/dp/B07PGLBCFG)
 - [Office Owl Caster Wheels for Desk Chairs](https://smile.amazon.com/gp/product/B08JPXXK4C/)
 - [UPLIFT Clamp-On Cup Holder](https://www.upliftdesk.com/clamp-on-cup-holder-by-uplift-desk/)
-- [UPLIFT Bamboo Standing Desk](https://www.upliftdesk.com/uplift-v2-bamboo-standing-desk/) 
+- [UPLIFT Bamboo Standing Desk](https://www.upliftdesk.com/uplift-v2-bamboo-standing-desk/)
 - [UPLIFT Big Standard Keyboard Tray - Bamboo with Quick Adjust Mechanism](https://www.upliftdesk.com/big-standard-keyboard-bamboo-tray-system-by-uplift-desk/)
 
 
@@ -90,7 +90,7 @@ Inspired by [uses.tech](https://uses.tech), I have written up my current setup. 
 
 ## VS Code Extensions
 
-- [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) - There is nothing like a handy way to convert which case your text or variables are. 
+- [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) - There is nothing like a handy way to convert which case your text or variables are.
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Never spend another hour trying to debug code that would work if didn't make that typo.
 - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) - Create and review PRs without having to find what your looking for in GitHub.
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Invite someone you trust to code along side you each from the comfort of each other's own VS Code.

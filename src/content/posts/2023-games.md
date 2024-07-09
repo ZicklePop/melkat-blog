@@ -3,7 +3,7 @@ cover: ./2023-games.png
 coverAlt: Game poster art for Like a Dragon Ishin and Gaiden, and Suika Game
 date: 2023-12-31T19:32:13.115Z
 title: My 2023 in Games
-tags: [post, media, games]
+tags: [post, me, media, games]
 ---
 
 When I write these year-end reviews, I go back and try to figure out where my time went and then figure out if I should admit to playing so much Picross. I couldn't find anything I enjoyed as much as these three games this year.
