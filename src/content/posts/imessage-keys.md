@@ -1,7 +1,7 @@
 ---
 date: 2024-05-20T06:43:50Z
 title: Enabling iMessage Contact Verification Keys
-tags: [post, imessage, shortcuts, security]
+tags: [post, imessage, shortcuts, security, omglol]
 ---
 
 I slept on this feature when it first came out, but when I noticed that [omg.lol](https://home.omg.lol/referred-by/melanie) added support for sharing public iMessage Contact Verification keys, I woke up.
