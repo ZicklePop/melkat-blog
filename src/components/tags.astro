@@ -3,6 +3,7 @@ import { cxs } from "@/src/consts/config";
 import Permalink from "./permalink.astro";
 import Share from "./share.astro";
 import Tag from "./tag.astro";
+import Reply from "./reply.astro";
 
 export interface Props {
 	slug: string;
@@ -27,9 +28,12 @@ const { url, tags, title } = Astro.props;
     <li class={cx.li}>
       <Permalink url={url} title={title} />
     </li>
-    <li class={cx.li}>
-      <Share url={url} title={title} />
-    </li>
+		<li class={cx.li}>
+			<Share url={url} title={title} />
+		</li>
+		<li class={cx.li}>
+			<Reply title={title} />
+		</li>
   </ul>
   <ul class={cx.ul}>
     {

@@ -1,0 +1,20 @@
+---
+import { baseUrl, cxs } from "@/src/consts/config";
+import Icon from "./icon.astro";
+
+export interface Props {
+	title: string;
+}
+
+const { title = 'Your Blog' } = Astro.props;
+---
+
+<a
+	class={`${cxs.aIcon} group disabled:cursor-not-allowed`}
+	title={`Reply to this post by email`}
+	href={`https://letterbird.co/melanie?hideheader=1&body=Re:%20${encodeURIComponent(title)}%0A%0A`}
+	><Icon
+		 type="like"
+		 appendClass="motion-safe:transition-transform group-hover:scale-125 group-active:*:stroke-hot-pink-600 motion-safe:group-active:animate-single-ping"
+	 /> Reply
+</a>

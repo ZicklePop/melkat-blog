@@ -27,19 +27,17 @@ const { showSearch = true } = Astro.props;
   <div class="flex flex-col md:flex-row justify-between gap-5">
     <p class={`${cx.p} md:text-left`}>
       {'browse by '}
-      <a class={cxs.a} href="/d">links</a>{' or '}
+      <a class={cxs.a} href="/d">links</a>,
       <a class={cxs.a} href="/t">tags</a>
       <br />
-      subscribe to the
-      <a class={cxs.a} href="/rss.xml">rss</a>
-      {' or '}
-      <a class={cxs.a} href="/feed.json">json</a>
-      feed
+      subscribe with
+      <a class={cxs.a} href="/rss.xml">rss</a>,
+      <a class={cxs.a} href="/feed.json">jsonfeed</a>
     </p>
     <p class={`${cx.p} md:text-right`}>
       a blog by
       <a class={cxs.a} href="https://melaniekat.com" rel="me">melanie kat</a>
-      <Icon type="like" appendClass="inline" />
+      <Icon type="like" appendClass="inline align-text-bottom *:stroke-cerulean-500" />
       <br />
       <a class={cxs.a} href="https://nyan.lol/@zicklepop" rel="me">
         @zicklepop@nyan.lol
