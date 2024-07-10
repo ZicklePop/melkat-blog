@@ -1,4 +1,4 @@
-export enum DIR {
+enum DIR {
 	NEXT = 0,
 	PREV = 1,
 }
@@ -40,7 +40,7 @@ function getSibling(el: HTMLElement, dir = DIR.NEXT) {
 	return el;
 }
 
-export function getSelected(dir = DIR.NEXT) {
+function getSelected(dir = DIR.NEXT) {
 	const selected = document.querySelector(
 		"article[data-selected]",
 	) as HTMLElement;
@@ -54,4 +54,12 @@ export function getSelected(dir = DIR.NEXT) {
 	nextSelected?.setAttribute("data-selected", "true");
 	nextSelected?.scrollIntoView({ behavior: "smooth" });
 	nextSelected?.focus();
+}
+
+export function getNext() {
+	getSelected(DIR.NEXT);
+}
+
+export function getPrev() {
+	getSelected(DIR.PREV);
 }

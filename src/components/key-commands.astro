@@ -42,7 +42,7 @@ import Kbd from "./kbd.astro";
   </button>
 </key-down>
 <script>
-	import { DIR, getSelected } from "@/src/lib/article-nav";
+	import { getNext, getPrev } from "@/src/lib/article-nav";
 
 	document.addEventListener('keydown', (e) => {
 		const target = e.target as HTMLElement
@@ -58,14 +58,18 @@ import Kbd from "./kbd.astro";
 			return;
 		}
 		if (e.key === 'j') {
-		  getSelected(DIR.NEXT)
+			getNext()
 		}
 		if (e.key === "k") {
-		  getSelected(DIR.PREV)
+			getPrev()
 		}
-		if (e.key === "Enter" && targetType === "article" && target.hasAttribute('data-selected')) {
-			const permalink = target?.querySelector('a[title^="Permalink"]') as HTMLElement
-			permalink?.click();
+
+		if (e.key === "Enter") {
+			const isSelectedArticle = targetType === "article" && target?.hasAttribute('data-selected')
+			if (isSelectedArticle) {
+				const permalink = target?.querySelector('a[title^="Permalink"]') as HTMLElement
+				permalink?.click();
+			}
 		}
 	})
 </script>
