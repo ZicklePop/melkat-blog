@@ -4,8 +4,8 @@ import PageNavigator from "@/src/components/page-navigator.astro";
 import { pageSize } from "@/src/consts/config";
 import Layout from "@/src/layouts/base-layout.astro";
 import PostLayout from "@/src/layouts/post-layout.astro";
-import { noDrafts } from "@/src/utils/filter";
-import { byDate } from "@/src/utils/sort";
+import { noDrafts } from "@/src/lib/filter";
+import { byDate } from "@/src/lib/sort";
 
 export const prerender = true;
 

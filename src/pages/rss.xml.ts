@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 import { baseUrl, title as blogTitle, description } from "@/src/consts/config";
-import { noDrafts } from "@/src/utils/filter";
-import { byDate } from "@/src/utils/sort";
+import { noDrafts } from "@/src/lib/filter";
+import { byDate } from "@/src/lib/sort";
 import rss from "@astrojs/rss";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";

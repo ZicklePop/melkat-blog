@@ -6,9 +6,9 @@ import PageNavigator from "@/src/components/page-navigator.astro";
 import { pageSize, title } from "@/src/consts/config";
 import Layout from "@/src/layouts/base-layout.astro";
 import PostLayout from "@/src/layouts/post-layout.astro";
-import { hasTagsNoDrafts } from "@/src/utils/filter";
-import { getAllTags, getPostsByTag } from "@/src/utils/get-posts";
-import { byDate } from "@/src/utils/sort";
+import { hasTagsNoDrafts } from "@/src/lib/filter";
+import { getAllTags, getPostsByTag } from "@/src/lib/get-posts";
+import { byDate } from "@/src/lib/sort";
 
 type EntryProp = CollectionEntry<"posts">;
 

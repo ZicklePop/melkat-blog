@@ -3,8 +3,8 @@ import { getCollection } from "astro:content";
 import PageHeader from "@/src/components/page-header.astro";
 import { cxs, title } from "@/src/consts/config";
 import Layout from "@/src/layouts/base-layout.astro";
-import { noDrafts } from "@/src/utils/filter";
-import { getDomainsByCount } from "@/src/utils/get-posts";
+import { noDrafts } from "@/src/lib/filter";
+import { getDomainsByCount } from "@/src/lib/get-posts";
 
 export const prerender = true;
 

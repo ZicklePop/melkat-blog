@@ -6,9 +6,9 @@ import PageNavigator from "@/src/components/page-navigator.astro";
 import { pageSize, title } from "@/src/consts/config";
 import Layout from "@/src/layouts/base-layout.astro";
 import PostLayout from "@/src/layouts/post-layout.astro";
-import { hasLinkNoDrafts } from "@/src/utils/filter";
-import { getAllDomains, getPostsByDomain } from "@/src/utils/get-posts";
-import { byDate } from "@/src/utils/sort";
+import { hasLinkNoDrafts } from "@/src/lib/filter";
+import { getAllDomains, getPostsByDomain } from "@/src/lib/get-posts";
+import { byDate } from "@/src/lib/sort";
 import type { GetStaticPathsOptions } from "astro";
 
 export const prerender = true;

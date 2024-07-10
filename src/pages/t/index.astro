@@ -4,8 +4,8 @@ import PageHeader from "@/src/components/page-header.astro";
 import Tag from "@/src/components/tag.astro";
 import { title } from "@/src/consts/config";
 import Layout from "@/src/layouts/base-layout.astro";
-import { noDrafts } from "@/src/utils/filter";
-import { getTagsByCount } from "@/src/utils/get-posts";
+import { noDrafts } from "@/src/lib/filter";
+import { getTagsByCount } from "@/src/lib/get-posts";
 
 export const prerender = true;
 

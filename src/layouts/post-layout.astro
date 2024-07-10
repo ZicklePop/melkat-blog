@@ -5,11 +5,11 @@ import Article from "@/src/components/article.astro";
 import RelatedArticles from "@/src/components/related-articles.astro";
 import TruncatedContent from "@/src/components/truncated-content.astro";
 import { title as blogTitle } from "@/src/consts/config";
-import { noDrafts } from "@/src/utils/filter";
-import { getRelatedPosts } from "@/src/utils/get-posts";
-import { byDate } from "@/src/utils/sort";
-import stripMd from "@/src/utils/strip-md";
-import truncateMd from "@/src/utils/truncate-md";
+import { noDrafts } from "@/src/lib/filter";
+import { getRelatedPosts } from "@/src/lib/get-posts";
+import { byDate } from "@/src/lib/sort";
+import stripMd from "@/src/lib/strip-md";
+import truncateMd from "@/src/lib/truncate-md";
 import Layout from "./base-layout.astro";
 
 export interface Props {
