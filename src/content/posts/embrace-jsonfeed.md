@@ -31,4 +31,6 @@ But with JSON Feed it's only:
 console.log(myJsonFeed.items[0])
 ```
 
-It's time to move on: no new RSS feeds in 2024
+~~It's time to move on: no new RSS feeds in 2024~~
+
+**Update, July 2024:** I apologize, that last line was a little much.
