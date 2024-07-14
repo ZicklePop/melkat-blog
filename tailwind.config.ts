@@ -266,11 +266,11 @@ const config: Config = {
 			transitionTimingFunction: {
 				"bounce-on-end": "cubic-bezier(0, 0, .5, 1.75)",
 			},
-			typography: ({ theme }: { theme: (i: string) => string }) => ({
+			typography: () => ({
 				melkat: {
 					css: {
-						"--tw-prose-links": theme("colors.cerulean[700]"),
-						"--tw-prose-invert-links": theme("colors.cerulean[600]"),
+						"--tw-prose-links": "oklch(51.08% 0.1514 240.79)",
+						"--tw-prose-invert-links": "oklch(64.12% 0.1898 239.60)",
 					},
 				},
 			}),
