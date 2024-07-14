@@ -18,6 +18,7 @@
 		"@astrojs/rss": "4.0.7",
 		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.1.0",
+		"@csstools/postcss-oklab-function": "^3.0.19",
 		"@leeoniya/ufuzzy": "^1.0.14",
 		"@tailwindcss/typography": "^0.5.12",
 		"@types/markdown-it": "^14.1.1",
