@@ -1,7 +1,7 @@
 ---
 title: My Blogroll
 tags: [post, slashpage]
-date: 2024-07-06T14:24:47-07:00
+date: 2024-08-02T12:43:41-07:00
 ---
 
 I feel like I've been putting off building a public blogroll for a while. Part of what has helped me to just do it is this post from Keenan about [getting rid of their blogroll](https://gkeenan.co/avgb/i-really-like-everyone-on-my-blogroll-but-im-sorry-to-say-that-it-must-die/). I sympathized with it quite a bit. Blogrolls are inherently messy, but so am I. I decided to approach this by just exporting my blog category in [Feedbin](https://feedbin.com) and doing very little filtering to it. Some of these blogs may have not been updated in quite a while and I'm just wanting to keep an eye out if something were to pop up.
