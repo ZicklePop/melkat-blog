@@ -1,6 +1,7 @@
 ---
 import Icon from "@/src/components/icon.astro";
 import Search from "@/src/components/search.astro";
+import Slashes from "@/src/components/slashes.astro";
 import { cxs } from "@/src/consts/config";
 
 export interface Props {
@@ -8,9 +9,9 @@ export interface Props {
 }
 
 const cx = {
-	footer: "w-full mb-5",
+	footer: "w-full my-12",
 	p: "text-center",
-	search: "max-w-md mx-auto",
+	search: "max-w-md mx-auto mb-12",
 };
 
 const { showSearch = true } = Astro.props;
@@ -24,6 +25,7 @@ const { showSearch = true } = Astro.props;
       </div>
     )
   }
+	<Slashes />
   <div class="flex flex-col md:flex-row justify-between gap-5">
     <p class={`${cx.p} md:text-left`}>
       {'browse by '}

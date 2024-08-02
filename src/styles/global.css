@@ -16,6 +16,6 @@
 	}
 
 	article[data-selected]:focus {
-		@apply border-transparent rounded-md outline-offset-8;
+		@apply rounded-md outline-offset-8;
 	}
 }

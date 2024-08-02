@@ -7,28 +7,24 @@ import Layout from "@/src/layouts/base-layout.astro";
 import { noDrafts } from "@/src/lib/filter";
 import { getTagsByCount } from "@/src/lib/get-posts";
 
-export const prerender = true;
-
 const allPosts = await getCollection("posts", noDrafts);
 const sortedData = getTagsByCount(allPosts).filter(({ count }) => count > 1);
 ---
 
 <Layout title={`${title} - Posts by tag`} permalink="/t">
-  <PageHeader> Posts by tag </PageHeader>
-  <div class="mb-8">
-    <ul
-      class="grid grid-cols-2 gap-y-4 gap-x-0 md:grid-cols-4 md:gap-x-2 md:py-2"
-    >
-      {
-        sortedData.map(({ key, count }) => (
-          <li>
-            <Tag tag={key} />
-            <span class="pl-4 text-sm font-semibold">
-              {`${count} ${count === 1 ? 'post' : 'posts'}`}
-            </span>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+	<PageHeader>Posts by tag</PageHeader>
+	<ul
+  	class="grid grid-cols-2 gap-y-4 gap-x-0 md:grid-cols-4 md:gap-x-2 md:py-2"
+	>
+  	{
+    	sortedData.map(({ key, count }) => (
+      	<li>
+        	<Tag tag={key} />
+        	<span class="pl-4 block text-sm font-semibold">
+          	{`${count} ${count === 1 ? 'post' : 'posts'}`}
+        	</span>
+      	</li>
+    	))
+  	}
+	</ul>
 </Layout>

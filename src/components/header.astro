@@ -3,7 +3,7 @@ import { title } from "@/src/consts/config";
 import Logo from "./logo.astro";
 
 const cx = {
-	h1: "h-card font-light text-4xl my-6",
+	h1: "h-card font-light text-4xl my-8",
 	link: "u-url no-underline hover:underline",
 	logo: "inline-block mr-2 align-middle stroke-cerulean-500",
 };
@@ -12,7 +12,7 @@ const cx = {
 <header role="banner">
   <h1 class={cx.h1}>
     <a href="/" class={cx.link}>
-      <div class={cx.logo} title="emoji by dzuk.zone">
+      <div class={cx.logo} title="">
         <Logo width={64} />
       </div><span class="p-name p-org">{title}</span>
     </a>

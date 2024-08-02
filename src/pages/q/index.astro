@@ -6,11 +6,13 @@ import Layout from "@/src/layouts/base-layout.astro";
 ---
 
 <Layout title="melkat.blog - Search" showSearch={false}>
-  <PageHeader>
-    <label for="search">Search</label>
-  </PageHeader>
-  <Search />
-  <SearchResults />
+	<div class="mb-8">
+  	<PageHeader>
+    	<label for="search">Search</label>
+  	</PageHeader>
+  	<Search />
+  	<SearchResults />
+	</div>
 </Layout>
 <script is:inline>
   const params = new URLSearchParams(document.location.search)

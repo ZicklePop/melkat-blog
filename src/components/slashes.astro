@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import { cxs } from "@/src/consts/config";
+import { noDrafts } from "@/src/lib/filter";
+import { getPostsByTag } from "@/src/lib/get-posts";
+
+const allPosts = await getCollection("posts", noDrafts);
+const slashpages = getPostsByTag(allPosts, "slashpage");
+---
+
+<ul class="my-8 flex flex-wrap gap-4 justify-around font-mono">
+	{slashpages.map(({ slug, data: { title } }) => (
+		<li><a class={cxs.a} href={`/p/${slug}`} title={title}>/{slug}</a></li>
+	))}
+</ul>

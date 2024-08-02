@@ -6,30 +6,27 @@ import Layout from "@/src/layouts/base-layout.astro";
 import { noDrafts } from "@/src/lib/filter";
 import { getDomainsByCount } from "@/src/lib/get-posts";
 
-export const prerender = true;
-
 const allPosts = await getCollection("posts", noDrafts);
 const sortedData = getDomainsByCount(allPosts);
 ---
 
+
 <Layout title={`${title} - Posts by domain`} permalink="/d">
-  <div class="mb-8">
-    <PageHeader>Linked posts by domain</PageHeader>
-    <ul
-      class="list-disc list-inside grid grid-cols-1 gap-y-4 gap-x-0 md:grid-cols-2 md:gap-x-2 md:py-2"
-    >
-      {
-        sortedData.map(({ key, count }) => (
-          <li>
-            <a class={cxs.a} href={`/d/${key}`}>
-              {key}
-            </a>
-            <span class="block pl-4 text-sm font-semibold">
-              {`${count} ${count === 1 ? 'post' : 'posts'}`}
-            </span>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <PageHeader>Link posts by domain</PageHeader>
+  <ul
+    class="list-inside list-disc grid grid-cols-2 gap-y-4 gap-x-0 md:gap-x-2 md:py-2"
+  >
+    {
+      sortedData.map(({ key, count }) => (
+        <li>
+          <a class={cxs.a} href={`/d/${key}`}>
+            {key}
+          </a>
+          <span class="pl-4 block text-sm font-semibold">
+            {`${count} ${count === 1 ? 'post' : 'posts'}`}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
