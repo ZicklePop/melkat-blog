@@ -117,14 +117,14 @@
 				htmlUrl="https://ludic.mataroa.blog" />
 			<outline text="Lynn Fisher" title="Lynn Fisher" type="rss"
 				xmlUrl="https://lynnandtonic.com/feed.xml" htmlUrl="https://lynnandtonic.com" />
-			<outline text="Matthew Bischoff" title="Matthew Bischoff" type="rss"
-				xmlUrl="https://matthewbischoff.com/feed/" htmlUrl="https://mbbischoff.com/" />
 			<outline text="Mayank" title="Mayank" type="rss" xmlUrl="https://www.mayank.co/blog/rss.xml"
 				htmlUrl="https://www.mayank.co/" />
 			<outline text="Mijndert Stuij" title="Mijndert Stuij" type="rss"
 				xmlUrl="https://mijndertstuij.nl/feed" htmlUrl="https://mijndertstuij.nl" />
 			<outline text="Modern CSS Solutions" title="Modern CSS Solutions" type="rss"
 				xmlUrl="https://moderncss.dev/feed/" htmlUrl="https://moderncss.dev" />
+			<outline text="mb bischoff" title="mb bischoff" type="rss"
+				xmlUrl="https://mbbischoff.com/feed/" htmlUrl="https://mbbischoff.com/" />
 			<outline text="Nathan Knowler" title="Nathan Knowler" type="rss"
 				xmlUrl="https://knowler.dev/feed.xml" htmlUrl="https://knowler.dev/" />
 			<outline text="Neatnik Notes" title="Neatnik Notes" type="rss"
