@@ -1,7 +1,7 @@
 ---
 date: 2024-05-12T20:28:56Z
 title: My Interests
-tags: [post, me, games, music, media]
+tags: [post, games, music, media, slashpage]
 ---
 
 These are current as to the moment I post this and forget to keep it updated. That said, I'm trying to go with things I have longer term strong feelings about, instead of something that might have recency bias. If anything sounds classic, cliched, or basic: sorry. I feel like some answers are so generic that it's weird to list them, but I'm going to. Maybe you should read in to what I don't list, lol.

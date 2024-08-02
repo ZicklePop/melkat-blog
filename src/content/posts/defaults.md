@@ -15,7 +15,7 @@ I've avoided making a [slashpage](https://slashpages.net) for my default apps fo
 - 💬 Chat: [iMessage](https://support.apple.com/messages)
 - 🌩️ Cloud Storage: [iCloud Drive](https://www.icloud.com/iclouddrive), [OneDrive](https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage)
 - 📇 Contacts: [iCloud Contacts](https://www.icloud.com/contacts/)
-- 👩‍💻 Editor: [VS Code](https://code.visualstudio.com)†, [Nova](https://nova.app), [LunarVim](https://www.lunarvim.org)
+- 👩‍💻 Editor: [VS Code](https://code.visualstudio.com)†, [Nova](https://nova.app)
 - 🖋️ Illustration: [Affinity Designer](https://affinity.serif.com/en-us/designer/), [Dotgrid](https://100r.co/site/dotgrid.html)
 - 🚀 Launcher: [Alfred](https://alfred.app)
 - 📨 Mail Client: [Apple Mail](https://support.apple.com/mail), [iCloud Mail](https://www.icloud.com/mail/)
@@ -31,7 +31,7 @@ I've avoided making a [slashpage](https://slashpages.net) for my default apps fo
 - 👩‍🎨 Photo Editing: [Darkroom](https://darkroom.co)
 - 🎨 Photoshopping: [Affinity Photo](https://affinity.serif.com/en-us/photo/)
 - 🎤 Podcasts: [Airshow](https://airshow.fm)
-- 📑 Read Later: [Omnivore](https://omnivore.app/)†
+- 📑 Read Later: [Readwise Reader](https://readwise.io/read)†
 - 📖 RSS: [Feedbin](https://feedbin.com/), [Reeder](https://reeder.app)
 - 🖥️ Screen Sharing: [Screens](https://edovia.com/en/screens/), [Remote Desktop](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)
 - 🛒 Shopping Lists: [iCloud Reminders](https://www.icloud.com/reminders)
