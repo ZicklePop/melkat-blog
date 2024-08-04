@@ -12,6 +12,6 @@ If you want to keep up with what I am up to, here's the where and how. If you ar
     - [@links@nyan.lol](https://nyan.lol/@links) ([rss](https://nyan.lol/@links.rss)) - Links places on the web I want to tell you about
     - [@melkat@nyan.lol](https://nyan.lol/@melkat) ([rss](https://nyan.lol/@melkat.rss)) - A feed of my blog posts and other writings
 - Pixelfed: [@zicklepop@nyan.pics](https://nyan.pics/@zicklepop) ([rss](https://nyan.pics/users/zicklepop.atom)) - My shared photos
-- Status.lol: [@zicklepop@omg.lol](https://status.melanie.lol) ([rss](https://melanie.status.lol/feed)) - Fun little status updates
+- Status.lol: [@melanie@omg.lol](https://status.melanie.lol) ([rss](https://melanie.status.lol/feed)) - Fun little status updates
 - Letterboxd: [@zicklepop@letterboxd.com](https://letterboxd.com/zicklepop) ([rss](https://letterboxd.com/zicklepop/rss)) - What I'm watching
 - Last.fm: [@zicklepop@last.fm](https://www.last.fm/user/zicklepop) - What I'm listening to

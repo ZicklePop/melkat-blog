@@ -9,7 +9,7 @@ I've avoided making a [slashpage](https://slashpages.net) for my default apps fo
 - 🤖 Automation: [Apple Shortcuts](https://support.apple.com/guide/shortcuts/welcome/), [Superkey](https://superkey.app), [Rectangle Pro](https://rectangleapp.com/pro)
 - 🗄️ Backup: [Backblaze](https://secure.backblaze.com/r/0167cy)
 - 🔖 Bookmarks: [GoodLinks](https://goodlinks.app)
-- 🌐 Browser: [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/), [Vivaldi](https://vivaldi.com)
+- 🌐 Browser: [Safari](https://www.apple.com/safari/), [Vivaldi](https://vivaldi.com)
 - 📆 Calendar: [iCloud Calendar](https://www.icloud.com/calendar)
 - 📷 Camera App: [Obscura](https://obscura.camera/obscura/index.html)
 - 💬 Chat: [iMessage](https://support.apple.com/messages)
