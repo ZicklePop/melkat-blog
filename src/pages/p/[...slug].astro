@@ -3,8 +3,6 @@ import { getCollection } from "astro:content";
 import PostLayout from "@/src/layouts/post-layout.astro";
 import { noDrafts } from "@/src/lib/filter";
 
-export const prerender = true;
-
 export async function getStaticPaths() {
 	const entries = await getCollection("posts", noDrafts);
 	return entries.map((entry) => ({

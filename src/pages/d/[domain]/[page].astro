@@ -11,8 +11,6 @@ import { getAllDomains, getPostsByDomain } from "@/src/lib/get-posts";
 import { byDate } from "@/src/lib/sort";
 import type { GetStaticPathsOptions } from "astro";
 
-export const prerender = true;
-
 type EntryProp = CollectionEntry<"posts">;
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {

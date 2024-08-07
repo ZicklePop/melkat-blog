@@ -11,8 +11,6 @@ import type { GetStaticPathsOptions } from "astro";
 
 type EntryProp = CollectionEntry<"posts">;
 
-export const prerender = true;
-
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	let allPosts = await getCollection("posts", noDrafts);
 	allPosts = allPosts.sort(byDate);

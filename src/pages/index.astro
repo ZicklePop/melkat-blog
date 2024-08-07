@@ -7,8 +7,6 @@ import PostLayout from "@/src/layouts/post-layout.astro";
 import { noDrafts } from "@/src/lib/filter";
 import { byDate } from "@/src/lib/sort";
 
-export const prerender = true;
-
 let allPosts = await getCollection("posts", noDrafts);
 allPosts = allPosts.sort(byDate);
 const lastPage = Math.ceil(allPosts.length / pageSize);

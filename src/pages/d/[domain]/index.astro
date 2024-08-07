@@ -10,8 +10,6 @@ import { hasLinkNoDrafts } from "@/src/lib/filter";
 import { getAllDomains, getPostsByDomain } from "@/src/lib/get-posts";
 import { byDate } from "@/src/lib/sort";
 
-export const prerender = true;
-
 type EntryProp = CollectionEntry<"posts">;
 
 export async function getStaticPaths() {

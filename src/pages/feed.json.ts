@@ -5,8 +5,6 @@ import { byDate } from "@/src/lib/sort";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 
-export const prerender = true;
-
 const parser = new MarkdownIt();
 
 export async function GET() {

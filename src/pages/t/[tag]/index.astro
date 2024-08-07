@@ -12,8 +12,6 @@ import { byDate } from "@/src/lib/sort";
 
 type EntryProp = CollectionEntry<"posts">;
 
-export const prerender = true;
-
 export async function getStaticPaths() {
 	let allPosts = await getCollection("posts", hasTagsNoDrafts);
 	allPosts = allPosts.sort(byDate);
