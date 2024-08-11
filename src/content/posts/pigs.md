@@ -2,7 +2,7 @@
 title: Portland Indie Game Squad
 date: 2024-06-30T13:51:12-07:00
 link: https://pigsquad.com
-tags: [link, games, wife]
+tags: [link, games, vivi]
 cover: ./pigs.jpg
 coverAlt: My wife Vivi doing a double peace sign next to a PIGS sign
 ---
