@@ -35,5 +35,5 @@ Hey, we all love trash. I love trash. Yum yum give me garbage. I'll take a Beefy
 
 I no longer live in San Francisco, but here are some other kinds of burritos I have enjoyed from other restaurants.
 
-- Sushiritto's Sumo Crunch — a burrito made of shrimp tempura, surimi crab, cucumbers, red tempura flakes, spicy aioli, avocado spread, sushi rice, and nori
+- Sushirito's Sumo Crunch — a burrito made of shrimp tempura, surimi crab, cucumbers, red tempura flakes, spicy aioli, avocado spread, sushi rice, and nori
 - Curry Up Now's Chicken Tikka Masala — a burrito made of Indian food. Personally, I would like to request no onions on mine but it's not a deal breaker.
