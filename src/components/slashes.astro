@@ -9,7 +9,7 @@ const slashpages = getPostsByTag(allPosts, "slashpage");
 ---
 
 <ul class="my-8 flex flex-wrap gap-4 justify-around font-mono">
-	{slashpages.map(({ slug, data: { title } }) => (
-		<li><a class={cxs.a} href={`/p/${slug}`} title={title}>/{slug}</a></li>
+	{slashpages.map(({ slug, data: { title, link } }) => (
+		<li><a class={cxs.a} href={link ? link : `/p/${slug}`} title={title}>/{slug}</a></li>
 	))}
 </ul>
