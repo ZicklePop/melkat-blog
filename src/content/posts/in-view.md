@@ -6,7 +6,7 @@ date: 2024-08-13T11:27:37-07:00
 
 In Astro, when you use a UI framework you have the ability to only load the [island](https://docs.astro.build/en/concepts/islands/) of JavaScript when it becomes [in view of the browser window](https://docs.astro.build/en/reference/directives-reference/#clientvisible). When you use web components, you have to build this functionality out yourself. This is exactly what I did in my new web component NPM package, in-view.
 
-I ran into this when I decided to start rebuilding parts of my [personal website](https://melaniekat.com) in web components on my ongoing journey to hyper-optimize my websites. I previously mentioned building a [timeline page](https://melkat.blog/p/my-feed) where you could see all of my online activity across a variety of websites and services. I decided to move it from its own page to the main page, just underneath a health amount of scrolling. The immediate issue is how much this increased the page load. I wanted to make sure it was only rendered for people who would actually view it.
+I ran into this when I decided to start rebuilding parts of my [personal website](https://melaniekat.com) in web components on my ongoing journey to hyper-optimize my websites. I previously mentioned building a [timeline page](https://melkat.blog/p/my-feed) where you could see all of my online activity across a variety of websites and services. I decided to move it from its own page to the main page, just underneath a healthy amount of scrolling. The immediate issue is how much this increased the page load. I wanted to make sure it was only rendered for people who would actually view it.
 
 When all you have is a web component hammer, everything looks like a web component nail.
 
