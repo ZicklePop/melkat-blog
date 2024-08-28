@@ -1,7 +1,7 @@
 ---
 date: 2024-08-28T11:10:01-07:00
 title: Great Android Apps
-tags: [post, me, android, apps]
+tags: [post, android, apps]
 cover: ./great-android-apps.png
 coverAlt: Apps from left to right are Breezy Weather, Pano Scrobbler, Capy Reader, and AntennaPod
 ---
