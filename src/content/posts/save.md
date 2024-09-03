@@ -14,3 +14,4 @@ My goal is to keep this list updated over time with products I use that play the
 - [Bunny](https://bunny.net/?ref=3echenpmxr): The global Content Delivery Platform that truly hops
 - [Lemonade](https://www.lemonade.com/r/melaniebilbrey): America’s top-rated home and renters insurance company.
 - [NextDNS](https://nextdns.io/?from=qa2cg8e9): DNS that protects you from security threats, blocks ads and trackers.
+- [Trakt](https://trakt.tv/vip/referral/22c1ae54ca605884fcef1b88040cd75c): Track shows and movies you watch.
