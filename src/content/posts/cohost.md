@@ -2,6 +2,8 @@
 title: Cohost, A Cautionary Tale
 date: 2024-09-10T11:51:43-07:00
 tags: [post, criticism]
+cover: ./cohost.jpg
+coverAlt: "A Cohost user threatening anyone who dared question Cohost with a post that says: Cohost isn't dying, it's being killed, and the people doing the killing have names and addresses, or something like that"
 ---
 
 Last night, I wrote a joke on Mastodon that I thought was a funny roast of Cohost users in light of the website shutting down. It was only funny to me, so I deleted it. I understand that Cohost was of special interest to a very small and vulnerable group. That's kind of the problem, though, right? Cohost was a business, and you are a human being. Can I make it any more obvious?
