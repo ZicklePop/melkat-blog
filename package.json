@@ -32,8 +32,8 @@
 		"typescript": "^5.5.4"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.8.3",
+		"@biomejs/biome": "^1.9.2",
 		"lefthook": "^1.7.14"
 	},
-	"trustedDependencies": ["@biomejs/biome"]
+	"trustedDependencies": ["@biomejs/biome", "esbuild", "lefthook", "sharp"]
 }
