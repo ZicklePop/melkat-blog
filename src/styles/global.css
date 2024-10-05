@@ -2,9 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Cartridge';
+	src: url('/Cartridge-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 @layer base {
 	body {
 		@apply bg-white text-gray-700 dark:bg-black dark:text-gray-300;
+	}
+
+	h1 {
+		font-feature-settings: 'ss01';
 	}
 
 	[popover]:popover-open {

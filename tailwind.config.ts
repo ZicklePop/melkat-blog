@@ -91,6 +91,19 @@ const config: Config = {
 				},
 			},
 			fontFamily: {
+				"cartridge": [
+					"Cartridge",
+					"ui-rounded",
+					"Hiragino Maru Gothic ProN",
+					"Quicksand",
+					"Comfortaa",
+					"Manjari",
+					"Arial Rounded MT",
+					"Arial Rounded MT Bold",
+					"Calibri",
+					"source-sans-pro",
+					"sans-serif",
+				],
 				"system-ui": ["system-ui", "sans-serif"],
 				transitional: [
 					"Charter",
