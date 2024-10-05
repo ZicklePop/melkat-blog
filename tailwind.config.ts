@@ -91,7 +91,7 @@ const config: Config = {
 				},
 			},
 			fontFamily: {
-				"cartridge": [
+				cartridge: [
 					"Cartridge",
 					"ui-rounded",
 					"Hiragino Maru Gothic ProN",

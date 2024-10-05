@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Cartridge';
-	src: url('/Cartridge-Regular.woff2') format('woff2');
+	font-family: "Cartridge";
+	src: url("/Cartridge-Regular.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -16,7 +16,7 @@
 	}
 
 	h1 {
-		font-feature-settings: 'ss01';
+		font-feature-settings: "ss01";
 	}
 
 	[popover]:popover-open {
