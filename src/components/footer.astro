@@ -20,7 +20,7 @@ const { showSearch = true } = Astro.props;
 <footer class={cx.footer} role="contentinfo">
   {
     showSearch && (
-      <div class={cx.search}>
+      <div class={`${cx.search} print:hidden`}>
         <Search />
       </div>
     )

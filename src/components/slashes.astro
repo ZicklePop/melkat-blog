@@ -8,7 +8,7 @@ const allPosts = await getCollection("posts", noDrafts);
 const slashpages = getPostsByTag(allPosts, "slashpage");
 ---
 
-<ul class="my-8 flex flex-wrap gap-y-4 gap-x-3 font-mono justify-center">
+<ul class="my-8 flex flex-wrap gap-y-4 gap-x-3 text-lg justify-center">
 	{slashpages.map(({ slug, data: { title, link } }) => (
 		<li><a class={cxs.a} href={link ? link : `/p/${slug}`} title={title}>/{slug}</a></li>
 	))}
