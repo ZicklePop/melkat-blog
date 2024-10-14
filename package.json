@@ -24,7 +24,7 @@
 		"@types/markdown-it": "^14.1.2",
 		"@types/sanitize-html": "^2.13.0",
 		"@zicklepop/key-down": "^1.0.1",
-		"astro": "4.15.1",
+		"astro": "4.16.1",
 		"markdown-it": "^14.1.0",
 		"marked": "^14.1.0",
 		"sanitize-html": "^2.13.0",
